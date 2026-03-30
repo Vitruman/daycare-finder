@@ -1,38 +1,45 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use App\Models\Blog;
-use App\Models\Facility;
-use App\Models\State;
-use App\Models\Setting;
-use Illuminate\Http\Request;
+use App\Models\Organization;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    private static $stateNames = [
+        'AL'=>'Alabama','AK'=>'Alaska','AZ'=>'Arizona','AR'=>'Arkansas','CA'=>'California',
+        'CO'=>'Colorado','CT'=>'Connecticut','DC'=>'District of Columbia','DE'=>'Delaware',
+        'FL'=>'Florida','GA'=>'Georgia','HI'=>'Hawaii','IA'=>'Iowa','ID'=>'Idaho',
+        'IL'=>'Illinois','IN'=>'Indiana','KS'=>'Kansas','KY'=>'Kentucky','LA'=>'Louisiana',
+        'MA'=>'Massachusetts','MD'=>'Maryland','ME'=>'Maine','MI'=>'Michigan','MN'=>'Minnesota',
+        'MO'=>'Missouri','MS'=>'Mississippi','MT'=>'Montana','NC'=>'North Carolina',
+        'ND'=>'North Dakota','NE'=>'Nebraska','NH'=>'New Hampshire','NJ'=>'New Jersey',
+        'NM'=>'New Mexico','NV'=>'Nevada','NY'=>'New York','OH'=>'Ohio','OK'=>'Oklahoma',
+        'OR'=>'Oregon','PA'=>'Pennsylvania','RI'=>'Rhode Island','SC'=>'South Carolina',
+        'SD'=>'South Dakota','TN'=>'Tennessee','TX'=>'Texas','UT'=>'Utah','VA'=>'Virginia',
+        'VT'=>'Vermont','WA'=>'Washington','WI'=>'Wisconsin','WV'=>'West Virginia','WY'=>'Wyoming',
+    ];
+
     public function index()
     {
-        $featuredStates = \App\Models\Organization::query()
-            ->selectRaw('state, COUNT(*) as facilities_count')
+        $states = Organization::select('state', DB::raw('count(*) as count'))
             ->whereNotNull('state')
             ->groupBy('state')
-            ->orderByDesc('facilities_count')
-            ->take(6)
+            ->orderByDesc('count')
             ->get()
             ->map(function ($row) {
-                $row->name = $row->state;
-                $row->code = $row->state;
-                $row->slug = \Illuminate\Support\Str::slug($row->state);
+                $code = strtoupper($row->state);
+                $row->name = self::$stateNames[$code] ?? $code;
+                $row->code = $code;
                 return $row;
             });
 
-        $featuredFacilities = \App\Models\Organization::query()
-            ->latest('created_at')
-            ->take(6)
+        $featuredCenters = Organization::where('source', 'nyc')
+            ->whereNotNull('phone')
+            ->whereNotNull('zip')
+            ->inRandomOrder()
+            ->limit(9)
             ->get();
 
-        $recentBlogs = \App\Models\Blog::published()->latest('published_at')->take(5)->get();
-
-        return view('home', compact('featuredStates', 'featuredFacilities', 'recentBlogs'));
+        return view('home', compact('states', 'featuredCenters'));
     }
 }

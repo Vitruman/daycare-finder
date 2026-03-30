@@ -31,18 +31,20 @@ Route::get('/facilities/{facility:name_id}', [FacilityController::class, 'show']
 
 // Robots.txt
 
-Route::get('/treatment', [TreatmentController::class, 'index'])->name('treatment.index');
-Route::get('/treatment/{slug}', [TreatmentController::class, 'show'])->name('treatment.show');
+Route::get('/programs', fn() => view('programs.index'))->name('programs.index');
+Route::redirect('/treatment', '/programs', 301);
+Route::redirect('/treatment/{slug}', '/programs', 301);
 
-Route::get('/addiction', [AddictionController::class, 'index'])->name('addiction.index');
-Route::get('/addiction/{slug}', [AddictionController::class, 'show'])->name('addiction.show');
+Route::redirect('/addiction', '/programs', 301);
+Route::redirect('/addiction/{slug}', '/programs', 301);
 
 
-Route::get('/insurance', [\App\Http\Controllers\InsuranceController::class, 'index'])->name('insurance.index');
-Route::get('/insurance/{slug}', [\App\Http\Controllers\InsuranceController::class, 'show'])->name('insurance.show');
+Route::get('/subsidies', fn() => view('subsidies.index'))->name('subsidies.index');
+Route::redirect('/insurance', '/subsidies', 301);
+Route::redirect('/insurance/{slug}', '/subsidies', 301);
 
-Route::get('/resources', [\App\Http\Controllers\ResourceController::class, 'index'])->name('resources.index');
-Route::get('/resources/{slug}', [\App\Http\Controllers\ResourceController::class, 'show'])->name('resources.show');
+Route::redirect('/resources', '/blog', 301);
+Route::redirect('/resources/{slug}', '/blog', 301);
 
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 Route::get('/privacy-policy', fn() => view('pages.privacy'))->name('privacy');
@@ -56,8 +58,8 @@ Route::get('/robots.txt', function () {
 
 
 // Compare (vs) pages
-Route::get('/compare', [App\Http\Controllers\CompareController::class, 'index'])->name('compare.index');
-Route::get('/compare/{slug}', [App\Http\Controllers\CompareController::class, 'show'])->name('compare.show');
+Route::redirect('/compare', '/programs', 301);
+Route::redirect('/compare/{slug}', '/programs', 301);
 // Sitemap
 Route::get('/sitemap.xml', function () {
     $urls = [
