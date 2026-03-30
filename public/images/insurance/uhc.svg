@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48">
+  <!-- UHC swoosh -->
+  <path d="M4 30 Q12 8 24 20 T44 14" stroke="#002677" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="44" cy="14" r="3" fill="#D4451A"/>
+  <text x="54" y="22" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#002677">UnitedHealthcare</text>
+  <text x="54" y="36" font-family="system-ui,sans-serif" font-size="9" fill="#666">a UnitedHealth Group company</text>
+</svg>

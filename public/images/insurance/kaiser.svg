@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="48" viewBox="0 0 180 48">
+  <!-- KP shield -->
+  <path d="M8 6 L26 6 L26 30 Q17 40 8 30 Z" fill="#004B87" rx="2"/>
+  <text x="12" y="24" font-family="serif" font-size="14" font-weight="700" fill="white">KP</text>
+  <text x="34" y="20" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#004B87">Kaiser</text>
+  <text x="34" y="34" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#004B87">Permanente</text>
+</svg>

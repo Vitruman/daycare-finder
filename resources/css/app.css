@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* RichEditor / generated HTML article typography */
+.article-content {
+    color: rgb(55 65 81); /* gray-700 */
+    line-height: 1.75;
+}
+
+.article-content > * + * {
+    margin-top: 1rem;
+}
+
+.article-content :where(h1) {
+    margin-top: 2.25rem;
+    margin-bottom: 0.9rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    color: rgb(17 24 39); /* gray-900 */
+}
+
+.article-content :where(h2) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: rgb(17 24 39); /* gray-900 */
+}
+
+.article-content :where(h3) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: rgb(17 24 39);
+}
+
+.article-content :where(h4) {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: rgb(17 24 39);
+}
+
+.article-content :where(a) {
+    color: rgb(22 163 74); /* green-600 */
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.article-content :where(a:hover) {
+    color: rgb(21 128 61); /* green-700 */
+}
+
+.article-content :where(ul, ol) {
+    padding-left: 1.5rem;
+}
+
+.article-content :where(ul) {
+    list-style: disc;
+}
+
+.article-content :where(ol) {
+    list-style: decimal;
+}
+
+.article-content :where(li) {
+    margin: 0.25rem 0;
+}
+
+.article-content :where(blockquote) {
+    border-left: 4px solid rgb(229 231 235); /* gray-200 */
+    background: rgb(249 250 251); /* gray-50 */
+    padding: 1rem 1rem;
+    border-radius: 0.75rem;
+    color: rgb(55 65 81);
+}
+
+.article-content :where(code) {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95em;
+    background: rgb(243 244 246); /* gray-100 */
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.5rem;
+}
+
+.article-content :where(table) {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgb(229 231 235); /* gray-200 */
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: white;
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.article-content :where(th, td) {
+    padding: 0.75rem 0.9rem;
+    vertical-align: top;
+    border-bottom: 1px solid rgb(229 231 235);
+}
+
+.article-content :where(th) {
+    font-weight: 700;
+    color: rgb(17 24 39);
+    background: rgb(249 250 251); /* gray-50 */
+    text-align: left;
+}
+
+.article-content :where(tr:last-child td) {
+    border-bottom: none;
+}
+
+.article-content :where(strong, b) {
+    font-weight: 700;
+    color: rgb(17 24 39);
+}
+
+.article-content :where(em, i) {
+    font-style: italic;
+}
+
+.article-content :where(pre) {
+    background: rgb(15 23 42); /* slate-900 */
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow: auto;
+}
+
+.article-content :where(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
