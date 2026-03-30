@@ -206,7 +206,7 @@
                 <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center"><span class="text-emerald-700 font-bold">RF</span></div>
                 <div>
                     <p class="font-bold text-gray-900">DaycareHub Editorial Team</p>
-                    <p class="text-sm text-gray-500">Evidence-based content reviewed by addiction treatment specialists</p>
+                    <p class="text-sm text-gray-500">Evidence-based content reviewed by childcare specialists</p>
                 </div>
             </div>
             <p class="text-xs text-gray-400">Last updated: {{ $blog->updated_at->format('F j, Y') }}</p>

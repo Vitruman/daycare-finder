@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @php
-        $defaultTitle = \App\Models\Setting::getValue('meta_title', 'DaycareHub - Find Rehabilitation Centers');
+        $defaultTitle = \App\Models\Setting::getValue('meta_title', 'DaycareHub - Find Childcare Centers');
         $defaultDescription = \App\Models\Setting::getValue('meta_description', 'Find rehabilitation support, facilities, and helpful resources.');
         $defaultKeywords = \App\Models\Setting::getValue('meta_keywords', '');
 
@@ -52,7 +52,7 @@
         "@@type": "Organization",
         "name": "DaycareHub",
         "url": "https://daycarehub.us",
-        "description": "Find drug and alcohol rehabilitation centers near you across the United States",
+        "description": "Find daycare and childcare childcare centers near you across the United States",
         "telephone": "{{ \App\Models\Setting::getValue('phone', '+1(855) 321-3614') }}",
         "areaServed": "US",
         "sameAs": []

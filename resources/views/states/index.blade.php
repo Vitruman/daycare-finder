@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Find Rehab Centers by State — All 50 US States | DaycareHub')
+@section('title', 'Find Daycare Centers by State — All 50 US States | DaycareHub')
 
-@section('meta_description', 'Browse drug and alcohol rehabilitation centers in all 50 US states. Find verified treatment facilities, read reviews, and get free guidance.')
+@section('meta_description', 'Browse daycare and childcare childcare centers in all 50 US states. Find verified treatment facilities, read reviews, and get free guidance.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -22,7 +22,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">US States</h1>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                Choose a state to find available rehabilitation centers and get detailed information
+                Choose a state to find available childcare centers and get detailed information
             </p>
         </div>
     </section>

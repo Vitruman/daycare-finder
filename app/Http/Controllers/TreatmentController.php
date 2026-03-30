@@ -10,7 +10,7 @@ class TreatmentController extends Controller
         'inpatient-rehab' => [
             'title' => 'Inpatient Rehab Programs',
             'meta_title' => 'Inpatient Rehab Centers Near You | RehabFlow',
-            'meta_desc' => 'Find inpatient rehabilitation centers offering 24/7 residential care. Compare programs, verify insurance, and start recovery today.',
+            'meta_desc' => 'Find inpatient daycare centers offering 24/7 residential care. Compare programs, verify insurance, and start recovery today.',
             'hero_label' => 'Residential Treatment',
             'duration' => '30-90 days',
             'cost' => '$15,000 - $30,000',
@@ -23,7 +23,7 @@ class TreatmentController extends Controller
         'outpatient-programs' => [
             'title' => 'Outpatient Treatment Programs',
             'meta_title' => 'Outpatient Rehab Programs Near You | RehabFlow',
-            'meta_desc' => 'Find flexible outpatient addiction treatment programs. Continue working while receiving care. Compare centers and verify insurance.',
+            'meta_desc' => 'Find flexible outpatient addiction childcare programs. Continue working while receiving care. Compare centers and verify insurance.',
             'hero_label' => 'Flexible Treatment',
             'duration' => '3-6 months',
             'cost' => '$5,000 - $10,000',

@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Drug & Alcohol Rehabilitation Centers — 21,000+ Verified | DaycareHub')
+@section('title', 'Licensed Daycare & Childcare Centers — 26,000+ Verified | DaycareHub')
 
-@section('meta_description', 'Search 21,000+ verified drug and alcohol rehab centers across the US. Filter by state, treatment type, and insurance accepted.')
+@section('meta_description', 'Search 26,000+ verified daycare and childcare daycare centers across the US. Filter by state, treatment type, and insurance accepted.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -19,8 +19,8 @@
 {
     "@@context": "https://schema.org",
     "@@type": "ItemList",
-    "name": "Rehabilitation Centers Directory",
-    "description": "Browse 21,000+ verified drug and alcohol rehabilitation centers across all 50 US states.",
+    "name": "Childcare Centers Directory",
+    "description": "Browse 26,000+ verified daycare and childcare childcare centers across all 50 US states.",
     "numberOfItems": {{ $facilities->total() ?? 0 }},
     "dateModified": "{{ now()->toIso8601String() }}",
     "itemListElement": [
@@ -46,9 +46,9 @@
     <!-- Header -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Rehabilitation Centers</h1>
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Childcare Centers</h1>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                Find the right rehabilitation center in your region.
+                Find the right childcare center in your region.
                 All facilities are verified and provide quality services.
             </p>
 

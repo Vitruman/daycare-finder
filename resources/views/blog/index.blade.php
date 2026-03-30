@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('meta_title', 'Recovery Blog — {{ $blogs->total() }} Expert Articles on Addiction Treatment | DaycareHub')
-@section('meta_description', 'Evidence-based articles on addiction recovery, treatment options, insurance coverage, and family support. Written by recovery specialists, updated weekly.')
+@section('meta_title', 'Recovery Blog — {{ $blogs->total() }} Expert Articles on Childcare | DaycareHub')
+@section('meta_description', 'Evidence-based articles on addiction recovery, treatment options, subsidy programs, and family support. Written by recovery specialists, updated weekly.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -60,7 +60,7 @@
             <span style="color:rgba(255,255,255,0.5)" class="mx-2">/</span>
             <span class="text-white">Blog</span>
         </nav>
-        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">Recovery Blog<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Expert Articles on Addiction Treatment</span></h1>
+        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">Recovery Blog<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Expert Articles on Childcare</span></h1>
         <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">Evidence-based articles on treatment, recovery, insurance, and family support. Reviewed by our editorial team, updated regularly.</p>
         <div style="display:flex;flex-wrap:wrap;gap:24px">
             <div style="display:flex;align-items:center;gap:8px">
@@ -250,7 +250,7 @@
                 <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center mb-3">
                     <span class="text-emerald-700 font-bold text-lg">1</span>
                 </div>
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">Choose a Rehab Center</h3>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">Choose a Daycare Center</h3>
                 <p class="text-gray-600 text-sm">7 factors to evaluate, red flags to avoid, and questions to ask before committing.</p>
             </a>
             <a href="/resources/what-to-expect-in-rehab" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
@@ -280,8 +280,8 @@
                 <h3 class="font-bold text-gray-900 mb-3 text-sm">Treatment Types</h3>
                 <div class="space-y-1.5 text-sm">
                     <a href="/treatment/inpatient-rehab" class="block text-gray-600 hover:text-emerald-600">Inpatient Rehab &rarr;</a>
-                    <a href="/treatment/outpatient-programs" class="block text-gray-600 hover:text-emerald-600">Outpatient &rarr;</a>
-                    <a href="/treatment/medical-detox" class="block text-gray-600 hover:text-emerald-600">Medical Detox &rarr;</a>
+                    <a href="/treatment/part-time-programs" class="block text-gray-600 hover:text-emerald-600">Outpatient &rarr;</a>
+                    <a href="/treatment/medical-infant care" class="block text-gray-600 hover:text-emerald-600">Medical Infant Care &rarr;</a>
                     <a href="/treatment/medication-assisted-treatment" class="block text-gray-600 hover:text-emerald-600">MAT &rarr;</a>
                     <a href="/treatment" class="block text-emerald-600 font-medium mt-1">All 7 programs &rarr;</a>
                 </div>
@@ -341,7 +341,7 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
         <div class="space-y-3">
-            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Who writes these articles?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">All articles are written by our editorial team with backgrounds in addiction treatment, behavioral health, and public health. Content is reviewed for accuracy before publication and updated regularly based on the latest research from SAMHSA, NIDA, and peer-reviewed sources.</div></details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Who writes these articles?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">All articles are written by our editorial team with backgrounds in childcare, behavioral health, and public health. Content is reviewed for accuracy before publication and updated regularly based on the latest research from SAMHSA, NIDA, and peer-reviewed sources.</div></details>
             <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How often is the blog updated?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">We publish new articles weekly and review existing content monthly. All articles display their publication and last-updated dates. If research or guidelines change, we update affected articles promptly.</div></details>
             <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Can I use this information to make treatment decisions?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Our articles are educational and should supplement — not replace — professional medical advice. For personalized treatment recommendations, we encourage speaking with a licensed professional or calling our helpline at <a href="tel:+18553213614" class="text-emerald-600 font-semibold">(855) 321-3614</a> for a free assessment.</div></details>
             <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Is the blog free to read?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Yes — 100% free, no registration required. We believe access to quality recovery information should never have a paywall.</div></details>

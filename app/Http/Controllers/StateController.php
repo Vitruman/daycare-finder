@@ -44,8 +44,22 @@ class StateController extends Controller
 
     public function show(string $state)
     {
-        $code = strtoupper($state);
-        $fullName = self::$stateNames[$code] ?? $code;
+        // Support slug (new-york) or code (ny / NY)
+        $input = strtolower(trim($state));
+        $code = null;
+        $upper = strtoupper($input);
+        if (isset(self::$stateNames[$upper])) {
+            $code = $upper;
+        } else {
+            foreach (self::$stateNames as $c => $n) {
+                if (strtolower(str_replace(' ', '-', $n)) === $input) {
+                    $code = $c;
+                    break;
+                }
+            }
+        }
+        if (!$code) abort(404);
+        $fullName = self::$stateNames[$code];
 
         $facilities = Organization::query()
             ->where('state', $code)
@@ -55,12 +69,13 @@ class StateController extends Controller
             'name' => $fullName,
             'code' => $code,
             'description' => null,
-            'image' => null,
+            'image' => self::$stateImages[$code] ?? null,
         ];
 
         return view('states.show', [
             'state' => $stateObject,
             'facilities' => $facilities,
+            'stateCode' => $code,
         ]);
     }
 }

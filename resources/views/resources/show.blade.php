@@ -6,7 +6,7 @@
 $readTime = max(5, intval(array_sum(array_map(fn($s) => str_word_count($s['text']), $guide['sections'])) / 200));
 $faqs = [
     ['q' => 'Is this guide free?', 'a' => 'Yes. All DaycareHub resources are 100% free and available to anyone. No registration or payment required.'],
-    ['q' => 'Who wrote this guide?', 'a' => 'This guide was written by the DaycareHub Editorial Team and reviewed by addiction treatment professionals. We follow evidence-based practices and cite authoritative sources including SAMHSA, NIDA, and NIH.'],
+    ['q' => 'Who wrote this guide?', 'a' => 'This guide was written by the DaycareHub Editorial Team and reviewed by childcare professionals. We follow evidence-based practices and cite authoritative sources including SAMHSA, NIDA, and NIH.'],
     ['q' => 'Can I share this with someone?', 'a' => 'Absolutely. We encourage sharing these resources with anyone who might benefit. Recovery affects entire families and communities — information is the first step.'],
 ];
 @endphp
@@ -122,9 +122,9 @@ $faqs = [
         <h2 class="text-xl font-bold text-gray-900 mb-6">Related resources</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
             @foreach([
-                ['Treatment Types', '/treatment', 'Compare inpatient, outpatient, detox, and more'],
-                ['Insurance Coverage', '/insurance', 'Verify if your plan covers treatment'],
-                ['Find Centers', '/facilities', 'Browse 21,000+ verified facilities'],
+                ['Treatment Types', '/treatment', 'Compare inpatient, part-time, infant care, and more'],
+                ['Subsidy Programs', '/insurance', 'Verify if your plan covers treatment'],
+                ['Find Centers', '/facilities', 'Browse 26,000+ verified facilities'],
                 ['Browse by State', '/states', 'Find treatment in your state'],
             ] as $link)
             <a href="{{ $link[1] }}" class="flex items-start gap-3 bg-white rounded-xl p-4 border border-gray-100 hover:border-emerald-200 hover:bg-emerald-50 transition-colors">
@@ -154,7 +154,7 @@ $faqs = [
 <section class="py-14 bg-emerald-700 text-white">
     <div class="max-w-3xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-4">Ready to take the next step?</h2>
-        <p class="text-emerald-100 mb-8 text-lg">Free, confidential guidance from addiction treatment specialists. Available 24/7.</p>
+        <p class="text-emerald-100 mb-8 text-lg">Free, confidential guidance from childcare specialists. Available 24/7.</p>
         <a href="tel:+18553213614" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             (855) 321-3614

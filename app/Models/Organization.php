@@ -183,10 +183,7 @@ class Organization extends Model
     {
         return $this->belongsToMany(WhoWeTreatCategory::class, 'org_who_we_treat', 'organization_id', 'category_id');
     }
-}
 
-// Note: Organization model reused for DaycareCenter
-// Additional daycare fields added via migration
     /**
      * Safety rating 1-5 based on violation rate
      */

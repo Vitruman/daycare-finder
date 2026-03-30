@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('meta_title', 'About DaycareHub — Free Addiction Treatment Directory | 17,000+ Centers')
-@section('meta_description', 'DaycareHub is a free, evidence-based platform connecting people with 17,000+ verified addiction treatment centers across all 50 US states. Learn about our mission, editorial standards, data sources, and commitment to unbiased information.')
+@section('meta_title', 'About DaycareHub — Free Childcare Directory | 17,000+ Centers')
+@section('meta_description', 'DaycareHub is a free, evidence-based platform connecting people with 17,000+ verified addiction daycare centers across all 50 US states. Learn about our mission, editorial standards, data sources, and commitment to unbiased information.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -20,13 +20,13 @@
     "@@type": "AboutPage",
     "name": "About DaycareHub",
     "url": "https://daycarehub.us/about",
-    "description": "Free online directory connecting individuals and families with evidence-based addiction treatment centers across the United States.",
+    "description": "Free online directory connecting individuals and families with evidence-based addiction daycare centers across the United States.",
     "publisher": {
         "@@type": "Organization",
         "name": "DaycareHub",
         "url": "https://daycarehub.us",
         "foundingDate": "2024",
-        "description": "Free addiction treatment directory with 17,000+ SAMHSA-verified centers across 50 US states.",
+        "description": "Free childcare directory with 17,000+ SAMHSA-verified centers across 50 US states.",
         "contactPoint": {
             "@@type": "ContactPoint",
             "telephone": "+1-855-321-3614",
@@ -44,10 +44,10 @@
     "@@context": "https://schema.org",
     "@@type": "FAQPage",
     "mainEntity": [
-        {"@@type": "Question", "name": "What is DaycareHub?", "acceptedAnswer": {"@@type": "Answer", "text": "DaycareHub is a free online platform that helps people find addiction treatment centers across the United States. Our directory includes 17,000+ SAMHSA-verified facilities searchable by location, treatment type, insurance, and specialty. We also provide evidence-based educational content on treatment types, substances, insurance coverage, and recovery strategies."}},
+        {"@@type": "Question", "name": "What is DaycareHub?", "acceptedAnswer": {"@@type": "Answer", "text": "DaycareHub is a free online platform that helps people find addiction daycare centers across the United States. Our directory includes 17,000+ SAMHSA-verified facilities searchable by location, treatment type, insurance, and specialty. We also provide evidence-based educational content on treatment types, substances, subsidy programs, and recovery strategies."}},
         {"@@type": "Question", "name": "Is DaycareHub free to use?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes, DaycareHub is completely free. Our directory, educational guides, and phone support line are all available at no cost. We believe access to quality treatment information should never be a barrier to getting help."}},
-        {"@@type": "Question", "name": "Where does DaycareHub get its data?", "acceptedAnswer": {"@@type": "Answer", "text": "Our treatment center data comes from SAMHSA's (Substance Abuse and Mental Health Services Administration) official National Directory of Drug and Alcohol Abuse Treatment Facilities. Medical and treatment information is sourced from NIDA, CDC, ASAM, and peer-reviewed research."}},
-        {"@@type": "Question", "name": "Does DaycareHub accept payment from treatment centers?", "acceptedAnswer": {"@@type": "Answer", "text": "No. We do not accept payment from treatment centers for favorable listings, reviews, or placement in our directory. Our data comes directly from SAMHSA's public database, ensuring complete objectivity and preventing conflicts of interest."}},
+        {"@@type": "Question", "name": "Where does DaycareHub get its data?", "acceptedAnswer": {"@@type": "Answer", "text": "Our treatment center data comes from SAMHSA's (Substance Abuse and Mental Health Services Administration) official National Directory of Childcare Abuse Treatment Facilities. Medical and treatment information is sourced from NIDA, CDC, ASAM, and peer-reviewed research."}},
+        {"@@type": "Question", "name": "Does DaycareHub accept payment from daycare centers?", "acceptedAnswer": {"@@type": "Answer", "text": "No. We do not accept payment from daycare centers for favorable listings, reviews, or placement in our directory. Our data comes directly from SAMHSA's public database, ensuring complete objectivity and preventing conflicts of interest."}},
         {"@@type": "Question", "name": "How can I contact DaycareHub?", "acceptedAnswer": {"@@type": "Answer", "text": "Call (855) 321-3614 for free, confidential guidance from treatment specialists, available 24/7. You can also reach us through our contact form at daycarehub.us/contact. Our team can help with treatment questions, insurance verification, and finding facilities in your area."}},
         {"@@type": "Question", "name": "Is my information kept private?", "acceptedAnswer": {"@@type": "Answer", "text": "Absolutely. All searches and interactions on DaycareHub are completely confidential. We use HTTPS encryption, do not require registration or personal information to use the site, and never share user data with third parties. Seeking help should never compromise your privacy."}}
     ]
@@ -73,7 +73,7 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white border-l-4 border-emerald-500 rounded-xl shadow-sm p-6 md:p-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About <span style="color:#065f46">DaycareHub</span></h1>
-            <p class="text-gray-700 text-lg leading-relaxed">DaycareHub is a <strong>free, evidence-based platform</strong> that connects people struggling with addiction to <strong>{{ number_format(\App\Models\Organization::count()) }}+ verified treatment centers</strong> across all 50 US states. We provide unbiased information — sourced from SAMHSA, NIDA, and CDC — to help individuals and families make informed decisions about care. <strong>No fees, no registration, no judgment.</strong></p>
+            <p class="text-gray-700 text-lg leading-relaxed">DaycareHub is a <strong>free, evidence-based platform</strong> that connects people struggling with addiction to <strong>{{ number_format(\App\Models\Organization::count()) }}+ verified daycare centers</strong> across all 50 US states. We provide unbiased information — sourced from SAMHSA, NIDA, and CDC — to help individuals and families make informed decisions about care. <strong>No fees, no registration, no judgment.</strong></p>
         </div>
     </div>
 </section>
@@ -133,7 +133,7 @@
             <div>
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
                 <p class="text-gray-600 mb-4">Every year, <strong>48.7 million Americans</strong> struggle with substance use disorders. Yet only 24% receive any form of treatment. The gap between needing help and finding it is filled with confusion, misinformation, and predatory marketing from unscrupulous facilities.</p>
-                <p class="text-gray-600 mb-4">DaycareHub exists to close that gap. We provide a comprehensive, searchable directory of SAMHSA-verified treatment centers, paired with expert-written educational content to help people make <strong>informed decisions</strong> about their care.</p>
+                <p class="text-gray-600 mb-4">DaycareHub exists to close that gap. We provide a comprehensive, searchable directory of SAMHSA-verified daycare centers, paired with expert-written educational content to help people make <strong>informed decisions</strong> about their care.</p>
                 <p class="text-gray-600">Our platform is and always will be <strong>free to use</strong>. We believe access to quality treatment information is a right, not a privilege.</p>
             </div>
             <div class="space-y-6">
@@ -174,7 +174,7 @@
 <section id="problem" class="py-14 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">The Problem We're Solving</h2>
-        <p class="text-gray-600 text-center max-w-3xl mx-auto mb-10">The addiction treatment landscape is broken. Here's what people face when trying to find help:</p>
+        <p class="text-gray-600 text-center max-w-3xl mx-auto mb-10">The childcare landscape is broken. Here's what people face when trying to find help:</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl p-6 border border-red-100">
@@ -202,7 +202,7 @@
                     </div>
                     <h3 class="font-bold text-gray-900">Cost Confusion</h3>
                 </div>
-                <p class="text-gray-600 text-sm">People don't know that most <a href="/insurance" class="text-emerald-600 hover:underline">insurance plans are required by law</a> to cover addiction treatment. Many pay out-of-pocket or avoid treatment entirely because they think they can't afford it.</p>
+                <p class="text-gray-600 text-sm">People don't know that most <a href="/insurance" class="text-emerald-600 hover:underline">insurance plans are required by law</a> to cover childcare. Many pay out-of-pocket or avoid treatment entirely because they think they can't afford it.</p>
             </div>
             <div class="bg-white rounded-xl p-6 border border-red-100">
                 <div class="flex items-center gap-3 mb-3">
@@ -245,7 +245,7 @@
                 </div>
                 <div class="pb-8">
                     <h3 class="font-bold text-gray-900 text-lg">Educate Yourself</h3>
-                    <p class="text-gray-600 text-sm mt-1">Read our in-depth guides on <a href="/treatment" class="text-emerald-600 hover:underline">treatment types</a> (inpatient, outpatient, detox, MAT, IOP, dual diagnosis, sober living), <a href="/addiction" class="text-emerald-600 hover:underline">substance-specific treatment</a>, and <a href="/insurance" class="text-emerald-600 hover:underline">insurance coverage</a>. Understand your options before making decisions.</p>
+                    <p class="text-gray-600 text-sm mt-1">Read our in-depth guides on <a href="/treatment" class="text-emerald-600 hover:underline">treatment types</a> (inpatient, part-time, infant care, MAT, IOP, dual diagnosis, sober living), <a href="/addiction" class="text-emerald-600 hover:underline">substance-specific treatment</a>, and <a href="/insurance" class="text-emerald-600 hover:underline">subsidy programs</a>. Understand your options before making decisions.</p>
                 </div>
             </div>
             <div class="flex gap-4">
@@ -344,14 +344,14 @@
                     <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
                     Editorial Review Process
                 </h3>
-                <p class="text-gray-600 text-sm">Content is written by specialists with backgrounds in addiction treatment, behavioral health, and public health. All articles undergo editorial review before publication and are updated monthly to reflect current research.</p>
+                <p class="text-gray-600 text-sm">Content is written by specialists with backgrounds in childcare, behavioral health, and public health. All articles undergo editorial review before publication and are updated monthly to reflect current research.</p>
             </div>
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
                 <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
                     Zero Bias Policy
                 </h3>
-                <p class="text-gray-600 text-sm">We do not accept payment from treatment centers for favorable listings, reviews, or placement. Our directory data comes directly from SAMHSA's public database. We have no financial relationships that could compromise our objectivity.</p>
+                <p class="text-gray-600 text-sm">We do not accept payment from daycare centers for favorable listings, reviews, or placement. Our directory data comes directly from SAMHSA's public database. We have no financial relationships that could compromise our objectivity.</p>
             </div>
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
                 <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
@@ -399,7 +399,7 @@
                     <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                 </div>
                 <h3 class="font-bold text-gray-900 mb-2">100% Confidential</h3>
-                <p class="text-gray-600 text-sm">All searches and interactions are private. We never share personal information with treatment centers or third parties.</p>
+                <p class="text-gray-600 text-sm">All searches and interactions are private. We never share personal information with daycare centers or third parties.</p>
             </div>
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 text-center">
                 <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
@@ -425,15 +425,15 @@
         <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Start Exploring</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a href="/facilities" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 mb-2">Find Treatment Centers</h3>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 mb-2">Find Daycare Centers</h3>
                 <p class="text-gray-600 text-sm">Search {{ number_format(\App\Models\Organization::count()) }}+ verified facilities across all 50 states by location, type, and insurance.</p>
             </a>
             <a href="/treatment" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
                 <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 mb-2">Compare Treatment Types</h3>
-                <p class="text-gray-600 text-sm">Understand the 7 levels of care: inpatient, outpatient, detox, MAT, IOP, dual diagnosis, and sober living.</p>
+                <p class="text-gray-600 text-sm">Understand the 7 levels of care: inpatient, part-time, infant care, MAT, IOP, dual diagnosis, and sober living.</p>
             </a>
             <a href="/insurance" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 mb-2">Check Insurance Coverage</h3>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 mb-2">Check Subsidy Programs</h3>
                 <p class="text-gray-600 text-sm">Verify benefits with 10 major providers. Learn about the Mental Health Parity Act and your rights.</p>
             </a>
         </div>
@@ -445,10 +445,10 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
         <div class="space-y-3">
-            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What is DaycareHub?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">DaycareHub is a free online platform that helps people find addiction treatment centers across the United States. Our <a href="/facilities" class="text-emerald-600 hover:underline">directory</a> includes {{ number_format(\App\Models\Organization::count()) }}+ SAMHSA-verified facilities searchable by location, treatment type, insurance, and specialty. We also provide evidence-based <a href="/resources" class="text-emerald-600 hover:underline">educational content</a> on treatment, substances, insurance, and recovery.</div></details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What is DaycareHub?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">DaycareHub is a free online platform that helps people find addiction daycare centers across the United States. Our <a href="/facilities" class="text-emerald-600 hover:underline">directory</a> includes {{ number_format(\App\Models\Organization::count()) }}+ SAMHSA-verified facilities searchable by location, treatment type, insurance, and specialty. We also provide evidence-based <a href="/resources" class="text-emerald-600 hover:underline">educational content</a> on treatment, substances, insurance, and recovery.</div></details>
             <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Is DaycareHub really free?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Yes — 100% free. Our directory, educational guides, <a href="/blog" class="text-emerald-600 hover:underline">blog</a>, and phone support line are all available at no cost with no registration required. We believe access to quality treatment information should never have a paywall.</div></details>
             <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Where does DaycareHub get its data?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Treatment center data comes from SAMHSA's official National Directory. Medical information is sourced from NIDA, CDC, ASAM, and peer-reviewed research. <a href="/insurance" class="text-emerald-600 hover:underline">Insurance coverage</a> information comes from CMS and individual provider documentation.</div></details>
-            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Do treatment centers pay to be listed?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">No. We do not accept payment from treatment centers for listings, reviews, or placement. Our data comes directly from SAMHSA's public database. This ensures complete objectivity and prevents the conflicts of interest common in the treatment referral industry.</div></details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Do daycare centers pay to be listed?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">No. We do not accept payment from daycare centers for listings, reviews, or placement. Our data comes directly from SAMHSA's public database. This ensures complete objectivity and prevents the conflicts of interest common in the treatment referral industry.</div></details>
             <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Is my information kept private?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Absolutely. All searches and interactions are confidential. We use HTTPS encryption, don't require registration or personal data, and never share information with third parties. Unlike many referral sites, we don't sell leads or user data.</div></details>
             <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How can I contact DaycareHub?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Call <a href="tel:+18553213614" class="text-emerald-600 font-semibold">(855) 321-3614</a> for free, confidential guidance from treatment specialists (available 24/7). You can also use our <a href="/contact" class="text-emerald-600 hover:underline">contact form</a>. Our team helps with treatment questions, insurance verification, and finding facilities.</div></details>
         </div>

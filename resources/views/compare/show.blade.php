@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('meta_title', $comparison['title'] . ': Side-by-Side Comparison (2026) | DaycareHub')
-@section('meta_description', 'Compare ' . $comparison['a']['name'] . ' vs ' . $comparison['b']['name'] . ': costs, duration, success rates, and insurance coverage. Find which is right for your situation.')
+@section('meta_description', 'Compare ' . $comparison['a']['name'] . ' vs ' . $comparison['b']['name'] . ': costs, duration, success rates, and subsidy programs. Find which is right for your situation.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -189,12 +189,12 @@
                 <p class="text-gray-500 text-xs mt-1">7 programs compared</p>
             </a>
             <a href="/insurance" class="group bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Insurance Coverage</h3>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Subsidy Programs</h3>
                 <p class="text-gray-500 text-xs mt-1">10 providers</p>
             </a>
             <a href="/facilities" class="group bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
                 <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Find Centers</h3>
-                <p class="text-gray-500 text-xs mt-1">21,000+ facilities</p>
+                <p class="text-gray-500 text-xs mt-1">26,000+ facilities</p>
             </a>
             <a href="/blog" class="group bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
                 <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Recovery Blog</h3>

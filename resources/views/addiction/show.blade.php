@@ -6,8 +6,8 @@
 $faqs = [
     ['q' => "What are the signs of {$substance['substance']} addiction?", 'a' => "Common signs include: " . implode('; ', array_slice($substance['signs'], 0, 4)) . ". If you recognize these signs in yourself or a loved one, professional help is available."],
     ['q' => "What is the best treatment for {$substance['substance']} addiction?", 'a' => "The most effective approach combines medical care with behavioral therapy. Options include: " . implode(', ', array_slice($substance['treatments'], 0, 4)) . ". The right treatment depends on addiction severity, health history, and individual needs."],
-    ['q' => "How long does {$substance['substance']} treatment take?", 'a' => "Treatment typically involves detox (3-10 days), followed by inpatient rehab (30-90 days) or outpatient programs (3-6 months). Research consistently shows that longer treatment (90+ days) leads to better long-term outcomes."],
-    ['q' => "Does insurance cover {$substance['substance']} addiction treatment?", 'a' => "Yes. Under the Mental Health Parity Act, most insurance plans must cover substance abuse treatment including detox, inpatient, outpatient, and medication-assisted treatment. Call (855) 321-3614 to verify your coverage."],
+    ['q' => "How long does {$substance['substance']} treatment take?", 'a' => "Treatment typically involves infant care (3-10 days), followed by full-time daycare (30-90 days) or part-time programs (3-6 months). Research consistently shows that longer treatment (90+ days) leads to better long-term outcomes."],
+    ['q' => "Does insurance cover {$substance['substance']} childcare?", 'a' => "Yes. Under the Mental Health Parity Act, most insurance plans must cover early childhood treatment including infant care, inpatient, part-time, and medication-assisted treatment. Call (855) 321-3614 to verify your coverage."],
     ['q' => "Can you recover from {$substance['substance']} addiction?", 'a' => "Yes. With proper treatment and ongoing support, lasting recovery is achievable. Treatment success rates are 40-60%, comparable to other chronic conditions. Many people maintain long-term sobriety after completing evidence-based treatment programs."],
 ];
 @endphp
@@ -100,13 +100,13 @@ $faqs = [
             <div>
                 <h3 class="text-lg font-bold text-gray-900 mb-4">Explore treatment types</h3>
                 <div class="flex flex-wrap gap-2">
-                    @foreach(['inpatient-rehab' => 'Inpatient', 'outpatient-programs' => 'Outpatient', 'medical-detox' => 'Detox', 'medication-assisted-treatment' => 'MAT', 'dual-diagnosis' => 'Dual Diagnosis', 'intensive-outpatient' => 'IOP', 'sober-living' => 'Sober Living'] as $ts => $tn)
+                    @foreach(['inpatient-rehab' => 'Inpatient', 'part-time-programs' => 'Outpatient', 'medical-infant care' => 'Infant Care', 'medication-assisted-treatment' => 'MAT', 'dual-diagnosis' => 'Dual Diagnosis', 'intensive-part-time' => 'IOP', 'sober-living' => 'Sober Living'] as $ts => $tn)
                     <a href="/treatment/{{ $ts }}" class="px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">{{ $tn }}</a>
                     @endforeach
                 </div>
             </div>
             <div>
-                <h3 class="text-lg font-bold text-gray-900 mb-4">Check insurance coverage</h3>
+                <h3 class="text-lg font-bold text-gray-900 mb-4">Check subsidy programs</h3>
                 <div class="flex flex-wrap gap-2">
                     @foreach(['aetna' => 'Aetna', 'bcbs' => 'BCBS', 'cigna' => 'Cigna', 'uhc' => 'UHC', 'medicaid' => 'Medicaid', 'medicare' => 'Medicare'] as $is => $in)
                     <a href="/insurance/{{ $is }}" class="px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">{{ $in }}</a>
@@ -138,7 +138,7 @@ $faqs = [
         <h3 class="text-lg font-bold text-gray-900 mb-4">Helpful resources</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             @foreach([
-                ['How to Choose a Rehab Center', '/resources/how-to-choose-rehab'],
+                ['How to Choose a Daycare Center', '/resources/how-to-choose-rehab'],
                 ['What to Expect in Rehab', '/resources/what-to-expect-in-rehab'],
                 ['Paying for Treatment', '/resources/paying-for-treatment'],
                 ['Relapse Prevention Guide', '/resources/relapse-prevention'],
@@ -156,7 +156,7 @@ $faqs = [
 <section class="py-14 bg-emerald-700 text-white">
     <div class="max-w-3xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-4">Get help for {{ strtolower($substance['substance']) }} addiction today</h2>
-        <p class="text-emerald-100 mb-8 text-lg">Free, confidential guidance to find the right treatment program. 21,000+ verified centers.</p>
+        <p class="text-emerald-100 mb-8 text-lg">Free, confidential guidance to find the right treatment program. 26,000+ verified centers.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+18553213614" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>

@@ -71,7 +71,7 @@
                         <div class="p-4 space-y-4">
                             <div class="flex items-center justify-between">
                                 <a href="{{ route('facilities.index') }}" class="text-sm font-semibold text-green-700 hover:text-green-800">
-                                    All Rehab Centers
+                                    All Daycare Centers
                                 </a>
                                 <a href="{{ route('states.index') }}" class="text-xs text-green-600 hover:text-green-700">
                                     View All →

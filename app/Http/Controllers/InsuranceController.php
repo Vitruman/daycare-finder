@@ -20,7 +20,7 @@ class InsuranceController extends Controller
             'coverage' => 'BCBS is the largest health insurer in America, covering 1 in 3 Americans. Most BCBS plans cover substance abuse treatment at various levels including medical detox, residential treatment, partial hospitalization, IOP, and outpatient therapy.',
             'plans' => ['BCBS PPO', 'BCBS HMO', 'Blue Cross Medicare', 'Federal Employee Program (FEP)', 'BCBS Marketplace Plans'],
             'covered_treatments' => ['Medical Detox', 'Inpatient/Residential', 'Partial Hospitalization (PHP)', 'Intensive Outpatient (IOP)', 'Outpatient Therapy', 'Medication-Assisted Treatment (MAT)', 'Psychiatric Services', 'Family Counseling'],
-            'how_to_verify' => ['Contact your local BCBS affiliate (each state has its own)', 'Ask for behavioral health substance abuse benefits', 'Verify in-network rehabilitation centers in your area', 'Ask about prior authorization for residential treatment', 'Confirm benefit limits, copays, and coinsurance', 'Or call RehabFlow at (855) 321-3614 — we verify for free'],
+            'how_to_verify' => ['Contact your local BCBS affiliate (each state has its own)', 'Ask for behavioral health substance abuse benefits', 'Verify in-network daycare centers in your area', 'Ask about prior authorization for residential treatment', 'Confirm benefit limits, copays, and coinsurance', 'Or call RehabFlow at (855) 321-3614 — we verify for free'],
         ],
         'cigna' => [
             'name' => 'Cigna',

@@ -37,7 +37,7 @@
 $faqs = [
     ['q' => "What is " . strtolower($treatment['title']) . "?", 'a' => $treatment['overview']],
     ['q' => "Who should consider " . strtolower($treatment['title']) . "?", 'a' => $treatment['who']],
-    ['q' => "How long does " . strtolower($treatment['title']) . " last?", 'a' => "Typical duration for " . strtolower($treatment['title']) . " is " . $treatment['duration'] . ". However, treatment length should be individualized based on clinical assessment, progress, and insurance coverage."],
+    ['q' => "How long does " . strtolower($treatment['title']) . " last?", 'a' => "Typical duration for " . strtolower($treatment['title']) . " is " . $treatment['duration'] . ". However, treatment length should be individualized based on clinical assessment, progress, and subsidy programs."],
     ['q' => "How much does " . strtolower($treatment['title']) . " cost?", 'a' => "The average cost is " . $treatment['cost'] . ". " . $treatment['insurance'] . ". Many facilities offer sliding-scale fees and payment plans. Call (855) 321-3614 to verify your specific coverage."],
     ['q' => "What is the success rate of " . strtolower($treatment['title']) . "?", 'a' => "Success rates for " . strtolower($treatment['title']) . " are approximately " . $treatment['success_rate'] . " for sustained recovery. Success improves with longer treatment duration, aftercare participation, and addressing co-occurring disorders."],
 ];
@@ -137,7 +137,7 @@ $faqs = [
     </div>
 </section>
 
-<!-- Insurance Coverage -->
+<!-- Subsidy Programs -->
 <section class="py-14 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">Insurance coverage for {{ strtolower($treatment['title']) }}</h2>
@@ -185,7 +185,7 @@ $faqs = [
 <section class="py-14 bg-emerald-700 text-white">
     <div class="max-w-3xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-4">Find {{ strtolower($treatment['title']) }} near you</h2>
-        <p class="text-emerald-100 mb-8 text-lg">We have 21,000+ verified facilities across all 50 states. Call for a free, confidential consultation.</p>
+        <p class="text-emerald-100 mb-8 text-lg">We have 26,000+ verified facilities across all 50 states. Call for a free, confidential consultation.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+18553213614" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>

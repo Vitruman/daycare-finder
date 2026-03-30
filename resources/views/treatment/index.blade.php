@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('meta_title', 'Types of Addiction Treatment Programs — Compare All Options | DaycareHub')
-@section('meta_description', 'Comprehensive guide to 7 evidence-based addiction treatment types: inpatient, outpatient, detox, MAT, IOP, dual diagnosis, sober living. Compare costs, duration, success rates, and find the right program.')
+@section('meta_title', 'Types of Childcare Programs — Compare All Options | DaycareHub')
+@section('meta_description', 'Comprehensive guide to 7 evidence-based childcare types: inpatient, part-time, infant care, MAT, IOP, dual diagnosis, sober living. Compare costs, duration, success rates, and find the right program.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -18,10 +18,10 @@
 {
     "@@context": "https://schema.org",
     "@@type": "MedicalWebPage",
-    "name": "Types of Addiction Treatment Programs",
+    "name": "Types of Childcare Programs",
     "url": "https://daycarehub.us/treatment",
     "dateModified": "{{ now()->toIso8601String() }}",
-    "description": "Comprehensive guide to evidence-based addiction treatment types including inpatient, outpatient, medical detox, MAT, IOP, dual diagnosis, and sober living.",
+    "description": "Comprehensive guide to evidence-based childcare types including inpatient, part-time, medical infant care, MAT, IOP, dual diagnosis, and sober living.",
     "lastReviewed": "{{ date('Y-m-d') }}",
     "reviewedBy": {
         "@@type": "Organization",
@@ -38,16 +38,16 @@
     "@@context": "https://schema.org",
     "@@type": "FAQPage",
     "mainEntity": [
-        {"@@type": "Question", "name": "What are the main types of addiction treatment?", "acceptedAnswer": {"@@type": "Answer", "text": "The 7 main types are: inpatient/residential (24/7 supervised care, 30-90 days), outpatient programs (flexible 3-6 month sessions), medical detox (3-10 days supervised withdrawal), intensive outpatient/IOP (9-20 hrs/week), medication-assisted treatment/MAT (ongoing with FDA-approved meds), dual diagnosis (integrated mental health + addiction), and sober living homes (3-12 months transitional housing)."}},
-        {"@@type": "Question", "name": "How do I choose the right treatment program?", "acceptedAnswer": {"@@type": "Answer", "text": "Consider 5 factors: (1) addiction severity and substance type, (2) co-occurring mental health conditions, (3) previous treatment history, (4) home environment stability, and (5) insurance coverage. ASAM criteria provide a standardized framework clinicians use to match patients to appropriate care levels."}},
-        {"@@type": "Question", "name": "Does insurance cover addiction treatment?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Under the Mental Health Parity and Addiction Equity Act (MHPAEA) and the Affordable Care Act, most insurance plans must cover substance use disorder treatment at the same level as physical health conditions. This includes detox, inpatient, outpatient, and MAT programs."}},
-        {"@@type": "Question", "name": "How long does addiction treatment take?", "acceptedAnswer": {"@@type": "Answer", "text": "Duration varies by program type: medical detox 3-10 days, inpatient 30-90 days, IOP 2-4 months, outpatient 3-6 months, sober living 3-12 months. NIDA research shows that 90+ days of combined treatment produces the best long-term outcomes."}},
-        {"@@type": "Question", "name": "What is the success rate of addiction treatment?", "acceptedAnswer": {"@@type": "Answer", "text": "Treatment success rates range from 40-60% for sustained recovery, comparable to other chronic diseases. Inpatient programs show 40-60%, MAT achieves 60-75% retention, and IOP ranges 35-55%. Success improves significantly with treatment lasting 90+ days, aftercare, and family involvement."}},
-        {"@@type": "Question", "name": "What is the difference between inpatient and outpatient rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Inpatient rehab requires living at the facility 24/7 for 30-90 days with constant medical supervision, costing $15,000-$30,000. Outpatient allows living at home while attending sessions 2-5 times per week for 3-6 months, costing $5,000-$10,000. Inpatient is better for severe addiction; outpatient suits mild-moderate cases with stable home environments."}},
-        {"@@type": "Question", "name": "Can I work while in addiction treatment?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes, with outpatient programs and IOP. Outpatient offers flexible scheduling (evening and weekend sessions), and IOP provides 9-20 hours per week with morning, afternoon, or evening tracks. Inpatient and residential programs require full-time commitment. The FMLA may protect your job for up to 12 weeks for treatment."}},
+        {"@@type": "Question", "name": "What are the main types of childcare?", "acceptedAnswer": {"@@type": "Answer", "text": "The 7 main types are: inpatient/residential (24/7 supervised care, 30-90 days), part-time programs (flexible 3-6 month sessions), medical infant care (3-10 days supervised withdrawal), intensive part-time/IOP (9-20 hrs/week), medication-assisted treatment/MAT (ongoing with FDA-approved meds), dual diagnosis (integrated mental health + addiction), and sober living homes (3-12 months transitional housing)."}},
+        {"@@type": "Question", "name": "How do I choose the right treatment program?", "acceptedAnswer": {"@@type": "Answer", "text": "Consider 5 factors: (1) addiction severity and substance type, (2) co-occurring mental health conditions, (3) previous treatment history, (4) home environment stability, and (5) subsidy programs. ASAM criteria provide a standardized framework clinicians use to match patients to appropriate care levels."}},
+        {"@@type": "Question", "name": "Does insurance cover childcare?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Under the Mental Health Parity and Addiction Equity Act (MHPAEA) and the Affordable Care Act, most insurance plans must cover substance use disorder treatment at the same level as physical health conditions. This includes infant care, inpatient, part-time, and MAT programs."}},
+        {"@@type": "Question", "name": "How long does childcare take?", "acceptedAnswer": {"@@type": "Answer", "text": "Duration varies by program type: medical infant care 3-10 days, inpatient 30-90 days, IOP 2-4 months, part-time 3-6 months, sober living 3-12 months. NIDA research shows that 90+ days of combined treatment produces the best long-term outcomes."}},
+        {"@@type": "Question", "name": "What is the success rate of childcare?", "acceptedAnswer": {"@@type": "Answer", "text": "Treatment success rates range from 40-60% for sustained recovery, comparable to other chronic diseases. Inpatient programs show 40-60%, MAT achieves 60-75% retention, and IOP ranges 35-55%. Success improves significantly with treatment lasting 90+ days, aftercare, and family involvement."}},
+        {"@@type": "Question", "name": "What is the difference between inpatient and part-time rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Inpatient rehab requires living at the facility 24/7 for 30-90 days with constant medical supervision, costing $15,000-$30,000. Outpatient allows living at home while attending sessions 2-5 times per week for 3-6 months, costing $5,000-$10,000. Inpatient is better for severe addiction; part-time suits mild-moderate cases with stable home environments."}},
+        {"@@type": "Question", "name": "Can I work while in childcare?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes, with part-time programs and IOP. Outpatient offers flexible scheduling (evening and weekend sessions), and IOP provides 9-20 hours per week with morning, afternoon, or evening tracks. Inpatient and residential programs require full-time commitment. The FMLA may protect your job for up to 12 weeks for treatment."}},
         {"@@type": "Question", "name": "What is MAT and is it effective?", "acceptedAnswer": {"@@type": "Answer", "text": "Medication-Assisted Treatment combines FDA-approved medications (buprenorphine/Suboxone, methadone, naltrexone/Vivitrol) with counseling. It reduces opioid overdose deaths by 50%, improves treatment retention by 60-75%, and decreases illicit drug use. MAT is the gold standard for opioid use disorder per SAMHSA and WHO guidelines."}},
         {"@@type": "Question", "name": "What happens after treatment is complete?", "acceptedAnswer": {"@@type": "Answer", "text": "Aftercare typically includes: step-down to a lower level of care (e.g., inpatient to IOP), sober living housing, ongoing individual or group therapy, 12-step or SMART Recovery meetings, alumni programs, and regular check-ins. A strong aftercare plan reduces relapse risk by up to 50%."}},
-        {"@@type": "Question", "name": "How much does addiction treatment cost without insurance?", "acceptedAnswer": {"@@type": "Answer", "text": "Costs without insurance: medical detox $3,000-$10,000, inpatient $15,000-$30,000+ for 30 days, IOP $5,000-$12,000, outpatient $5,000-$10,000, sober living $500-$3,000/month, MAT $5,000-$15,000/year. Many facilities offer sliding-scale fees, payment plans, scholarships, and state-funded programs for those without coverage."}}
+        {"@@type": "Question", "name": "How much does childcare cost without insurance?", "acceptedAnswer": {"@@type": "Answer", "text": "Costs without insurance: medical infant care $3,000-$10,000, inpatient $15,000-$30,000+ for 30 days, IOP $5,000-$12,000, part-time $5,000-$10,000, sober living $500-$3,000/month, MAT $5,000-$15,000/year. Many facilities offer sliding-scale fees, payment plans, scholarships, and state-funded programs for those without coverage."}}
     ]
 }
 </script>
@@ -69,8 +69,8 @@
             <span style="color:rgba(255,255,255,0.5)" class="mx-2">/</span>
             <span class="text-white">Treatment Programs</span>
         </nav>
-        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">Addiction Treatment Programs<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Evidence-Based Recovery Options</span></h1>
-        <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">7 types of treatment compared: costs, duration, success rates, insurance coverage. Find the right program for your situation.</p>
+        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">Childcare Programs<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Evidence-Based Recovery Options</span></h1>
+        <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">7 types of treatment compared: costs, duration, success rates, subsidy programs. Find the right program for your situation.</p>
         <div style="display:flex;flex-wrap:wrap;gap:24px">
             <div style="display:flex;align-items:center;gap:8px">
                 <div style="width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
@@ -115,7 +115,7 @@
             <div class="px-4 pb-4">
                 <ol class="grid grid-cols-1 md:grid-cols-2 gap-1 text-sm">
                     <li><a href="#programs" class="text-emerald-700 hover:underline py-1 block">1. Treatment Programs Overview</a></li>
-                    <li><a href="#stats" class="text-emerald-700 hover:underline py-1 block">2. Addiction Treatment Statistics</a></li>
+                    <li><a href="#stats" class="text-emerald-700 hover:underline py-1 block">2. Childcare Statistics</a></li>
                     <li><a href="#levels-of-care" class="text-emerald-700 hover:underline py-1 block">3. Understanding Levels of Care (ASAM)</a></li>
                     <li><a href="#comparison" class="text-emerald-700 hover:underline py-1 block">4. Side-by-Side Comparison</a></li>
                     <li><a href="#choosing" class="text-emerald-700 hover:underline py-1 block">5. How to Choose the Right Program</a></li>
@@ -144,7 +144,7 @@
             </div>
             <div>
                 <div class="text-3xl md:text-4xl font-bold">40-60%</div>
-                <div class="text-emerald-200 text-sm mt-1">Recovery success rate<sup class="cursor-help" title="NIDA Principles of Drug Addiction Treatment">2</sup></div>
+                <div class="text-emerald-200 text-sm mt-1">Recovery success rate<sup class="cursor-help" title="NIDA Principles of Drug Childcare">2</sup></div>
             </div>
             <div>
                 <div class="text-3xl md:text-4xl font-bold">17,000+</div>
@@ -159,7 +159,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900">7 Evidence-Based Treatment Programs</h2>
-            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Each program serves a specific need in the recovery journey. Many people progress through multiple levels of care — starting with detox and stepping down through less intensive programs.</p>
+            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">Each program serves a specific need in the recovery journey. Many people progress through multiple levels of care — starting with infant care and stepping down through less intensive programs.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -216,15 +216,15 @@
                 <!-- Level 1 -->
                 <div class="md:pl-8">
                     <div class="inline-block px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold mb-2">Level 1</div>
-                    <h3 class="font-bold text-gray-900"><a href="/treatment/outpatient-programs" class="hover:text-emerald-700">Outpatient Treatment</a></h3>
+                    <h3 class="font-bold text-gray-900"><a href="/treatment/part-time-programs" class="hover:text-emerald-700">Outpatient Treatment</a></h3>
                     <p class="text-gray-600 text-sm mt-1">Less than 9 hours/week of structured programming. Individual and group therapy while maintaining daily life. Suitable for mild substance use disorders with strong social support.</p>
                 </div>
 
                 <!-- Level 2.1 -->
                 <div class="md:text-right md:pr-8">
                     <div class="inline-block px-2 py-0.5 rounded bg-emerald-200 text-emerald-800 text-xs font-bold mb-2">Level 2.1</div>
-                    <h3 class="font-bold text-gray-900"><a href="/treatment/intensive-outpatient" class="hover:text-emerald-700">Intensive Outpatient (IOP)</a></h3>
-                    <p class="text-gray-600 text-sm mt-1">9-20 hours/week of structured programming. Group therapy 3-5 days per week plus individual sessions. Step-down from residential or step-up from standard outpatient.</p>
+                    <h3 class="font-bold text-gray-900"><a href="/treatment/intensive-part-time" class="hover:text-emerald-700">Intensive Outpatient (IOP)</a></h3>
+                    <p class="text-gray-600 text-sm mt-1">9-20 hours/week of structured programming. Group therapy 3-5 days per week plus individual sessions. Step-down from residential or step-up from standard part-time.</p>
                 </div>
                 <div class="hidden md:block"></div>
 
@@ -248,7 +248,7 @@
                 <!-- Level 3.7-4 -->
                 <div class="md:pl-8">
                     <div class="inline-block px-2 py-0.5 rounded bg-red-100 text-red-800 text-xs font-bold mb-2">Level 3.7-4</div>
-                    <h3 class="font-bold text-gray-900"><a href="/treatment/medical-detox" class="hover:text-emerald-700">Medically Managed Intensive</a></h3>
+                    <h3 class="font-bold text-gray-900"><a href="/treatment/medical-infant care" class="hover:text-emerald-700">Medically Managed Intensive</a></h3>
                     <p class="text-gray-600 text-sm mt-1">Hospital-level care for severe withdrawal and acute medical conditions. 24-hour nursing, physician-directed care, medication management. Required for alcohol, benzodiazepine, and severe opioid withdrawal.</p>
                 </div>
             </div>
@@ -284,7 +284,7 @@
                 </thead>
                 <tbody>
                     <tr class="border-t border-gray-100 hover:bg-gray-50">
-                        <td class="py-3 px-4"><a href="/treatment/medical-detox" class="text-emerald-700 font-medium hover:underline">Medical Detox</a></td>
+                        <td class="py-3 px-4"><a href="/treatment/medical-infant care" class="text-emerald-700 font-medium hover:underline">Medical Infant Care</a></td>
                         <td class="py-3 px-4 text-center"><span class="px-2 py-0.5 bg-red-50 text-red-700 rounded text-xs font-bold">3.7-4</span></td>
                         <td class="py-3 px-4 text-center text-gray-600">3-10 days</td>
                         <td class="py-3 px-4 text-center text-gray-600">$3K-$10K</td>
@@ -308,7 +308,7 @@
                         <td class="py-3 px-4 text-center font-medium text-emerald-700">45-65%</td>
                     </tr>
                     <tr class="border-t border-gray-100 hover:bg-gray-50">
-                        <td class="py-3 px-4"><a href="/treatment/intensive-outpatient" class="text-emerald-700 font-medium hover:underline">IOP</a></td>
+                        <td class="py-3 px-4"><a href="/treatment/intensive-part-time" class="text-emerald-700 font-medium hover:underline">IOP</a></td>
                         <td class="py-3 px-4 text-center"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-xs font-bold">2.1</span></td>
                         <td class="py-3 px-4 text-center text-gray-600">2-4 months</td>
                         <td class="py-3 px-4 text-center text-gray-600">$5K-$12K</td>
@@ -316,7 +316,7 @@
                         <td class="py-3 px-4 text-center font-medium text-emerald-700">35-55%</td>
                     </tr>
                     <tr class="border-t border-gray-100 hover:bg-gray-50">
-                        <td class="py-3 px-4"><a href="/treatment/outpatient-programs" class="text-emerald-700 font-medium hover:underline">Outpatient</a></td>
+                        <td class="py-3 px-4"><a href="/treatment/part-time-programs" class="text-emerald-700 font-medium hover:underline">Outpatient</a></td>
                         <td class="py-3 px-4 text-center"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-xs font-bold">1</span></td>
                         <td class="py-3 px-4 text-center text-gray-600">3-6 months</td>
                         <td class="py-3 px-4 text-center text-gray-600">$5K-$10K</td>
@@ -388,7 +388,7 @@
                     <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
                 </div>
                 <h3 class="font-bold text-gray-900 mb-2">Addiction Severity</h3>
-                <p class="text-gray-600 text-sm">Mild use disorders may respond well to outpatient care. Severe physical dependence (especially alcohol, benzodiazepines, opioids) typically requires medical detox followed by residential treatment.</p>
+                <p class="text-gray-600 text-sm">Mild use disorders may respond well to part-time care. Severe physical dependence (especially alcohol, benzodiazepines, opioids) typically requires medical infant care followed by residential treatment.</p>
             </div>
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
                 <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mb-3">
@@ -402,7 +402,7 @@
                     <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                 </div>
                 <h3 class="font-bold text-gray-900 mb-2">Treatment History</h3>
-                <p class="text-gray-600 text-sm">Previous attempts that didn't work signal that a higher level of care may be needed. Someone who relapsed after outpatient may benefit from inpatient or a longer treatment duration (90+ days).</p>
+                <p class="text-gray-600 text-sm">Previous attempts that didn't work signal that a higher level of care may be needed. Someone who relapsed after part-time may benefit from inpatient or a longer treatment duration (90+ days).</p>
             </div>
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
                 <div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center mb-3">
@@ -423,7 +423,7 @@
                     <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                 </div>
                 <h3 class="font-bold text-emerald-800 mb-2">The Continuum Approach</h3>
-                <p class="text-emerald-700 text-sm">Most successful recoveries involve <strong>multiple levels of care</strong>: Detox → Inpatient → IOP → Outpatient → Sober Living. Each step down maintains support while building independence. 90+ days total produces the best outcomes.</p>
+                <p class="text-emerald-700 text-sm">Most successful recoveries involve <strong>multiple levels of care</strong>: Infant Care → Inpatient → IOP → Outpatient → Sober Living. Each step down maintains support while building independence. 90+ days total produces the best outcomes.</p>
             </div>
         </div>
     </div>
@@ -440,7 +440,7 @@
                 <h3 class="font-bold text-gray-900 mb-4">Average Costs by Program Type</h3>
                 <div class="space-y-3">
                     <div class="flex justify-between items-center py-2 border-b border-gray-200">
-                        <span class="text-gray-700">Medical Detox</span>
+                        <span class="text-gray-700">Medical Infant Care</span>
                         <span class="font-semibold text-gray-900">$3,000 - $10,000</span>
                     </div>
                     <div class="flex justify-between items-center py-2 border-b border-gray-200">
@@ -477,7 +477,7 @@
                             <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
                         </div>
                         <div>
-                            <p class="font-semibold text-gray-900">Insurance Coverage</p>
+                            <p class="font-semibold text-gray-900">Subsidy Programs</p>
                             <p class="text-gray-600 text-sm">Most plans cover treatment under the Mental Health Parity Act. <a href="/insurance" class="text-emerald-600 hover:underline">Verify your benefits &rarr;</a></p>
                         </div>
                     </div>
@@ -514,7 +514,7 @@
                         </div>
                         <div>
                             <p class="font-semibold text-gray-900">Medicaid & Medicare</p>
-                            <p class="text-gray-600 text-sm">Both programs cover substance abuse treatment. <a href="/insurance/medicaid" class="text-emerald-600 hover:underline">Medicaid</a> and <a href="/insurance/medicare" class="text-emerald-600 hover:underline">Medicare</a> information.</p>
+                            <p class="text-gray-600 text-sm">Both programs cover early childhood treatment. <a href="/insurance/medicaid" class="text-emerald-600 hover:underline">Medicaid</a> and <a href="/insurance/medicare" class="text-emerald-600 hover:underline">Medicare</a> information.</p>
                         </div>
                     </div>
                 </div>
@@ -546,8 +546,8 @@
                     <div class="w-0.5 bg-gray-200 flex-1 mt-1"></div>
                 </div>
                 <div class="pb-8">
-                    <h3 class="font-bold text-gray-900"><a href="/treatment/medical-detox" class="hover:text-emerald-700">Detoxification (Days 1-10)</a></h3>
-                    <p class="text-gray-600 text-sm mt-1">Medically supervised withdrawal management with FDA-approved medications for comfort and safety. 24/7 monitoring of vital signs. Critical for alcohol, opioids, and benzodiazepines where withdrawal can be life-threatening. <em>Detox alone is not treatment — it is preparation for treatment.</em></p>
+                    <h3 class="font-bold text-gray-900"><a href="/treatment/medical-infant care" class="hover:text-emerald-700">Infant Careification (Days 1-10)</a></h3>
+                    <p class="text-gray-600 text-sm mt-1">Medically supervised withdrawal management with FDA-approved medications for comfort and safety. 24/7 monitoring of vital signs. Critical for alcohol, opioids, and benzodiazepines where withdrawal can be life-threatening. <em>Infant Care alone is not treatment — it is preparation for treatment.</em></p>
                 </div>
             </div>
             <div class="flex gap-4">
@@ -557,7 +557,7 @@
                 </div>
                 <div class="pb-8">
                     <h3 class="font-bold text-gray-900"><a href="/treatment/inpatient-rehab" class="hover:text-emerald-700">Primary Treatment (Weeks 2-12)</a></h3>
-                    <p class="text-gray-600 text-sm mt-1">The core therapeutic phase. Daily schedule includes individual therapy (CBT, DBT, EMDR), group counseling, psychoeducation, family sessions, and wellness activities. Residential programs provide 24/7 structure; outpatient programs offer similar therapies while living at home.</p>
+                    <p class="text-gray-600 text-sm mt-1">The core therapeutic phase. Daily schedule includes individual therapy (CBT, DBT, EMDR), group counseling, psychoeducation, family sessions, and wellness activities. Residential programs provide 24/7 structure; part-time programs offer similar therapies while living at home.</p>
                 </div>
             </div>
             <div class="flex gap-4">
@@ -566,8 +566,8 @@
                     <div class="w-0.5 bg-gray-200 flex-1 mt-1"></div>
                 </div>
                 <div class="pb-8">
-                    <h3 class="font-bold text-gray-900"><a href="/treatment/intensive-outpatient" class="hover:text-emerald-700">Step-Down Care (Months 3-6)</a></h3>
-                    <p class="text-gray-600 text-sm mt-1">Transition to IOP or outpatient programming. 9-20 hours/week stepping down to 2-5 sessions. Focus shifts to relapse prevention skills, real-world coping strategies, and rebuilding daily routines. Many individuals move to sober living during this phase.</p>
+                    <h3 class="font-bold text-gray-900"><a href="/treatment/intensive-part-time" class="hover:text-emerald-700">Step-Down Care (Months 3-6)</a></h3>
+                    <p class="text-gray-600 text-sm mt-1">Transition to IOP or part-time programming. 9-20 hours/week stepping down to 2-5 sessions. Focus shifts to relapse prevention skills, real-world coping strategies, and rebuilding daily routines. Many individuals move to sober living during this phase.</p>
                 </div>
             </div>
             <div class="flex gap-4">
@@ -588,9 +588,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
-                <h2 class="text-xl font-bold text-gray-900 mb-4">Insurance Coverage for Treatment</h2>
-                <p class="text-gray-600 text-sm mb-2">Under federal parity laws, insurance must cover substance abuse treatment at the same level as physical health conditions. Most plans cover all levels of care from detox through outpatient.</p>
-                <p class="text-gray-600 text-sm mb-4"><a href="/insurance" class="text-emerald-600 font-semibold hover:underline">Verify your insurance coverage &rarr;</a></p>
+                <h2 class="text-xl font-bold text-gray-900 mb-4">Subsidy Programs for Treatment</h2>
+                <p class="text-gray-600 text-sm mb-2">Under federal parity laws, insurance must cover early childhood treatment at the same level as physical health conditions. Most plans cover all levels of care from infant care through part-time.</p>
+                <p class="text-gray-600 text-sm mb-4"><a href="/insurance" class="text-emerald-600 font-semibold hover:underline">Verify your subsidy programs &rarr;</a></p>
                 <div class="flex flex-wrap gap-2">
                     @foreach(['aetna', 'bcbs', 'cigna', 'uhc', 'anthem', 'humana', 'kaiser', 'medicaid', 'medicare', 'tricare'] as $ins)
                     <a href="{{ route('insurance.show', $ins) }}" class="px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">{{ ucfirst($ins) }}</a>
@@ -599,7 +599,7 @@
             </div>
             <div>
                 <h2 class="text-xl font-bold text-gray-900 mb-4">Find Treatment by State</h2>
-                <p class="text-gray-600 text-sm mb-4">Browse SAMHSA-certified treatment centers in your state. Our directory includes 17,000+ verified facilities across all 50 states.</p>
+                <p class="text-gray-600 text-sm mb-4">Browse SAMHSA-certified daycare centers in your state. Our directory includes 17,000+ verified facilities across all 50 states.</p>
                 <div class="flex flex-wrap gap-2">
                     @foreach(['CA', 'TX', 'FL', 'NY', 'PA', 'IL', 'OH', 'GA', 'NC', 'MI', 'NJ', 'AZ'] as $st)
                     <a href="{{ route('states.show', strtolower($st)) }}" class="px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">{{ $st }}</a>
@@ -620,7 +620,7 @@
                 <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-3">
                     <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                 </div>
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors">How to Choose a Rehab Center</h3>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors">How to Choose a Daycare Center</h3>
                 <p class="text-gray-600 text-sm mt-2">Step-by-step guide to evaluating facilities, asking the right questions, and finding quality care.</p>
             </a>
             <a href="/resources/what-to-expect-in-rehab" class="group bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
@@ -647,28 +647,28 @@
         <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
         <div class="space-y-3">
             <details class="group bg-white rounded-xl border border-gray-100">
-                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What are the main types of addiction treatment?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-                <div class="px-5 pb-5 text-gray-600">The 7 main types are: <a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">inpatient/residential</a> (24/7 supervised care), <a href="/treatment/outpatient-programs" class="text-emerald-600 hover:underline">outpatient</a> (flexible scheduling), <a href="/treatment/medical-detox" class="text-emerald-600 hover:underline">medical detox</a> (supervised withdrawal), <a href="/treatment/intensive-outpatient" class="text-emerald-600 hover:underline">intensive outpatient (IOP)</a>, <a href="/treatment/medication-assisted-treatment" class="text-emerald-600 hover:underline">medication-assisted treatment (MAT)</a>, <a href="/treatment/dual-diagnosis" class="text-emerald-600 hover:underline">dual diagnosis</a>, and <a href="/treatment/sober-living" class="text-emerald-600 hover:underline">sober living homes</a>.</div>
+                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What are the main types of childcare?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                <div class="px-5 pb-5 text-gray-600">The 7 main types are: <a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">inpatient/residential</a> (24/7 supervised care), <a href="/treatment/part-time-programs" class="text-emerald-600 hover:underline">part-time</a> (flexible scheduling), <a href="/treatment/medical-infant care" class="text-emerald-600 hover:underline">medical infant care</a> (supervised withdrawal), <a href="/treatment/intensive-part-time" class="text-emerald-600 hover:underline">intensive part-time (IOP)</a>, <a href="/treatment/medication-assisted-treatment" class="text-emerald-600 hover:underline">medication-assisted treatment (MAT)</a>, <a href="/treatment/dual-diagnosis" class="text-emerald-600 hover:underline">dual diagnosis</a>, and <a href="/treatment/sober-living" class="text-emerald-600 hover:underline">sober living homes</a>.</div>
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
                 <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How do I choose the right treatment program?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-                <div class="px-5 pb-5 text-gray-600">Consider 5 key factors: (1) addiction severity and substance type, (2) co-occurring mental health conditions, (3) previous treatment history, (4) home environment stability, and (5) <a href="/insurance" class="text-emerald-600 hover:underline">insurance coverage</a>. ASAM criteria provide a standardized framework clinicians use to match patients to the appropriate level of care. Call <a href="tel:+18553213614" class="text-emerald-600 font-semibold">(855) 321-3614</a> for a free assessment.</div>
+                <div class="px-5 pb-5 text-gray-600">Consider 5 key factors: (1) addiction severity and substance type, (2) co-occurring mental health conditions, (3) previous treatment history, (4) home environment stability, and (5) <a href="/insurance" class="text-emerald-600 hover:underline">subsidy programs</a>. ASAM criteria provide a standardized framework clinicians use to match patients to the appropriate level of care. Call <a href="tel:+18553213614" class="text-emerald-600 font-semibold">(855) 321-3614</a> for a free assessment.</div>
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
-                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What is the difference between inpatient and outpatient rehab?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-                <div class="px-5 pb-5 text-gray-600"><a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">Inpatient rehab</a> requires living at the facility 24/7 for 30-90 days ($15,000-$30,000) with constant medical supervision. <a href="/treatment/outpatient-programs" class="text-emerald-600 hover:underline">Outpatient</a> allows living at home while attending sessions 2-5 times per week ($5,000-$10,000). Inpatient is better for severe addiction or unstable home environments; outpatient suits mild-moderate cases with strong support systems.</div>
+                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What is the difference between inpatient and part-time rehab?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                <div class="px-5 pb-5 text-gray-600"><a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">Inpatient rehab</a> requires living at the facility 24/7 for 30-90 days ($15,000-$30,000) with constant medical supervision. <a href="/treatment/part-time-programs" class="text-emerald-600 hover:underline">Outpatient</a> allows living at home while attending sessions 2-5 times per week ($5,000-$10,000). Inpatient is better for severe addiction or unstable home environments; part-time suits mild-moderate cases with strong support systems.</div>
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
-                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Does insurance cover addiction treatment?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-                <div class="px-5 pb-5 text-gray-600">Yes. Under the <a href="/insurance" class="text-emerald-600 hover:underline">Mental Health Parity and Addiction Equity Act</a>, most insurance plans must cover substance use disorder treatment at the same level as physical health conditions. This includes detox, inpatient, outpatient, IOP, and MAT. Verify your specific coverage with our <a href="/insurance" class="text-emerald-600 hover:underline">insurance guide</a>.</div>
+                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Does insurance cover childcare?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                <div class="px-5 pb-5 text-gray-600">Yes. Under the <a href="/insurance" class="text-emerald-600 hover:underline">Mental Health Parity and Addiction Equity Act</a>, most insurance plans must cover substance use disorder treatment at the same level as physical health conditions. This includes infant care, inpatient, part-time, IOP, and MAT. Verify your specific coverage with our <a href="/insurance" class="text-emerald-600 hover:underline">insurance guide</a>.</div>
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
-                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Can I work while in addiction treatment?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-                <div class="px-5 pb-5 text-gray-600">Yes, with <a href="/treatment/outpatient-programs" class="text-emerald-600 hover:underline">outpatient</a> and <a href="/treatment/intensive-outpatient" class="text-emerald-600 hover:underline">IOP programs</a>. Both offer evening and weekend sessions designed for working adults. The Family and Medical Leave Act (FMLA) also protects your job for up to 12 weeks if you need inpatient treatment. Many employers' EAP programs also provide confidential referrals.</div>
+                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Can I work while in childcare?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                <div class="px-5 pb-5 text-gray-600">Yes, with <a href="/treatment/part-time-programs" class="text-emerald-600 hover:underline">part-time</a> and <a href="/treatment/intensive-part-time" class="text-emerald-600 hover:underline">IOP programs</a>. Both offer evening and weekend sessions designed for working adults. The Family and Medical Leave Act (FMLA) also protects your job for up to 12 weeks if you need inpatient treatment. Many employers' EAP programs also provide confidential referrals.</div>
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
-                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How long does addiction treatment take?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-                <div class="px-5 pb-5 text-gray-600">Duration varies: detox 3-10 days, inpatient 30-90 days, IOP 2-4 months, outpatient 3-6 months, sober living 3-12 months. NIDA research shows that <strong>90+ days of combined treatment</strong> significantly improves long-term outcomes. Most successful recoveries involve multiple levels of care in sequence.</div>
+                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How long does childcare take?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                <div class="px-5 pb-5 text-gray-600">Duration varies: infant care 3-10 days, inpatient 30-90 days, IOP 2-4 months, part-time 3-6 months, sober living 3-12 months. NIDA research shows that <strong>90+ days of combined treatment</strong> significantly improves long-term outcomes. Most successful recoveries involve multiple levels of care in sequence.</div>
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
                 <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What is MAT and is it effective?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
@@ -680,10 +680,10 @@
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
                 <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How much does treatment cost without insurance?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
-                <div class="px-5 pb-5 text-gray-600">Costs vary widely: detox $3,000-$10,000, inpatient $15,000-$30,000+ for 30 days, IOP $5,000-$12,000, outpatient $5,000-$10,000, sober living $500-$3,000/month. Many facilities offer sliding-scale fees, payment plans, and scholarships. State-funded programs through SAMHSA provide free or low-cost treatment. <a href="/resources/paying-for-treatment" class="text-emerald-600 hover:underline">See all financial options &rarr;</a></div>
+                <div class="px-5 pb-5 text-gray-600">Costs vary widely: infant care $3,000-$10,000, inpatient $15,000-$30,000+ for 30 days, IOP $5,000-$12,000, part-time $5,000-$10,000, sober living $500-$3,000/month. Many facilities offer sliding-scale fees, payment plans, and scholarships. State-funded programs through SAMHSA provide free or low-cost treatment. <a href="/resources/paying-for-treatment" class="text-emerald-600 hover:underline">See all financial options &rarr;</a></div>
             </details>
             <details class="group bg-white rounded-xl border border-gray-100">
-                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What is the success rate of addiction treatment?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                <summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">What is the success rate of childcare?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
                 <div class="px-5 pb-5 text-gray-600">Success rates range from 40-60% for sustained recovery — comparable to other chronic conditions like diabetes (40-60%) and hypertension (50-70%). MAT achieves 60-75% retention rates. Key factors that improve outcomes: treatment duration 90+ days, aftercare participation, family involvement, addressing co-occurring mental health conditions, and choosing the appropriate level of care.</div>
             </details>
         </div>
@@ -710,8 +710,8 @@
             <summary class="cursor-pointer font-semibold hover:text-gray-700">Sources & References</summary>
             <ol class="mt-3 space-y-1 list-decimal list-inside">
                 <li>SAMHSA. (2023). <em>National Survey on Drug Use and Health (NSDUH).</em> <a href="https://www.samhsa.gov/data/nsduh" class="text-emerald-600 hover:underline" target="_blank" rel="noopener">samhsa.gov/data/nsduh</a></li>
-                <li>NIDA. (2018). <em>Principles of Drug Addiction Treatment: A Research-Based Guide.</em> <a href="https://nida.nih.gov/publications/principles-drug-addiction-treatment" class="text-emerald-600 hover:underline" target="_blank" rel="noopener">nida.nih.gov</a></li>
-                <li>SAMHSA. (2024). <em>National Directory of Drug and Alcohol Abuse Treatment Facilities.</em> <a href="https://findtreatment.gov" class="text-emerald-600 hover:underline" target="_blank" rel="noopener">findtreatment.gov</a></li>
+                <li>NIDA. (2018). <em>Principles of Drug Childcare: A Research-Based Guide.</em> <a href="https://nida.nih.gov/publications/principles-drug-addiction-treatment" class="text-emerald-600 hover:underline" target="_blank" rel="noopener">nida.nih.gov</a></li>
+                <li>SAMHSA. (2024). <em>National Directory of Childcare Abuse Treatment Facilities.</em> <a href="https://findtreatment.gov" class="text-emerald-600 hover:underline" target="_blank" rel="noopener">findtreatment.gov</a></li>
                 <li>ASAM. (2013). <em>The ASAM Criteria: Treatment Criteria for Addictive, Substance-Related, and Co-Occurring Conditions.</em></li>
                 <li>CMS. (2008). <em>Mental Health Parity and Addiction Equity Act.</em></li>
             </ol>

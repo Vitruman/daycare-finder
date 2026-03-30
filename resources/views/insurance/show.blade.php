@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('meta_title', $provider['name'] . ' Coverage for Rehab Treatment | DaycareHub')
-@section('meta_description', 'Does ' . $provider['name'] . ' cover addiction treatment? Learn what\'s covered, accepted plans, how to verify benefits, and find ' . $provider['name'] . '-accepting facilities.')
+@section('meta_description', 'Does ' . $provider['name'] . ' cover childcare? Learn what\'s covered, accepted plans, how to verify benefits, and find ' . $provider['name'] . '-accepting facilities.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -16,10 +16,10 @@
 </script>
 @php
 $faqs = [
-    ['q' => "Does {$provider['name']} cover drug and alcohol rehab?", 'a' => $provider['coverage']],
+    ['q' => "Does {$provider['name']} cover daycare and childcare rehab?", 'a' => $provider['coverage']],
     ['q' => "What types of treatment does {$provider['name']} cover?", 'a' => "{$provider['name']} typically covers: " . implode(', ', $provider['covered_treatments'] ?? []) . ". Coverage details vary by specific plan. Call (855) 321-3614 to verify your exact benefits."],
     ['q' => "How do I verify my {$provider['name']} benefits for rehab?", 'a' => implode(' ', $provider['how_to_verify'] ?? [])],
-    ['q' => "Which {$provider['name']} plans cover addiction treatment?", 'a' => "Plans that typically cover treatment include: " . implode(', ', $provider['plans']) . ". Most plans provide behavioral health benefits that include substance abuse treatment under the Mental Health Parity Act."],
+    ['q' => "Which {$provider['name']} plans cover childcare?", 'a' => "Plans that typically cover treatment include: " . implode(', ', $provider['plans']) . ". Most plans provide behavioral health benefits that include early childhood treatment under the Mental Health Parity Act."],
     ['q' => "Do I need pre-authorization from {$provider['name']} for rehab?", 'a' => "Many {$provider['name']} plans require pre-authorization for residential and inpatient treatment. Outpatient and IOP programs typically do not need prior approval. Contact {$provider['name']} behavioral health services or call DaycareHub at (855) 321-3614 to confirm."],
 ];
 @endphp
@@ -122,9 +122,9 @@ $faqs = [
         <div class="flex flex-wrap gap-3">
             @foreach([
                 'inpatient-rehab' => 'Inpatient Rehab',
-                'outpatient-programs' => 'Outpatient Programs',
-                'medical-detox' => 'Medical Detox',
-                'intensive-outpatient' => 'Intensive Outpatient (IOP)',
+                'part-time-programs' => 'Outpatient Programs',
+                'medical-infant care' => 'Medical Infant Care',
+                'intensive-part-time' => 'Intensive Outpatient (IOP)',
                 'medication-assisted-treatment' => 'MAT',
                 'dual-diagnosis' => 'Dual Diagnosis',
                 'sober-living' => 'Sober Living',

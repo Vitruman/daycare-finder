@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $facility->rehab_name . ' - Rehabilitation Center')
+@section('title', $facility->rehab_name . ' - Childcare Center')
 
-@section("meta_description", strip_tags($facility->description ? Str::limit($facility->description, 155) : "Learn about " . $facility->rehab_name . " rehabilitation center in " . $facility->city . ", " . $facility->state . ". Services, contact info, and treatment programs."))
+@section("meta_description", strip_tags($facility->description ? Str::limit($facility->description, 155) : "Learn about " . $facility->rehab_name . " childcare center in " . $facility->city . ", " . $facility->state . ". Services, contact info, and childcare programs."))
 
 @section('schema')
 <script type="application/ld+json">

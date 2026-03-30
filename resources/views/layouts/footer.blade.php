@@ -6,7 +6,7 @@
                 <div class="flex items-center gap-3 mb-4"><img src="/images/logo/rf-logo-light.svg" alt="DaycareHub" style="height:36px;width:auto"></div>
                 <p class="text-gray-300 mb-4 max-w-md">
                     We help people find their path to recovery and start a new life.
-                    Our mission is to connect those seeking help with the best rehabilitation centers.
+                    Our mission is to connect those seeking help with the best childcare centers.
                 </p>
                 <div class="flex space-x-4">
                     <a href="tel:{{ \App\Models\Setting::getValue('phone', '+1 (555) 123-4567') }}"
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <p class="text-gray-500 text-xs leading-relaxed">
-                <strong>Medical Disclaimer:</strong> DaycareHub provides information about substance abuse treatment facilities for informational purposes only.
+                <strong>Medical Disclaimer:</strong> DaycareHub provides information about early childhood treatment facilities for informational purposes only.
                 This website does not provide medical advice, diagnosis, or treatment. The information on this site should not be used as a substitute
                 for professional medical advice. Always seek the guidance of a qualified health provider with any questions you may have regarding
                 a medical condition or treatment. If you are experiencing a medical emergency, call 911 immediately.

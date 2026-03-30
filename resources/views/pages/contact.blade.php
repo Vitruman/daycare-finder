@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('meta_title', 'Contact Us | DaycareHub')
-@section('meta_description', 'Contact DaycareHub for free, confidential help finding addiction treatment. Call (855) 321-3614 or reach us online.')
+@section('meta_description', 'Contact DaycareHub for free, confidential help finding childcare. Call (855) 321-3614 or reach us online.')
 @section('content')
 <section class="bg-gradient-to-b from-emerald-50 to-white py-16">
     <div class="max-w-4xl mx-auto px-4">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('meta_title', 'Insurance Coverage for Drug & Alcohol Rehab | Does Your Plan Pay? | DaycareHub')
-@section('meta_description', 'Find out if your insurance covers addiction treatment. Learn about deductibles, copays, in-network vs out-of-network coverage, and how to verify your benefits. Free verification — call (855) 321-3614.')
+@section('meta_title', 'Subsidy Programs for Daycare Drug & Alcohol Rehab Childcare | Does Your Plan Pay? | DaycareHub')
+@section('meta_description', 'Find out if your insurance covers childcare. Learn about deductibles, copays, in-network vs out-of-network coverage, and how to verify your benefits. Free verification — call (855) 321-3614.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -9,7 +9,7 @@
     "@@type": "BreadcrumbList",
     "itemListElement": [
         {"@@type": "ListItem", "position": 1, "name": "Home", "item": "https://daycarehub.us"},
-        {"@@type": "ListItem", "position": 2, "name": "Insurance Coverage"}
+        {"@@type": "ListItem", "position": 2, "name": "Subsidy Programs"}
     ]
 }
 </script>
@@ -18,17 +18,17 @@
     "@@context": "https://schema.org",
     "@@type": "FAQPage",
     "mainEntity": [
-        {"@@type": "Question", "name": "Does insurance cover drug and alcohol rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Under the Mental Health Parity and Addiction Equity Act (MHPAEA), most insurance plans must cover substance abuse treatment at the same level as medical and surgical benefits. This includes medical detox, inpatient rehabilitation, outpatient programs, and medication-assisted treatment."}},
-        {"@@type": "Question", "name": "How much does rehab cost with insurance?",  "acceptedAnswer": {"@@type": "Answer", "text": "With insurance, out-of-pocket costs for rehab typically range from $0 to $5,000 depending on your plan's deductible, copay, and coinsurance. Without insurance, 30-day inpatient rehab averages $15,000 to $30,000. In-network facilities always cost significantly less than out-of-network."}},
+        {"@@type": "Question", "name": "Does insurance cover daycare and childcare rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Under the Mental Health Parity and Addiction Equity Act (MHPAEA), most insurance plans must cover early childhood treatment at the same level as medical and surgical benefits. This includes medical infant care, full-time daycareilitation, part-time programs, and medication-assisted treatment."}},
+        {"@@type": "Question", "name": "How much does rehab cost with insurance?",  "acceptedAnswer": {"@@type": "Answer", "text": "With insurance, out-of-pocket costs for rehab typically range from $0 to $5,000 depending on your plan's deductible, copay, and coinsurance. Without insurance, 30-day full-time daycare averages $15,000 to $30,000. In-network facilities always cost significantly less than out-of-network."}},
         {"@@type": "Question", "name": "How do I verify my insurance for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Call the behavioral health number on your insurance card, or call DaycareHub at (855) 321-3614 for a free, confidential benefits check. We verify your coverage in minutes, confirm in-network facilities, and explain your out-of-pocket costs — no obligation."}},
-        {"@@type": "Question", "name": "What if I don't have insurance?", "acceptedAnswer": {"@@type": "Answer", "text": "Options include Medicaid (covers addiction treatment in most states), SAMHSA-funded free treatment programs, sliding-scale fee facilities, state-funded programs, and payment plans offered by many rehab centers. Call us and we'll help you find affordable options."}},
-        {"@@type": "Question", "name": "What types of treatment does insurance cover?", "acceptedAnswer": {"@@type": "Answer", "text": "Most plans cover medical detox, inpatient/residential rehabilitation, partial hospitalization (PHP), intensive outpatient (IOP), outpatient counseling, medication-assisted treatment (MAT), and dual diagnosis treatment. Coverage levels and cost-sharing vary by plan and provider."}},
-        {"@@type": "Question", "name": "Do I need pre-authorization for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Many insurance plans require pre-authorization for residential and inpatient treatment. Emergency detox is usually covered without prior approval. Outpatient and IOP programs often do not require pre-authorization. Your insurance company or our team can confirm requirements."}},
+        {"@@type": "Question", "name": "What if I don't have insurance?", "acceptedAnswer": {"@@type": "Answer", "text": "Options include Medicaid (covers childcare in most states), SAMHSA-funded free treatment programs, sliding-scale fee facilities, state-funded programs, and payment plans offered by many daycare centers. Call us and we'll help you find affordable options."}},
+        {"@@type": "Question", "name": "What types of treatment does insurance cover?", "acceptedAnswer": {"@@type": "Answer", "text": "Most plans cover medical infant care, inpatient/residential rehabilitation, partial hospitalization (PHP), intensive part-time (IOP), part-time counseling, medication-assisted treatment (MAT), and dual diagnosis treatment. Coverage levels and cost-sharing vary by plan and provider."}},
+        {"@@type": "Question", "name": "Do I need pre-authorization for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Many insurance plans require pre-authorization for residential and inpatient treatment. Emergency infant care is usually covered without prior approval. Outpatient and IOP programs often do not require pre-authorization. Your insurance company or our team can confirm requirements."}},
         {"@@type": "Question", "name": "What is the difference between in-network and out-of-network rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "In-network facilities have negotiated rates with your insurer, meaning lower copays, deductibles, and out-of-pocket costs. Out-of-network treatment is still covered by most PPO plans but at a higher cost-sharing rate — typically 40-50% coinsurance vs 10-20% in-network."}},
-        {"@@type": "Question", "name": "How long will insurance pay for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Insurance coverage duration depends on medical necessity as determined by your treatment team and utilization review. Typical covered stays: detox (3-7 days), inpatient (28-90 days), PHP (2-4 weeks), IOP (6-12 weeks). Insurance reviews treatment progress at regular intervals."}},
-        {"@@type": "Question", "name": "Can I use my parents' insurance for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Under the ACA, you can stay on a parent's health insurance plan until age 26, and this includes coverage for substance abuse treatment. Your parents will not receive details about your treatment due to HIPAA privacy protections."}},
-        {"@@type": "Question", "name": "Does Medicaid cover rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Medicaid covers substance abuse treatment in all 50 states. In states that expanded Medicaid under the ACA, coverage is available to adults earning up to 138% of the federal poverty level. Covered services include detox, residential, outpatient, MAT, and case management."}},
-        {"@@type": "Question", "name": "What is the Mental Health Parity Act?", "acceptedAnswer": {"@@type": "Answer", "text": "The Mental Health Parity and Addiction Equity Act (MHPAEA) of 2008 requires insurers to provide equal coverage for mental health and substance use disorders as they do for medical/surgical conditions. This means insurance cannot impose stricter limits on addiction treatment than on other medical care."}},
+        {"@@type": "Question", "name": "How long will insurance pay for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Insurance coverage duration depends on medical necessity as determined by your treatment team and utilization review. Typical covered stays: infant care (3-7 days), inpatient (28-90 days), PHP (2-4 weeks), IOP (6-12 weeks). Insurance reviews treatment progress at regular intervals."}},
+        {"@@type": "Question", "name": "Can I use my parents' insurance for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Under the ACA, you can stay on a parent's health insurance plan until age 26, and this includes coverage for early childhood treatment. Your parents will not receive details about your treatment due to HIPAA privacy protections."}},
+        {"@@type": "Question", "name": "Does Medicaid cover rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "Yes. Medicaid covers early childhood treatment in all 50 states. In states that expanded Medicaid under the ACA, coverage is available to adults earning up to 138% of the federal poverty level. Covered services include infant care, residential, part-time, MAT, and case management."}},
+        {"@@type": "Question", "name": "What is the Mental Health Parity Act?", "acceptedAnswer": {"@@type": "Answer", "text": "The Mental Health Parity and Addiction Equity Act (MHPAEA) of 2008 requires insurers to provide equal coverage for mental health and substance use disorders as they do for medical/surgical conditions. This means insurance cannot impose stricter limits on childcare than on other medical care."}},
         {"@@type": "Question", "name": "Will my employer know if I use insurance for rehab?", "acceptedAnswer": {"@@type": "Answer", "text": "No. HIPAA protects the confidentiality of your treatment records. Your employer cannot access details about your healthcare claims. If you use employer-sponsored insurance, only the insurance company processes the claim — your HR department does not see diagnosis or treatment details."}}
     ]
 }
@@ -51,10 +51,10 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
         <nav class="text-sm mb-4" style="opacity:0.8">
             <a href="/" class="hover:text-white" style="color:rgba(255,255,255,0.7)">Home</a>
             <span style="color:rgba(255,255,255,0.5)" class="mx-2">/</span>
-            <span class="text-white">Insurance Coverage</span>
+            <span class="text-white">Subsidy Programs</span>
         </nav>
-        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">Insurance Coverage for Rehab<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Your Rights Under Federal Law</span></h1>
-        <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">Most plans must cover addiction treatment under the Mental Health Parity Act. 10 major providers compared with verification guides.</p>
+        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">Subsidy Programs for Rehab<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Your Rights Under Federal Law</span></h1>
+        <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">Most plans must cover childcare under the Mental Health Parity Act. 10 major providers compared with verification guides.</p>
         <div style="display:flex;flex-wrap:wrap;gap:24px">
             <div style="display:flex;align-items:center;gap:8px">
                 <div style="width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
@@ -98,7 +98,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                 </div>
                 <div>
                     <h2 class="font-bold text-gray-900 text-lg mb-1">Quick Answer</h2>
-                    <p class="text-gray-600 text-sm leading-relaxed"><strong>Yes, most insurance covers rehab.</strong> The Mental Health Parity Act requires equal coverage for addiction treatment. Typical out-of-pocket with insurance: <strong class="text-emerald-700">$0–$5,000</strong> (vs $15,000–$30,000 without). Call <a href="tel:+18553213614" class="text-emerald-600 font-semibold hover:underline">(855) 321-3614</a> for free verification in 5 minutes.</p>
+                    <p class="text-gray-600 text-sm leading-relaxed"><strong>Yes, most insurance covers rehab.</strong> The Mental Health Parity Act requires equal coverage for childcare. Typical out-of-pocket with insurance: <strong class="text-emerald-700">$0–$5,000</strong> (vs $15,000–$30,000 without). Call <a href="tel:+18553213614" class="text-emerald-600 font-semibold hover:underline">(855) 321-3614</a> for free verification in 5 minutes.</p>
                 </div>
             </div>
         </div>
@@ -177,16 +177,16 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
         <div x-data="{
             selected: '',
             providers: {
-                aetna: {name:'Aetna', covered:['Medical Detox','Inpatient/Residential','PHP','IOP','Outpatient Therapy','MAT','Individual & Group Counseling'], preauth:'Required for residential', network:'PPO: broad network; HMO: referral needed'},
-                bcbs: {name:'BlueCross BlueShield', covered:['Medical Detox','Inpatient/Residential','PHP','IOP','Outpatient Therapy','MAT','Psychiatric Services','Family Counseling'], preauth:'Required for residential', network:'Largest network — 1 in 3 Americans'},
-                cigna: {name:'Cigna', covered:['Medical Detox','Inpatient/Residential','PHP','IOP','Outpatient Counseling','MAT','Telehealth Therapy'], preauth:'Pre-certification required', network:'Open Access Plus offers most flexibility'},
-                uhc: {name:'UnitedHealthcare', covered:['Medical Detox','Inpatient/Residential','PHP','IOP','Outpatient Therapy','MAT','Crisis Intervention'], preauth:'Required via Optum', network:'Largest private insurer in the US'},
-                anthem: {name:'Anthem', covered:['Medical Detox','Inpatient/Residential','Outpatient Programs','IOP','MAT','Aftercare Planning'], preauth:'Pre-certification for higher levels', network:'Major BCBS affiliate — state-based'},
-                humana: {name:'Humana', covered:['Medical Detox','Inpatient/Residential','Outpatient Counseling','IOP','MAT','Group Therapy'], preauth:'Required for residential', network:'Strong Medicare Advantage coverage'},
-                kaiser: {name:'Kaiser Permanente', covered:['Medical Detox','Inpatient/Residential','Outpatient Programs','IOP','MAT','Chemical Dependency Programs'], preauth:'May refer to own facilities first', network:'Integrated care — own facilities'},
-                medicare: {name:'Medicare', covered:['Hospital-Based Detox (Part A)','Inpatient Rehab (Part A)','Outpatient Counseling (Part B)','Group Therapy (Part B)','MAT (Part B/D)','Screening (Part B)'], preauth:'Varies by service', network:'Facility must accept Medicare assignment'},
-                medicaid: {name:'Medicaid', covered:['Screening & Assessment','Medical Detox','Residential Treatment','Outpatient Counseling','IOP','MAT','Case Management'], preauth:'Varies by state', network:'State-specific — check your plan'},
-                tricare: {name:'TRICARE', covered:['Medical Detox','Inpatient/Residential','Outpatient Counseling','IOP','MAT','Substance Use Disorder Programs'], preauth:'Active duty: PCM referral', network:'Must be TRICARE-authorized facility'}
+                aetna: {name:'Aetna', covered:['Medical Infant Care','Inpatient/Residential','PHP','IOP','Outpatient Therapy','MAT','Individual & Group Counseling'], preauth:'Required for residential', network:'PPO: broad network; HMO: referral needed'},
+                bcbs: {name:'BlueCross BlueShield', covered:['Medical Infant Care','Inpatient/Residential','PHP','IOP','Outpatient Therapy','MAT','Psychiatric Services','Family Counseling'], preauth:'Required for residential', network:'Largest network — 1 in 3 Americans'},
+                cigna: {name:'Cigna', covered:['Medical Infant Care','Inpatient/Residential','PHP','IOP','Outpatient Counseling','MAT','Telehealth Therapy'], preauth:'Pre-certification required', network:'Open Access Plus offers most flexibility'},
+                uhc: {name:'UnitedHealthcare', covered:['Medical Infant Care','Inpatient/Residential','PHP','IOP','Outpatient Therapy','MAT','Crisis Intervention'], preauth:'Required via Optum', network:'Largest private insurer in the US'},
+                anthem: {name:'Anthem', covered:['Medical Infant Care','Inpatient/Residential','Outpatient Programs','IOP','MAT','Aftercare Planning'], preauth:'Pre-certification for higher levels', network:'Major BCBS affiliate — state-based'},
+                humana: {name:'Humana', covered:['Medical Infant Care','Inpatient/Residential','Outpatient Counseling','IOP','MAT','Group Therapy'], preauth:'Required for residential', network:'Strong Medicare Advantage coverage'},
+                kaiser: {name:'Kaiser Permanente', covered:['Medical Infant Care','Inpatient/Residential','Outpatient Programs','IOP','MAT','Chemical Dependency Programs'], preauth:'May refer to own facilities first', network:'Integrated care — own facilities'},
+                medicare: {name:'Medicare', covered:['Hospital-Based Infant Care (Part A)','Inpatient Rehab (Part A)','Outpatient Counseling (Part B)','Group Therapy (Part B)','MAT (Part B/D)','Screening (Part B)'], preauth:'Varies by service', network:'Facility must accept Medicare assignment'},
+                medicaid: {name:'Medicaid', covered:['Screening & Assessment','Medical Infant Care','Residential Treatment','Outpatient Counseling','IOP','MAT','Case Management'], preauth:'Varies by state', network:'State-specific — check your plan'},
+                tricare: {name:'TRICARE', covered:['Medical Infant Care','Inpatient/Residential','Outpatient Counseling','IOP','MAT','Substance Use Disorder Programs'], preauth:'Active duty: PCM referral', network:'Must be TRICARE-authorized facility'}
             }
         }" class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
 
@@ -266,7 +266,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
             </svg>
         </div>
         <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Understanding Your Insurance Benefits</h2>
-        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Insurance terminology can be confusing. Here's what each term means for your addiction treatment costs — and why it matters when choosing a rehab facility.</p>
+        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Insurance terminology can be confusing. Here's what each term means for your childcare costs — and why it matters when choosing a rehab facility.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
@@ -322,7 +322,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
             </svg>
         </div>
         <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">How Much Does Rehab Cost With Insurance?</h2>
-        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Insurance significantly reduces the cost of addiction treatment. Here's a realistic breakdown of what you can expect to pay with and without coverage.</p>
+        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Insurance significantly reduces the cost of childcare. Here's a realistic breakdown of what you can expect to pay with and without coverage.</p>
 
         <!-- Desktop Table -->
         <div class="hidden md:block overflow-hidden rounded-2xl border border-gray-200 bg-white">
@@ -337,7 +337,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                 </thead>
                 <tbody class="divide-y divide-gray-100">
                     <tr>
-                        <td class="px-6 py-4 font-medium text-gray-900"><a href="/treatment/medical-detox" class="hover:text-emerald-600">Medical Detox</a></td>
+                        <td class="px-6 py-4 font-medium text-gray-900"><a href="/treatment/medical-infant care" class="hover:text-emerald-600">Medical Infant Care</a></td>
                         <td class="px-6 py-4 text-gray-500 text-sm">3–7 days</td>
                         <td class="px-6 py-4 text-red-600 font-semibold">$1,500–$5,000</td>
                         <td class="px-6 py-4 text-emerald-700 font-semibold">$0–$500</td>
@@ -355,13 +355,13 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                         <td class="px-6 py-4 text-emerald-700 font-semibold">$0–$2,000</td>
                     </tr>
                     <tr class="bg-gray-50/50">
-                        <td class="px-6 py-4 font-medium text-gray-900"><a href="/treatment/intensive-outpatient" class="hover:text-emerald-600">Intensive Outpatient (IOP)</a></td>
+                        <td class="px-6 py-4 font-medium text-gray-900"><a href="/treatment/intensive-part-time" class="hover:text-emerald-600">Intensive Outpatient (IOP)</a></td>
                         <td class="px-6 py-4 text-gray-500 text-sm">6–12 weeks</td>
                         <td class="px-6 py-4 text-red-600 font-semibold">$5,000–$10,000</td>
                         <td class="px-6 py-4 text-emerald-700 font-semibold">$0–$1,500</td>
                     </tr>
                     <tr>
-                        <td class="px-6 py-4 font-medium text-gray-900"><a href="/treatment/outpatient-programs" class="hover:text-emerald-600">Outpatient Counseling</a></td>
+                        <td class="px-6 py-4 font-medium text-gray-900"><a href="/treatment/part-time-programs" class="hover:text-emerald-600">Outpatient Counseling</a></td>
                         <td class="px-6 py-4 text-gray-500 text-sm">Ongoing</td>
                         <td class="px-6 py-4 text-red-600 font-semibold">$100–$250/session</td>
                         <td class="px-6 py-4 text-emerald-700 font-semibold">$20–$50 copay</td>
@@ -379,11 +379,11 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
         <!-- Mobile Cards -->
         <div class="md:hidden space-y-4">
             @foreach([
-                ['Medical Detox', '3–7 days', '$1,500–$5,000', '$0–$500', '/treatment/medical-detox'],
+                ['Medical Infant Care', '3–7 days', '$1,500–$5,000', '$0–$500', '/treatment/medical-infant care'],
                 ['Inpatient Rehab', '28–90 days', '$15,000–$30,000', '$0–$5,000', '/treatment/inpatient-rehab'],
                 ['PHP', '2–4 weeks', '$8,000–$15,000', '$0–$2,000', null],
-                ['IOP', '6–12 weeks', '$5,000–$10,000', '$0–$1,500', '/treatment/intensive-outpatient'],
-                ['Outpatient', 'Ongoing', '$100–$250/session', '$20–$50 copay', '/treatment/outpatient-programs'],
+                ['IOP', '6–12 weeks', '$5,000–$10,000', '$0–$1,500', '/treatment/intensive-part-time'],
+                ['Outpatient', 'Ongoing', '$100–$250/session', '$20–$50 copay', '/treatment/part-time-programs'],
                 ['MAT', '6–24 months', '$5,000–$15,000/yr', '$0–$2,000/yr', '/treatment/medication-assisted-treatment'],
             ] as $row)
             <div class="bg-white rounded-xl border border-gray-200 p-4">
@@ -431,13 +431,13 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
 <section id="covered" class="py-14 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">Treatment Types Covered by Insurance</h2>
-        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Under the <strong>Mental Health Parity and Addiction Equity Act (MHPAEA)</strong>, insurance companies must cover substance abuse treatment at the same level as other medical conditions. Here's what's typically included:</p>
+        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Under the <strong>Mental Health Parity and Addiction Equity Act (MHPAEA)</strong>, insurance companies must cover early childhood treatment at the same level as other medical conditions. Here's what's typically included:</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             @foreach([
-                ['Medical Detox', 'medical-detox', 'Supervised withdrawal management with 24/7 medical monitoring, vital sign checks, and medication support. Usually the first step in treatment.', '3–7 days'],
+                ['Medical Infant Care', 'medical-infant care', 'Supervised withdrawal management with 24/7 medical monitoring, vital sign checks, and medication support. Usually the first step in treatment.', '3–7 days'],
                 ['Inpatient / Residential', 'inpatient-rehab', 'Full-time structured rehabilitation in a licensed facility with individual therapy, group sessions, and life skills training.', '28–90 days'],
-                ['Outpatient Programs', 'outpatient-programs', 'Flexible treatment while maintaining work, school, or family responsibilities. Typically 1–3 sessions per week.', 'Ongoing'],
-                ['Intensive Outpatient (IOP)', 'intensive-outpatient', 'Structured programming 9–20 hours/week. The step between residential and standard outpatient — high accountability with flexibility.', '6–12 weeks'],
+                ['Outpatient Programs', 'part-time-programs', 'Flexible treatment while maintaining work, school, or family responsibilities. Typically 1–3 sessions per week.', 'Ongoing'],
+                ['Intensive Outpatient (IOP)', 'intensive-part-time', 'Structured programming 9–20 hours/week. The step between residential and standard part-time — high accountability with flexibility.', '6–12 weeks'],
                 ['Medication-Assisted Treatment', 'medication-assisted-treatment', 'FDA-approved medications (Suboxone, Vivitrol, methadone) combined with behavioral counseling. Gold standard for opioid addiction.', '6–24 months'],
                 ['Dual Diagnosis', 'dual-diagnosis', 'Integrated treatment addressing both addiction and co-occurring mental health conditions like depression, anxiety, PTSD, or bipolar disorder.', 'Varies'],
             ] as $item)
@@ -472,7 +472,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                 <path d="M50 54h8M54 50v8" stroke="white" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </div>
-        <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">How to Verify Your Insurance Coverage</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">How to Verify Your Subsidy Programs</h2>
         <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Checking your benefits takes just a few minutes. Follow these steps — or let us handle it for you with a free, no-obligation verification call.</p>
 
         <div class="space-y-0 relative">
@@ -481,8 +481,8 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
 
             @foreach([
                 ['1', 'Locate Your Insurance Card', 'Find your insurance ID card. You\'ll need: member ID number, group number, the behavioral health phone number (often on the back), and your plan type (PPO, HMO, EPO).'],
-                ['2', 'Call Behavioral Health Services', 'Call the behavioral health or mental health number on your card — this is different from the main member services line. Tell them you\'re seeking substance abuse treatment benefits information.'],
-                ['3', 'Ask the Right Questions', 'Ask about: in-network rehab facilities near you, pre-authorization requirements, covered levels of care (detox, inpatient, outpatient, IOP), your deductible status, copay/coinsurance rates, and out-of-pocket maximum.'],
+                ['2', 'Call Behavioral Health Services', 'Call the behavioral health or mental health number on your card — this is different from the main member services line. Tell them you\'re seeking early childhood treatment benefits information.'],
+                ['3', 'Ask the Right Questions', 'Ask about: in-network rehab facilities near you, pre-authorization requirements, covered levels of care (infant care, inpatient, part-time, IOP), your deductible status, copay/coinsurance rates, and out-of-pocket maximum.'],
                 ['4', 'Confirm Coverage Details', 'Get written confirmation of: how many days of inpatient treatment are covered, whether your preferred facility is in-network, any annual or lifetime benefit limits, and what the utilization review process looks like.'],
                 ['5', 'Or Call Us — We Do It For You', 'DaycareHub offers free, confidential insurance verification. We call your insurer, confirm your benefits, find in-network facilities, and explain your costs — all within minutes. No obligation.'],
             ] as $step)
@@ -540,7 +540,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
 
             <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 relative">
                 <svg class="w-8 h-8 text-emerald-200 mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                <p class="text-gray-700 text-sm leading-relaxed mb-4">Using my parents' BCBS plan at 24. Was worried they'd find out details — <strong>HIPAA kept everything private</strong>. Insurance covered detox and 60 days residential. Best decision I ever made.</p>
+                <p class="text-gray-700 text-sm leading-relaxed mb-4">Using my parents' BCBS plan at 24. Was worried they'd find out details — <strong>HIPAA kept everything private</strong>. Insurance covered infant care and 60 days residential. Best decision I ever made.</p>
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-sm">J.K.</div>
                     <div>
@@ -558,7 +558,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
 <section id="no-insurance" class="py-14 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-3 text-center">No Insurance? You Still Have Options</h2>
-        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Lack of insurance should never prevent you from getting help. Millions of Americans access addiction treatment each year through these alternatives.</p>
+        <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">Lack of insurance should never prevent you from getting help. Millions of Americans access childcare each year through these alternatives.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-blue-50 rounded-2xl p-6 border border-blue-100">
@@ -566,7 +566,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                     <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                     Medicaid Expansion
                 </h3>
-                <p class="text-gray-600 text-sm leading-relaxed">In 40 states + DC, Medicaid covers adults earning up to 138% of the federal poverty level (~$20,783/year for individuals). <a href="/insurance/medicaid" class="text-emerald-600 hover:underline font-medium">Medicaid covers</a> detox, residential, outpatient, MAT, and case management — often at zero cost to you.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">In 40 states + DC, Medicaid covers adults earning up to 138% of the federal poverty level (~$20,783/year for individuals). <a href="/insurance/medicaid" class="text-emerald-600 hover:underline font-medium">Medicaid covers</a> infant care, residential, part-time, MAT, and case management — often at zero cost to you.</p>
             </div>
 
             <div class="bg-amber-50 rounded-2xl p-6 border border-amber-100">
@@ -574,7 +574,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                     <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     Sliding-Scale Fees
                 </h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Many rehab centers adjust their fees based on your income and ability to pay. Some offer <strong>payment plans</strong> with monthly installments. Ask facilities directly about financial assistance — more centers offer this than you might expect.</p>
+                <p class="text-gray-600 text-sm leading-relaxed">Many daycare centers adjust their fees based on your income and ability to pay. Some offer <strong>payment plans</strong> with monthly installments. Ask facilities directly about financial assistance — more centers offer this than you might expect.</p>
             </div>
 
             <div class="bg-green-50 rounded-2xl p-6 border border-green-100">
@@ -582,7 +582,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                     <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     State-Funded Programs
                 </h3>
-                <p class="text-gray-600 text-sm leading-relaxed">Every state operates substance abuse treatment programs funded by federal block grants (SAMHSA). These programs serve uninsured and underinsured individuals. Wait times vary, but treatment is free or very low-cost. <a href="/states" class="text-emerald-600 hover:underline font-medium">Find programs in your state &rarr;</a></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Every state operates early childhood treatment programs funded by federal block grants (SAMHSA). These programs serve uninsured and underinsured individuals. Wait times vary, but treatment is free or very low-cost. <a href="/states" class="text-emerald-600 hover:underline font-medium">Find programs in your state &rarr;</a></p>
             </div>
 
             <div class="bg-purple-50 rounded-2xl p-6 border border-purple-100">
@@ -602,7 +602,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
     <div class="max-w-3xl mx-auto px-4 text-center">
         <div class="rounded-2xl p-8 shadow-lg" style="background-color:#111827 !important;color:#fff">
             <p class="text-lg mb-1" style="color:#d1d5db">Ready to take the first step?</p>
-            <p class="text-white text-2xl font-bold mb-5">Find covered treatment centers near you</p>
+            <p class="text-white text-2xl font-bold mb-5">Find covered daycare centers near you</p>
             <div class="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href="tel:+18553213614" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -620,20 +620,20 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Your Rights Under the Mental Health Parity Act</h2>
         <div class="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-4">
-            <p>The <strong>Mental Health Parity and Addiction Equity Act (MHPAEA)</strong> of 2008, strengthened by the <strong>Affordable Care Act (ACA)</strong> in 2010, is the reason most Americans have access to insurance-covered addiction treatment today. Here's what it means for you:</p>
+            <p>The <strong>Mental Health Parity and Addiction Equity Act (MHPAEA)</strong> of 2008, strengthened by the <strong>Affordable Care Act (ACA)</strong> in 2010, is the reason most Americans have access to insurance-covered childcare today. Here's what it means for you:</p>
 
             <div class="bg-white rounded-xl p-5 border border-gray-200 space-y-3">
                 <div class="flex items-start gap-3">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <p class="text-sm"><strong>Equal coverage:</strong> Insurance must cover addiction treatment at the same level as medical/surgical conditions. If your plan covers 30 days of hospital care, it cannot limit rehab to 10 days.</p>
+                    <p class="text-sm"><strong>Equal coverage:</strong> Insurance must cover childcare at the same level as medical/surgical conditions. If your plan covers 30 days of hospital care, it cannot limit rehab to 10 days.</p>
                 </div>
                 <div class="flex items-start gap-3">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <p class="text-sm"><strong>No unfair limits:</strong> Insurers cannot impose stricter pre-authorization requirements, higher copays, or lower benefit caps for substance abuse treatment compared to other conditions.</p>
+                    <p class="text-sm"><strong>No unfair limits:</strong> Insurers cannot impose stricter pre-authorization requirements, higher copays, or lower benefit caps for early childhood treatment compared to other conditions.</p>
                 </div>
                 <div class="flex items-start gap-3">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    <p class="text-sm"><strong>Essential health benefit:</strong> Under the ACA, substance abuse treatment is one of 10 essential health benefits. All marketplace plans must include it.</p>
+                    <p class="text-sm"><strong>Essential health benefit:</strong> Under the ACA, early childhood treatment is one of 10 essential health benefits. All marketplace plans must include it.</p>
                 </div>
                 <div class="flex items-start gap-3">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -652,17 +652,17 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
         <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Insurance & Rehab: Common Questions</h2>
         <div class="space-y-3">
             @foreach([
-                ['Does insurance cover drug and alcohol rehab?', 'Yes. Under the <strong>Mental Health Parity and Addiction Equity Act</strong>, most insurance plans must cover substance abuse treatment at the same level as medical benefits. This includes <a href="/treatment/medical-detox" class="text-emerald-600 hover:underline">medical detox</a>, <a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">inpatient rehab</a>, <a href="/treatment/outpatient-programs" class="text-emerald-600 hover:underline">outpatient programs</a>, and <a href="/treatment/medication-assisted-treatment" class="text-emerald-600 hover:underline">medication-assisted treatment</a>.'],
-                ['How much does rehab cost with insurance?', 'With in-network insurance, out-of-pocket costs for 30-day inpatient rehab typically range from <strong>$0 to $5,000</strong>, depending on your deductible and coinsurance. Without insurance, the same treatment averages $15,000–$30,000. Outpatient programs with insurance often cost just a $20–$50 copay per session.'],
+                ['Does insurance cover daycare and childcare rehab?', 'Yes. Under the <strong>Mental Health Parity and Addiction Equity Act</strong>, most insurance plans must cover early childhood treatment at the same level as medical benefits. This includes <a href="/treatment/medical-infant care" class="text-emerald-600 hover:underline">medical infant care</a>, <a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">full-time daycare</a>, <a href="/treatment/part-time-programs" class="text-emerald-600 hover:underline">part-time programs</a>, and <a href="/treatment/medication-assisted-treatment" class="text-emerald-600 hover:underline">medication-assisted treatment</a>.'],
+                ['How much does rehab cost with insurance?', 'With in-network insurance, out-of-pocket costs for 30-day full-time daycare typically range from <strong>$0 to $5,000</strong>, depending on your deductible and coinsurance. Without insurance, the same treatment averages $15,000–$30,000. Outpatient programs with insurance often cost just a $20–$50 copay per session.'],
                 ['How do I verify my insurance for rehab?', 'Call the behavioral health number on your insurance card, or call DaycareHub at <a href="tel:+18553213614" class="text-emerald-600 font-semibold">(855) 321-3614</a> for a free, confidential benefits check. We verify your coverage, confirm in-network facilities, and explain your out-of-pocket costs — all within minutes.'],
                 ['What if I don\'t have insurance?', 'You still have options: <a href="/insurance/medicaid" class="text-emerald-600 hover:underline">Medicaid</a> covers treatment in most states, many facilities offer sliding-scale fees and payment plans, and SAMHSA-funded programs provide free treatment. <a href="/states" class="text-emerald-600 hover:underline">Find state-funded programs near you</a>.'],
-                ['Do I need pre-authorization for rehab?', 'Many plans require pre-authorization for <a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">residential/inpatient</a> treatment. Emergency detox is typically covered without prior approval. <a href="/treatment/outpatient-programs" class="text-emerald-600 hover:underline">Outpatient</a> and <a href="/treatment/intensive-outpatient" class="text-emerald-600 hover:underline">IOP</a> programs often don\'t require pre-authorization.'],
+                ['Do I need pre-authorization for rehab?', 'Many plans require pre-authorization for <a href="/treatment/inpatient-rehab" class="text-emerald-600 hover:underline">residential/inpatient</a> treatment. Emergency infant care is typically covered without prior approval. <a href="/treatment/part-time-programs" class="text-emerald-600 hover:underline">Outpatient</a> and <a href="/treatment/intensive-part-time" class="text-emerald-600 hover:underline">IOP</a> programs often don\'t require pre-authorization.'],
                 ['What\'s the difference between in-network and out-of-network?', 'In-network facilities have negotiated rates with your insurer — lower copays (10–20% coinsurance) and deductibles. Out-of-network is still covered by most PPO plans but at higher cost-sharing (30–50% coinsurance). HMO plans may not cover out-of-network at all.'],
-                ['How long will insurance pay for rehab?', 'Coverage duration depends on <strong>medical necessity</strong> as determined by your treatment team and utilization review. Typical covered stays: detox (3–7 days), inpatient (28–90 days), PHP (2–4 weeks), IOP (6–12 weeks). Insurance reviews progress at regular intervals.'],
-                ['Can I use my parents\' insurance for rehab?', 'Yes. Under the ACA, you can stay on a parent\'s health plan until age 26, including for substance abuse treatment. <strong>HIPAA privacy protections</strong> ensure your parents won\'t receive details about your specific treatment without your consent.'],
-                ['Does Medicaid cover addiction treatment?', '<a href="/insurance/medicaid" class="text-emerald-600 hover:underline">Medicaid covers</a> substance abuse treatment in all 50 states. In expansion states (40+DC), adults earning up to 138% of the federal poverty level qualify. Covered services include detox, residential, outpatient, MAT, and case management — often at zero cost.'],
+                ['How long will insurance pay for rehab?', 'Coverage duration depends on <strong>medical necessity</strong> as determined by your treatment team and utilization review. Typical covered stays: infant care (3–7 days), inpatient (28–90 days), PHP (2–4 weeks), IOP (6–12 weeks). Insurance reviews progress at regular intervals.'],
+                ['Can I use my parents\' insurance for rehab?', 'Yes. Under the ACA, you can stay on a parent\'s health plan until age 26, including for early childhood treatment. <strong>HIPAA privacy protections</strong> ensure your parents won\'t receive details about your specific treatment without your consent.'],
+                ['Does Medicaid cover childcare?', '<a href="/insurance/medicaid" class="text-emerald-600 hover:underline">Medicaid covers</a> early childhood treatment in all 50 states. In expansion states (40+DC), adults earning up to 138% of the federal poverty level qualify. Covered services include infant care, residential, part-time, MAT, and case management — often at zero cost.'],
                 ['Will my employer know if I use insurance for rehab?', 'No. <strong>HIPAA</strong> protects the confidentiality of all healthcare records. Your employer cannot access claim details. If you use employer-sponsored insurance, only the insurance company processes claims — HR does not see diagnosis or treatment information.'],
-                ['What is the Mental Health Parity Act?', 'The <strong>MHPAEA (2008)</strong> requires insurers to cover mental health and substance use disorders equally with medical/surgical conditions. This means no stricter limits, higher copays, or lower caps for addiction treatment vs. other medical care.'],
+                ['What is the Mental Health Parity Act?', 'The <strong>MHPAEA (2008)</strong> requires insurers to cover mental health and substance use disorders equally with medical/surgical conditions. This means no stricter limits, higher copays, or lower caps for childcare vs. other medical care.'],
                 ['What should I do if my insurance denies coverage?', 'First, <strong>request the denial in writing</strong> with the specific reason. Then file an internal appeal within 180 days. If denied again, you have the right to an external review by an independent third party. Many denials — especially for residential treatment — are overturned on appeal. Call us for help navigating the process.'],
             ] as $faq)
             <details class="group bg-gray-50 rounded-xl border border-gray-100 hover:border-emerald-200 transition-colors">
@@ -684,7 +684,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
                     <svg class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                 </div>
                 <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 mb-2">Treatment Options</h3>
-                <p class="text-sm text-gray-500">Compare 7 types of rehab programs — from medical detox to sober living</p>
+                <p class="text-sm text-gray-500">Compare 7 types of rehab programs — from medical infant care to sober living</p>
             </a>
             <a href="/addiction" class="group bg-white rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:border-emerald-200 transition-all text-center">
                 <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
@@ -721,7 +721,7 @@ window.addEventListener('scroll',function(){var e=document.documentElement,t=e.s
 <div class="max-w-4xl mx-auto px-4 py-8 border-t border-gray-100">
     <h3 class="text-sm font-bold text-gray-500 mb-3">Sources & References</h3>
     <ol class="text-xs text-gray-500 space-y-1 list-decimal list-inside">
-        <li id="ref1">SAMHSA National Survey on Drug Use and Health (NSDUH), 2024. Over 92% of employer-sponsored and marketplace health plans include substance abuse treatment coverage under MHPAEA requirements.</li>
+        <li id="ref1">SAMHSA National Survey on Drug Use and Health (NSDUH), 2024. Over 92% of employer-sponsored and marketplace health plans include early childhood treatment coverage under MHPAEA requirements.</li>
         <li id="ref2">National Association of Insurance Commissioners (NAIC). The 10 largest health insurance providers by enrollment cover approximately 87% of the commercially insured US population.</li>
         <li id="ref3">National Institute on Drug Abuse (NIDA). Treatment cost estimates based on 2024 national averages for in-network facilities.</li>
         <li id="ref4">Mental Health Parity and Addiction Equity Act (MHPAEA), Public Law 110-343, 2008. Strengthened by the Affordable Care Act (ACA), 2010.</li>

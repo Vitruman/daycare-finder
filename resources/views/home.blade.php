@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'DaycareHub — Find Drug & Alcohol Rehab Centers Near You')
-@section('meta_description', 'Search 21,000+ verified drug and alcohol rehabilitation centers across all 50 US states. Free, confidential guidance available 24/7. Find inpatient, outpatient, and detox programs near you.')
+@section('title', 'DaycareHub — Find Daycare & Childcare Centers Near You')
+@section('meta_description', 'Search 26,000+ verified daycare and childcare childcare centers across all 50 US states. Free, confidential guidance available 24/7. Find inpatient, part-time, and infant care programs near you.')
 
 @section('schema')
 @verbatim
@@ -12,7 +12,7 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "How do I find a rehab center near me?",
+            "name": "How do I find a daycare center near me?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Use the search bar on DaycareHub to filter by state, treatment type, or insurance. You can also call our free helpline at (855) 321-3614 for personalized guidance."
@@ -20,15 +20,15 @@
         },
         {
             "@type": "Question",
-            "name": "Does insurance cover drug and alcohol rehabilitation?",
+            "name": "Does insurance cover daycare and childcare rehabilitation?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Most major insurance plans cover substance abuse treatment under the Mental Health Parity and Addiction Equity Act. Coverage varies by plan and provider."
+                "text": "Most major insurance plans cover early childhood treatment under the Mental Health Parity and Addiction Equity Act. Coverage varies by plan and provider."
             }
         },
         {
             "@type": "Question",
-            "name": "What is the difference between inpatient and outpatient rehab?",
+            "name": "What is the difference between inpatient and part-time rehab?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Inpatient rehab provides 24/7 residential care in a structured environment. Outpatient rehab allows patients to live at home while attending scheduled treatment sessions."
@@ -37,10 +37,10 @@
 ,
         {
             "@@type": "Question",
-            "name": "What happens during medical detox?",
+            "name": "What happens during medical infant care?",
             "acceptedAnswer": {
                 "@@type": "Answer",
-                "text": "Medical detox is supervised withdrawal in a clinical setting with 24/7 nursing care. Doctors may prescribe medications to ease symptoms like anxiety, nausea, and seizures. Detox typically lasts 3-10 days depending on the substance. It is the first step before entering a treatment program — detox alone is not considered treatment."
+                "text": "Medical infant care is supervised withdrawal in a clinical setting with 24/7 nursing care. Doctors may prescribe medications to ease symptoms like anxiety, nausea, and seizures. Infant Care typically lasts 3-10 days depending on the substance. It is the first step before entering a treatment program — infant care alone is not considered treatment."
             }
         },
         {
@@ -72,12 +72,12 @@
             "name": "Can I keep working while in treatment?",
             "acceptedAnswer": {
                 "@@type": "Answer",
-                "text": "Yes, outpatient and intensive outpatient programs (IOP) are designed for people who need to maintain work or school obligations. IOP typically meets 3-5 days per week for 3-4 hours per session. The Family and Medical Leave Act (FMLA) also protects your job if you need to attend inpatient treatment at a qualifying employer."
+                "text": "Yes, part-time and intensive part-time programs (IOP) are designed for people who need to maintain work or school obligations. IOP typically meets 3-5 days per week for 3-4 hours per session. The Family and Medical Leave Act (FMLA) also protects your job if you need to attend inpatient treatment at a qualifying employer."
             }
         },
         {
             "@@type": "Question",
-            "name": "What should I look for when choosing a rehab center?",
+            "name": "What should I look for when choosing a daycare center?",
             "acceptedAnswer": {
                 "@@type": "Answer",
                 "text": "Key factors include: accreditation (JCAHO, CARF), licensed clinical staff, evidence-based treatment approaches, insurance acceptance, location, program length, aftercare planning, and patient-to-staff ratio. Read reviews, ask about success metrics, and verify credentials. Our directory lets you filter by all of these criteria."
@@ -88,7 +88,7 @@
             "name": "Is rehab confidential? Will my employer find out?",
             "acceptedAnswer": {
                 "@@type": "Answer",
-                "text": "Federal law (42 CFR Part 2) provides strict confidentiality protections for substance abuse treatment records — stronger than standard HIPAA. Treatment centers cannot share your information without written consent. Your employer will not be notified unless you choose to tell them. Insurance claims show general behavioral health services, not specific diagnoses."
+                "text": "Federal law (42 CFR Part 2) provides strict confidentiality protections for early childhood treatment records — stronger than standard HIPAA. Treatment centers cannot share your information without written consent. Your employer will not be notified unless you choose to tell them. Insurance claims show general behavioral health services, not specific diagnoses."
             }
         },
         {
@@ -104,7 +104,7 @@
             "name": "What happens after rehab? How do I prevent relapse?",
             "acceptedAnswer": {
                 "@@type": "Answer",
-                "text": "Aftercare is critical and may include: outpatient counseling, support groups (AA, NA, SMART Recovery), sober living, alumni programs, and ongoing therapy. Building a relapse prevention plan, identifying triggers, maintaining a support network, and addressing lifestyle changes are key. Most successful recoveries involve long-term engagement with support systems."
+                "text": "Aftercare is critical and may include: part-time counseling, support groups (AA, NA, SMART Recovery), sober living, alumni programs, and ongoing therapy. Building a relapse prevention plan, identifying triggers, maintaining a support network, and addressing lifestyle changes are key. Most successful recoveries involve long-term engagement with support systems."
             }
         }
     ]
@@ -119,7 +119,7 @@
     "@@type": "WebSite",
     "name": "DaycareHub",
     "url": "https://daycarehub.us",
-    "description": "Find drug and alcohol rehabilitation centers across all 50 US states. Free, confidential guidance available 24/7.",
+    "description": "Find daycare and childcare childcare centers across all 50 US states. Free, confidential guidance available 24/7.",
     "dateModified": "{{ now()->toIso8601String() }}",
     "potentialAction": {
         "@@type": "SearchAction",
@@ -151,11 +151,11 @@ $stateImages = array (
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6" style="text-shadow: 0 2px 12px rgba(0,0,0,0.4)">
-                    Drug &amp; Alcohol Rehab Centers
+                    Daycare &amp; Childcare Daycare Centers
                     <span class="text-green-400">Near You</span>
                 </h1>
                 <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto" style="text-shadow: 0 1px 4px rgba(0,0,0,0.5)">
-                    Compare 21,000+ verified treatment facilities across all 50 states.
+                    Compare 26,000+ verified treatment facilities across all 50 states.
                     Find the right program, check insurance, and get help today — 100% free &amp; confidential.
                 </p>
 
@@ -234,7 +234,7 @@ var qs=[
 {t:"Less than 6 months",v:"short"},{t:"6 months to 2 years",v:"medium"},
 {t:"More than 2 years",v:"long"},{t:"Not sure",v:"unsure"}]},
 {q:"Have you tried treatment before?",opts:[
-{t:"No, this would be my first time",v:"first"},{t:"Yes, outpatient counseling",v:"outpatient"},
+{t:"No, this would be my first time",v:"first"},{t:"Yes, part-time counseling",v:"part-time"},
 {t:"Yes, inpatient/residential",v:"inpatient"},{t:"Yes, multiple attempts",v:"multiple"}]},
 {q:"What is most important to you in a program?",opts:[
 {t:"Staying close to home and family",v:"local"},{t:"24/7 medical supervision",v:"medical"},
@@ -274,19 +274,19 @@ var dur="30\u201390 days";
 if(answers[2]==="first"&&answers[3]==="flexible"){
 rec="Intensive Outpatient Program (IOP)";
 desc="An IOP lets you receive structured treatment while maintaining work and family commitments. Typically 3-5 sessions per week.";
-link="/treatment/intensive-outpatient";dur="8\u201312 weeks";
+link="/treatment/intensive-part-time";dur="8\u201312 weeks";
 } else if(answers[0]==="family"){
 rec="Family Support & Intervention";
 desc="Professional guidance can help you support your loved one effectively. Family therapy and intervention services make a real difference.";
 link="/resources";dur="Ongoing";
 } else if(answers[0]==="opioid"||answers[0]==="rx"){
-rec="Medical Detox + MAT Program";
-desc="For opioid and prescription drug dependence, medically-assisted treatment (MAT) combined with supervised detox has the highest success rates.";
-link="/treatment/medication-assisted-treatment";dur="Detox: 5\u201310 days, MAT: ongoing";
+rec="Medical Infant Care + MAT Program";
+desc="For opioid and prescription drug dependence, medically-assisted treatment (MAT) combined with supervised infant care has the highest success rates.";
+link="/treatment/medication-assisted-treatment";dur="Infant Care: 5\u201310 days, MAT: ongoing";
 } else if(answers[1]==="short"&&answers[2]==="first"){
 rec="Outpatient Treatment Program";
-desc="For early-stage concerns, outpatient therapy provides professional support while you continue daily life. Early intervention leads to better outcomes.";
-link="/treatment/outpatient-programs";dur="3\u20136 months";
+desc="For early-stage concerns, part-time therapy provides professional support while you continue daily life. Early intervention leads to better outcomes.";
+link="/treatment/part-time-programs";dur="3\u20136 months";
 }
 var h='<div style="text-align:center">';
 h+='<div style="width:56px;height:56px;background:#d1fae5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg width="28" height="28" fill="none" stroke="#059669" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>';
@@ -314,7 +314,7 @@ render();
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
                     <div class="text-3xl font-bold text-green-600 mb-2">{{ number_format(\App\Models\Organization::count()) }}</div>
-                    <div class="text-gray-600">Rehabilitation Centers</div>
+                    <div class="text-gray-600">Childcare Centers</div>
                 </div>
                 <div>
                     <div class="text-3xl font-bold text-green-600 mb-2">50</div>
@@ -360,7 +360,7 @@ render();
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 text-center mb-2">Search & Compare</h3>
                         <p class="text-sm text-gray-600 text-center">
-                            Use our advanced filters to find treatment centers that match your specific needs, location, and insurance.
+                            Use our advanced filters to find daycare centers that match your specific needs, location, and insurance.
                         </p>
                     </div>
 
@@ -413,12 +413,12 @@ render();
                      'duration' => '30-90 days',
                      'color' => 'emerald'],
                     ['icon' => '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>',
-                     'slug' => 'outpatient-programs', 'title' => 'Outpatient Programs',
+                     'slug' => 'part-time-programs', 'title' => 'Outpatient Programs',
                      'desc' => 'Flexible scheduling allows you to live at home while attending treatment sessions. Ideal for mild to moderate substance use.',
                      'duration' => '3-6 months',
                      'color' => 'blue'],
                     ['icon' => '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>',
-                     'slug' => 'medical-detox', 'title' => 'Medical Detox',
+                     'slug' => 'medical-infant care', 'title' => 'Medical Infant Care',
                      'desc' => 'Medically supervised withdrawal management with 24-hour nursing care. The critical first step for safe recovery.',
                      'duration' => '3-10 days',
                      'color' => 'rose'],
@@ -485,13 +485,13 @@ render();
             <div class="text-center mb-10 space-y-3">
                 <h2 class="text-3xl font-bold text-gray-900">Popular States for Treatment</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Discover rehabilitation centers in states with diverse treatment options and comprehensive care programs.
+                    Discover childcare centers in states with diverse treatment options and comprehensive care programs.
                 </p>
             </div>
 
             @php
                 $tags = [
-                    ['Dual Diagnosis', 'Medical Detox'],
+                    ['Dual Diagnosis', 'Medical Infant Care'],
                     ['Outpatient', 'Holistic Support'],
                     ['Veterans Programs', 'Faith-Based'],
                     ['Family Therapy', 'Adolescent Care'],
@@ -590,7 +590,7 @@ render();
             @php
                 $facilityTags = [
                     ['Inpatient', 'Outpatient', 'Dual Diagnosis'],
-                    ['Detox', 'Residential', 'Holistic'],
+                    ['Infant Care', 'Residential', 'Holistic'],
                     ['Family Support', 'Aftercare', 'Faith-based'],
                     ['MAT', 'Partial Hospitalization', 'Evening Programs'],
                     ['Telehealth', 'Youth Programs', 'Trauma-Informed'],
@@ -832,7 +832,7 @@ render();
                     </div>
                 </div>
 
-                <!-- Step 2: Detox -->
+                <!-- Step 2: Infant Care -->
                 <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 mb-12">
                     <div class="md:w-1/2 md:text-right md:pr-12 order-2 md:order-3 hidden md:block">
                         <div class="flex flex-wrap gap-2 justify-end">
@@ -844,7 +844,7 @@ render();
                     <div class="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-lg order-1">2</div>
                     <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
                         <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-2">Days 1-10</span>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Medical Detox</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Medical Infant Care</h3>
                         <p class="text-gray-600 leading-relaxed">Your body safely clears substances under medical supervision. Doctors manage withdrawal symptoms with FDA-approved medications. Nurses monitor vitals around the clock. This stage focuses on physical stabilization before therapy begins.</p>
                     </div>
                 </div>
@@ -910,7 +910,7 @@ render();
                         Call (855) 321-3614
                     </a>
                     <a href="{{ route('facilities.index') }}" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-emerald-200 text-emerald-700 font-semibold hover:bg-emerald-50 transition-colors">
-                        Browse treatment centers
+                        Browse daycare centers
                     </a>
                 </div>
             </div>
@@ -927,7 +927,7 @@ render();
             <div style="display:flex;flex-direction:column;gap:12px" x-data="{open:null}">
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
                     <button @click="open=open===1?null:1" style="width:100%;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border:none;background:none;cursor:pointer;text-align:left">
-                        <span style="font-weight:600;color:#111827;font-size:1rem">How do I find the right rehab center for me?</span>
+                        <span style="font-weight:600;color:#111827;font-size:1rem">How do I find the right daycare center for me?</span>
                         <svg :style="open===1?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===1" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
@@ -936,20 +936,20 @@ render();
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
                     <button @click="open=open===2?null:2" style="width:100%;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border:none;background:none;cursor:pointer;text-align:left">
-                        <span style="font-weight:600;color:#111827;font-size:1rem">Does insurance cover drug and alcohol rehabilitation?</span>
+                        <span style="font-weight:600;color:#111827;font-size:1rem">Does insurance cover daycare and childcare rehabilitation?</span>
                         <svg :style="open===2?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===2" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
-                        Yes, most major insurance plans cover substance abuse treatment under the Mental Health Parity and Addiction Equity Act (MHPAEA). Coverage varies by plan — common providers include Aetna, BlueCross BlueShield, Cigna, United Healthcare, and Anthem. We can help verify your coverage for free.
+                        Yes, most major insurance plans cover early childhood treatment under the Mental Health Parity and Addiction Equity Act (MHPAEA). Coverage varies by plan — common providers include Aetna, BlueCross BlueShield, Cigna, United Healthcare, and Anthem. We can help verify your coverage for free.
                     </div>
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
                     <button @click="open=open===3?null:3" style="width:100%;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border:none;background:none;cursor:pointer;text-align:left">
-                        <span style="font-weight:600;color:#111827;font-size:1rem">What is the difference between inpatient and outpatient rehab?</span>
+                        <span style="font-weight:600;color:#111827;font-size:1rem">What is the difference between inpatient and part-time rehab?</span>
                         <svg :style="open===3?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===3" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
-                        Inpatient (residential) rehab provides 24/7 care in a structured facility, typically for 28-90 days. Outpatient rehab allows you to live at home while attending scheduled sessions. Inpatient is recommended for severe addiction; outpatient works well for mild-to-moderate cases or as a step-down from residential treatment.
+                        Inpatient (residential) rehab provides 24/7 care in a structured facility, typically for 28-90 days. Outpatient rehab allows you to live at home while attending scheduled sessions. Inpatient is recommended for severe addiction; part-time works well for mild-to-moderate cases or as a step-down from residential treatment.
                     </div>
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
@@ -967,7 +967,7 @@ render();
                         <svg :style="open===5?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===5" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
-                        Treatment duration depends on the program: medical detox takes 3-7 days, short-term rehab is 28-30 days, and long-term residential care is 60-90 days. Outpatient programs typically run 8-12 weeks with 2-3 sessions per week. Research shows longer treatment correlates with better outcomes.
+                        Treatment duration depends on the program: medical infant care takes 3-7 days, short-term rehab is 28-30 days, and long-term residential care is 60-90 days. Outpatient programs typically run 8-12 weeks with 2-3 sessions per week. Research shows longer treatment correlates with better outcomes.
                     </div>
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
@@ -981,11 +981,11 @@ render();
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
                     <button @click="open=open===7?null:7" style="width:100%;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border:none;background:none;cursor:pointer;text-align:left">
-                        <span style="font-weight:600;color:#111827;font-size:1rem">What happens during medical detox?</span>
+                        <span style="font-weight:600;color:#111827;font-size:1rem">What happens during medical infant care?</span>
                         <svg :style="open===7?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===7" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
-                        Medical detox is supervised withdrawal in a clinical setting with 24/7 nursing care. Doctors may prescribe medications to ease symptoms like anxiety, nausea, and seizures. Detox typically lasts 3-10 days depending on the substance. It is the first step before entering a treatment program — detox alone is not considered treatment.
+                        Medical infant care is supervised withdrawal in a clinical setting with 24/7 nursing care. Doctors may prescribe medications to ease symptoms like anxiety, nausea, and seizures. Infant Care typically lasts 3-10 days depending on the substance. It is the first step before entering a treatment program — infant care alone is not considered treatment.
                     </div>
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
@@ -1021,12 +1021,12 @@ render();
                         <svg :style="open===11?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===11" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
-                        Yes, outpatient and intensive outpatient programs (IOP) are designed for people who need to maintain work or school obligations. IOP typically meets 3-5 days per week for 3-4 hours per session. The Family and Medical Leave Act (FMLA) also protects your job if you need to attend inpatient treatment at a qualifying employer.
+                        Yes, part-time and intensive part-time programs (IOP) are designed for people who need to maintain work or school obligations. IOP typically meets 3-5 days per week for 3-4 hours per session. The Family and Medical Leave Act (FMLA) also protects your job if you need to attend inpatient treatment at a qualifying employer.
                     </div>
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
                     <button @click="open=open===12?null:12" style="width:100%;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;border:none;background:none;cursor:pointer;text-align:left">
-                        <span style="font-weight:600;color:#111827;font-size:1rem">What should I look for when choosing a rehab center?</span>
+                        <span style="font-weight:600;color:#111827;font-size:1rem">What should I look for when choosing a daycare center?</span>
                         <svg :style="open===12?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===12" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
@@ -1039,7 +1039,7 @@ render();
                         <svg :style="open===13?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===13" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
-                        Federal law (42 CFR Part 2) provides strict confidentiality protections for substance abuse treatment records — stronger than standard HIPAA. Treatment centers cannot share your information without written consent. Your employer will not be notified unless you choose to tell them. Insurance claims show general behavioral health services, not specific diagnoses.
+                        Federal law (42 CFR Part 2) provides strict confidentiality protections for early childhood treatment records — stronger than standard HIPAA. Treatment centers cannot share your information without written consent. Your employer will not be notified unless you choose to tell them. Insurance claims show general behavioral health services, not specific diagnoses.
                     </div>
                 </div>
                 <div style="border:1px solid #e5e7eb;border-radius:12px;background:#fff;overflow:hidden">
@@ -1057,7 +1057,7 @@ render();
                         <svg :style="open===15?'transform:rotate(180deg)':''" width="18" height="18" style="color:#9ca3af;transition:transform 0.2s;flex-shrink:0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-show="open===15" x-collapse style="padding:0 20px 16px;color:#4b5563;line-height:1.6">
-                        Aftercare is critical and may include: outpatient counseling, support groups (AA, NA, SMART Recovery), sober living, alumni programs, and ongoing therapy. Building a relapse prevention plan, identifying triggers, maintaining a support network, and addressing lifestyle changes are key. Most successful recoveries involve long-term engagement with support systems.
+                        Aftercare is critical and may include: part-time counseling, support groups (AA, NA, SMART Recovery), sober living, alumni programs, and ongoing therapy. Building a relapse prevention plan, identifying triggers, maintaining a support network, and addressing lifestyle changes are key. Most successful recoveries involve long-term engagement with support systems.
                     </div>
                 </div>
             </div>
@@ -1097,7 +1097,7 @@ render();
                     <div class="text-sm"><span class="text-gray-500">Best for:</span> <span class="font-medium">Mild-moderate, strong support system</span></div>
                 </div>
                 <div class="border border-gray-200 rounded-xl p-5 space-y-3">
-                    <h3 class="text-lg font-bold text-gray-900">Medical Detox</h3>
+                    <h3 class="text-lg font-bold text-gray-900">Medical Infant Care</h3>
                     <div class="grid grid-cols-2 gap-3 text-sm">
                         <div><span class="text-gray-500">Setting:</span><br><span class="font-medium">Medical facility</span></div>
                         <div><span class="text-gray-500">Duration:</span><br><span class="font-medium">3-10 days</span></div>
@@ -1136,7 +1136,7 @@ render();
                             <th class="text-left py-4 px-5 text-sm font-semibold text-gray-500 uppercase tracking-wide border-b-2 border-gray-200"></th>
                             <th class="text-center py-4 px-5 border-b-2 border-emerald-500"><span class="block text-lg font-bold text-gray-900">Inpatient</span><span class="text-xs text-emerald-600 font-semibold">Most Comprehensive</span></th>
                             <th class="text-center py-4 px-5 border-b-2 border-blue-400"><span class="block text-lg font-bold text-gray-900">Outpatient</span><span class="text-xs text-blue-600 font-semibold">Most Flexible</span></th>
-                            <th class="text-center py-4 px-5 border-b-2 border-rose-400"><span class="block text-lg font-bold text-gray-900">Detox</span><span class="text-xs text-rose-600 font-semibold">First Step</span></th>
+                            <th class="text-center py-4 px-5 border-b-2 border-rose-400"><span class="block text-lg font-bold text-gray-900">Infant Care</span><span class="text-xs text-rose-600 font-semibold">First Step</span></th>
                             <th class="text-center py-4 px-5 border-b-2 border-violet-400"><span class="block text-lg font-bold text-gray-900">IOP</span><span class="text-xs text-violet-600 font-semibold">Best Balance</span></th>
                             <th class="text-center py-4 px-5 border-b-2 border-amber-400"><span class="block text-lg font-bold text-gray-900">Sober Living</span><span class="text-xs text-amber-600 font-semibold">Long-Term</span></th>
                         </tr>
@@ -1284,8 +1284,8 @@ render();
                         <h3 class="text-xl font-bold text-gray-900">Good news!</h3>
                         <p class="text-gray-600 mt-2">
                             <span x-show="selected !== 'No Insurance / Self-Pay'">
-                                <strong x-text="selected"></strong> plans typically cover substance abuse treatment.
-                                Coverage includes detox, inpatient, and outpatient programs.
+                                <strong x-text="selected"></strong> plans typically cover early childhood treatment.
+                                Coverage includes infant care, inpatient, and part-time programs.
                             </span>
                             <span x-show="selected === 'No Insurance / Self-Pay'">
                                 Many facilities offer sliding-scale fees, payment plans, and state-funded programs for uninsured patients.
@@ -1308,7 +1308,7 @@ render();
             <p class="text-center text-sm text-gray-500 mt-6">+ Most PPO, HMO, and employer-sponsored plans accepted</p>
             <div class="text-center mt-4">
                 <a href="{{ route('insurance.index') }}" class="text-emerald-600 font-semibold hover:text-emerald-700 text-sm inline-flex items-center gap-1">
-                    Learn more about insurance coverage
+                    Learn more about subsidy programs
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>

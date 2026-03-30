@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('meta_title', 'Treatment Comparisons: Side-by-Side Rehab Guides (2026) | DaycareHub')
-@section('meta_description', 'Compare rehab options head-to-head: inpatient vs outpatient, 30-day vs 90-day, methadone vs suboxone, and more. Data-driven comparisons with costs, success rates, and expert analysis.')
+@section('meta_description', 'Compare rehab options head-to-head: inpatient vs part-time, 30-day vs 90-day, methadone vs suboxone, and more. Data-driven comparisons with costs, success rates, and expert analysis.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -60,9 +60,9 @@
     "mainEntity": [
 @verbatim
         {"@type": "Question", "name": "What is the most important decision when choosing rehab?", "acceptedAnswer": {"@type": "Answer", "text": "The single most impactful decision is treatment duration. NIDA research consistently shows 90+ days produces significantly better outcomes than shorter stays, with 45-65% one-year sobriety rates vs 20-35% for 30-day programs."}},
-        {"@type": "Question", "name": "Does insurance cover all types of rehab?", "acceptedAnswer": {"@type": "Answer", "text": "Under the Mental Health Parity and Addiction Equity Act (MHPAEA), insurance must cover addiction treatment at the same level as physical health. This includes inpatient, outpatient, detox, and medication-assisted treatment (MAT). Pre-authorization may be required for residential stays."}},
-        {"@type": "Question", "name": "Should I choose inpatient or outpatient rehab?", "acceptedAnswer": {"@type": "Answer", "text": "Inpatient is recommended for severe addiction, unstable home environment, co-occurring disorders, or previous relapse. Outpatient works for mild-moderate addiction with strong support systems. Many people step down from inpatient to outpatient as a continuum of care."}},
-        {"@type": "Question", "name": "What is the difference between CBT and DBT in addiction treatment?", "acceptedAnswer": {"@type": "Answer", "text": "CBT (Cognitive Behavioral Therapy) focuses on identifying and changing negative thought patterns that drive substance use. DBT (Dialectical Behavior Therapy) focuses on managing intense emotions and was originally designed for borderline personality disorder. Both are evidence-based; many programs combine elements of both."}},
+        {"@type": "Question", "name": "Does insurance cover all types of rehab?", "acceptedAnswer": {"@type": "Answer", "text": "Under the Mental Health Parity and Addiction Equity Act (MHPAEA), insurance must cover childcare at the same level as physical health. This includes inpatient, part-time, infant care, and medication-assisted treatment (MAT). Pre-authorization may be required for residential stays."}},
+        {"@type": "Question", "name": "Should I choose inpatient or part-time rehab?", "acceptedAnswer": {"@type": "Answer", "text": "Inpatient is recommended for severe addiction, unstable home environment, co-occurring disorders, or previous relapse. Outpatient works for mild-moderate addiction with strong support systems. Many people step down from inpatient to part-time as a continuum of care."}},
+        {"@type": "Question", "name": "What is the difference between CBT and DBT in childcare?", "acceptedAnswer": {"@type": "Answer", "text": "CBT (Cognitive Behavioral Therapy) focuses on identifying and changing negative thought patterns that drive substance use. DBT (Dialectical Behavior Therapy) focuses on managing intense emotions and was originally designed for borderline personality disorder. Both are evidence-based; many programs combine elements of both."}},
         {"@type": "Question", "name": "Is methadone or Suboxone better for opioid addiction?", "acceptedAnswer": {"@type": "Answer", "text": "Both reduce overdose deaths by 50%+. Methadone provides stronger craving control for severe dependence (especially fentanyl) but requires daily clinic visits. Suboxone (buprenorphine) has lower overdose risk, can be prescribed by any doctor, and offers more privacy. The choice depends on dependence severity and lifestyle."}}
 @endverbatim
     ]
@@ -324,7 +324,7 @@
         <div class="space-y-4">
             <div class="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 class="font-bold text-gray-900 mb-2">🏥 Level of Care: Match Intensity to Severity</h3>
-                <p class="text-gray-600">ASAM (American Society of Addiction Medicine) uses 6 dimensions to determine the right level of care. Severe physical dependence → <a href="/compare/detox-vs-residential" class="text-emerald-600">medical detox</a> first. High-risk environment → <a href="/compare/inpatient-vs-outpatient" class="text-emerald-600">inpatient over outpatient</a>. Previous relapse → longer treatment (<a href="/compare/30-day-vs-90-day-rehab" class="text-emerald-600">90-day programs</a>).</p>
+                <p class="text-gray-600">ASAM (American Society of Addiction Medicine) uses 6 dimensions to determine the right level of care. Severe physical dependence → <a href="/compare/infant care-vs-residential" class="text-emerald-600">medical infant care</a> first. High-risk environment → <a href="/compare/inpatient-vs-part-time" class="text-emerald-600">inpatient over part-time</a>. Previous relapse → longer treatment (<a href="/compare/30-day-vs-90-day-rehab" class="text-emerald-600">90-day programs</a>).</p>
             </div>
             <div class="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 class="font-bold text-gray-900 mb-2">💊 Medication: Evidence Over Stigma</h3>
@@ -336,7 +336,7 @@
             </div>
             <div class="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 class="font-bold text-gray-900 mb-2">💰 Cost: Don't Let Price Decide</h3>
-                <p class="text-gray-600">Under the Mental Health Parity Act, <a href="/insurance" class="text-emerald-600">insurance must cover addiction treatment</a>. A more expensive program isn't necessarily better — accreditation (JCAHO, CARF), staff credentials, and evidence-based methods matter more. Compare <a href="/compare/aetna-vs-bcbs" class="text-emerald-600">insurance providers</a> for coverage details.</p>
+                <p class="text-gray-600">Under the Mental Health Parity Act, <a href="/insurance" class="text-emerald-600">insurance must cover childcare</a>. A more expensive program isn't necessarily better — accreditation (JCAHO, CARF), staff credentials, and evidence-based methods matter more. Compare <a href="/compare/aetna-vs-bcbs" class="text-emerald-600">insurance providers</a> for coverage details.</p>
             </div>
         </div>
     </div>
@@ -350,7 +350,7 @@
             <div style="background:#f0fdf4;border-radius:16px;padding:24px;border:1px solid #d1fae5">
                 <div class="text-3xl mb-3">1️⃣</div>
                 <h3 class="font-bold text-gray-900 mb-2">Severity Assessment</h3>
-                <p class="text-gray-600 text-sm mb-3">How severe is the addiction? Physical dependence requiring detox? Co-occurring mental health conditions?</p>
+                <p class="text-gray-600 text-sm mb-3">How severe is the addiction? Physical dependence requiring infant care? Co-occurring mental health conditions?</p>
                 <div class="text-xs text-emerald-700 font-medium">Low severity → Outpatient/IOP</div>
                 <div class="text-xs text-emerald-700 font-medium">High severity → Inpatient 90+ days</div>
             </div>
@@ -364,7 +364,7 @@
             <div style="background:#fefce8;border-radius:16px;padding:24px;border:1px solid #fde68a">
                 <div class="text-3xl mb-3">3️⃣</div>
                 <h3 class="font-bold text-gray-900 mb-2">Treatment History</h3>
-                <p class="text-gray-600 text-sm mb-3">First time? Previous relapse after 30-day program? Failed outpatient attempts?</p>
+                <p class="text-gray-600 text-sm mb-3">First time? Previous relapse after 30-day program? Failed part-time attempts?</p>
                 <div class="text-xs text-yellow-700 font-medium">First attempt → 30-day may work</div>
                 <div class="text-xs text-yellow-700 font-medium">Relapse history → Step up intensity</div>
             </div>
@@ -372,7 +372,7 @@
                 <div class="text-3xl mb-3">4️⃣</div>
                 <h3 class="font-bold text-gray-900 mb-2">Practical Constraints</h3>
                 <p class="text-gray-600 text-sm mb-3">Insurance coverage limits? Work/family obligations? Geographic preferences?</p>
-                <div class="text-xs text-pink-700 font-medium">Can't leave work → IOP or outpatient</div>
+                <div class="text-xs text-pink-700 font-medium">Can't leave work → IOP or part-time</div>
                 <div class="text-xs text-pink-700 font-medium">Insurance limits → Appeal or state-funded</div>
             </div>
         </div>
@@ -388,10 +388,10 @@
         <div class="space-y-0">
             @php
             $steps = [
-                ['step' => '1', 'title' => 'Medical Detox', 'duration' => '3-10 days', 'desc' => 'Safe withdrawal management with 24/7 medical monitoring', 'color' => '#dc2626', 'link' => '/compare/detox-vs-residential'],
-                ['step' => '2', 'title' => 'Residential / Inpatient', 'duration' => '30-90 days', 'desc' => 'Intensive therapy in a structured, substance-free environment', 'color' => '#ea580c', 'link' => '/compare/inpatient-vs-outpatient'],
-                ['step' => '3', 'title' => 'Intensive Outpatient (IOP)', 'duration' => '2-4 months', 'desc' => '9-20 hours/week of therapy while living at home', 'color' => '#ca8a04', 'link' => '/treatment/intensive-outpatient'],
-                ['step' => '4', 'title' => 'Outpatient', 'duration' => '3-12 months', 'desc' => 'Weekly individual and group sessions for ongoing support', 'color' => '#16a34a', 'link' => '/treatment/outpatient-programs'],
+                ['step' => '1', 'title' => 'Medical Infant Care', 'duration' => '3-10 days', 'desc' => 'Safe withdrawal management with 24/7 medical monitoring', 'color' => '#dc2626', 'link' => '/compare/infant care-vs-residential'],
+                ['step' => '2', 'title' => 'Residential / Inpatient', 'duration' => '30-90 days', 'desc' => 'Intensive therapy in a structured, substance-free environment', 'color' => '#ea580c', 'link' => '/compare/inpatient-vs-part-time'],
+                ['step' => '3', 'title' => 'Intensive Outpatient (IOP)', 'duration' => '2-4 months', 'desc' => '9-20 hours/week of therapy while living at home', 'color' => '#ca8a04', 'link' => '/treatment/intensive-part-time'],
+                ['step' => '4', 'title' => 'Outpatient', 'duration' => '3-12 months', 'desc' => 'Weekly individual and group sessions for ongoing support', 'color' => '#16a34a', 'link' => '/treatment/part-time-programs'],
                 ['step' => '5', 'title' => 'Aftercare & Alumni', 'duration' => 'Ongoing', 'desc' => 'Peer support groups, check-ins, relapse prevention', 'color' => '#0891b2', 'link' => '/resources/relapse-prevention'],
             ];
             @endphp
@@ -434,11 +434,11 @@
             @php
             $faqs = [
                 ['q' => 'What is the most important decision when choosing rehab?', 'a' => 'Treatment duration. NIDA research consistently shows that 90+ days of treatment produces significantly better outcomes than shorter stays, with 45-65% one-year sobriety rates vs 20-35% for 30-day programs. The second most important factor is matching treatment intensity to addiction severity using ASAM criteria.'],
-                ['q' => 'Does insurance cover all types of rehab?', 'a' => 'Under the Mental Health Parity and Addiction Equity Act (MHPAEA), insurance must cover addiction treatment at the same level as physical health conditions. This includes inpatient, outpatient, detox, MAT, and therapy. Pre-authorization may be required for residential stays. Call (855) 321-3614 for free insurance verification.'],
-                ['q' => 'Should I choose inpatient or outpatient rehab?', 'a' => 'It depends on severity, home stability, and treatment history. Inpatient is recommended for severe addiction, unstable environments, co-occurring disorders, or previous relapse. Outpatient works for mild-moderate addiction with strong support. Many people step down from inpatient to outpatient as a continuum of care.'],
+                ['q' => 'Does insurance cover all types of rehab?', 'a' => 'Under the Mental Health Parity and Addiction Equity Act (MHPAEA), insurance must cover childcare at the same level as physical health conditions. This includes inpatient, part-time, infant care, MAT, and therapy. Pre-authorization may be required for residential stays. Call (855) 321-3614 for free insurance verification.'],
+                ['q' => 'Should I choose inpatient or part-time rehab?', 'a' => 'It depends on severity, home stability, and treatment history. Inpatient is recommended for severe addiction, unstable environments, co-occurring disorders, or previous relapse. Outpatient works for mild-moderate addiction with strong support. Many people step down from inpatient to part-time as a continuum of care.'],
                 ['q' => 'Is medication-assisted treatment (MAT) just replacing one drug with another?', 'a' => 'No — this is a persistent myth. MAT medications (methadone, Suboxone, naltrexone) are FDA-approved, evidence-based treatments that reduce overdose deaths by 50%+. They stabilize brain chemistry without producing euphoria at therapeutic doses. Every major medical organization endorses MAT as first-line treatment for opioid use disorder.'],
-                ['q' => 'How do I know if I need detox before rehab?', 'a' => 'Medical detox is critical for substances with dangerous withdrawal syndromes: alcohol (seizures, delirium tremens), benzodiazepines (seizures), and opioids (extremely uncomfortable). A clinical assessment determines if you need medically supervised detox. Most residential programs include detox as the first phase.'],
-                ['q' => 'What if I can\'t afford rehab?', 'a' => 'Multiple options exist: insurance coverage under parity law, Medicaid (covers rehab in all states), state-funded programs through SAMHSA, sliding-scale facilities, and scholarships. Free treatment is available — call (855) 321-3614 or search state-funded options on our facilities page.'],
+                ['q' => 'How do I know if I need infant care before rehab?', 'a' => 'Medical infant care is critical for substances with dangerous withdrawal syndromes: alcohol (seizures, delirium tremens), benzodiazepines (seizures), and opioids (extremely uncomfortable). A clinical assessment determines if you need medically supervised infant care. Most residential programs include infant care as the first phase.'],
+                ['q' => 'What if I can\'t afford rehab?', 'a' => 'Multiple options exist: subsidy programs under parity law, Medicaid (covers rehab in all states), state-funded programs through SAMHSA, sliding-scale facilities, and scholarships. Free treatment is available — call (855) 321-3614 or search state-funded options on our facilities page.'],
                 ['q' => 'What therapy approach is best for addiction?', 'a' => 'No single therapy is best — the most effective programs combine multiple approaches. CBT (changing thought patterns) and DBT (managing emotions) are both evidence-based. Group therapy, family sessions, and peer support add crucial elements. The key is finding a program that tailors therapy to your specific needs.'],
                 ['q' => 'How many of these comparisons should I read?', 'a' => 'Start with the comparison most relevant to your situation. If you\'re deciding between program types, read "Inpatient vs Outpatient" and "30-Day vs 90-Day." For medication questions, read "Methadone vs Suboxone." For insurance, read "Aetna vs BCBS." Each comparison is self-contained with all the information you need.'],
             ];
@@ -467,12 +467,12 @@
                 <p class="text-gray-500 text-xs mt-1">7 programs</p>
             </a>
             <a href="/insurance" class="group bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center" style="text-decoration:none">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Insurance Coverage</h3>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Subsidy Programs</h3>
                 <p class="text-gray-500 text-xs mt-1">10 providers</p>
             </a>
             <a href="/facilities" class="group bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center" style="text-decoration:none">
                 <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Find Centers</h3>
-                <p class="text-gray-500 text-xs mt-1">21,000+ facilities</p>
+                <p class="text-gray-500 text-xs mt-1">26,000+ facilities</p>
             </a>
             <a href="/addiction" class="group bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center" style="text-decoration:none">
                 <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Substances</h3>
@@ -488,7 +488,7 @@
         <details class="bg-gray-50 rounded-xl border border-gray-200 p-5">
             <summary class="font-bold text-gray-900 cursor-pointer text-sm">📚 Sources & References</summary>
             <ol class="mt-3 space-y-2 text-xs text-gray-600 list-decimal pl-5">
-                <li>NIDA (2024). <em>Principles of Drug Addiction Treatment: A Research-Based Guide</em>. National Institute on Drug Abuse.</li>
+                <li>NIDA (2024). <em>Principles of Drug Childcare: A Research-Based Guide</em>. National Institute on Drug Abuse.</li>
                 <li>SAMHSA (2024). <em>National Survey on Drug Use and Health</em>. Substance Abuse and Mental Health Services Administration.</li>
                 <li>ASAM (2023). <em>ASAM Criteria: Treatment Criteria for Addictive, Substance-Related, and Co-Occurring Conditions</em>.</li>
                 <li>Lally, P. et al. (2010). <em>How are habits formed: Modelling habit formation in the real world</em>. European Journal of Social Psychology, 40(6), 998-1009.</li>

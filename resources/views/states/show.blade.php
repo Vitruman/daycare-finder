@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Rehab Centers in ' . $state->name . ' — Find Treatment Near You | DaycareHub')
+@section('title', 'Daycare Centers in ' . $state->name . ' — Find Daycare Near You | DaycareHub')
 
-@section('meta_description', 'Find verified drug & alcohol rehab centers in ' . $state->name . '. Browse ' . $facilities->total() . ' treatment facilities, compare programs, and get free guidance.')
+@section('meta_description', 'Find verified drug & alcohol daycare centers in ' . $state->name . '. Browse ' . $facilities->total() . ' treatment facilities, compare programs, and get free guidance.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -20,7 +20,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "ItemList",
-    "name": "Rehab Centers in {{ $state->name ?? $stateCode }}",
+    "name": "Daycare Centers in {{ $state->name ?? $stateCode }}",
     "numberOfItems": {{ $facilities->total() ?? 0 }},
     "dateModified": "{{ now()->toIso8601String() }}",
     "itemListElement": [
@@ -66,7 +66,7 @@
     <!-- Facilities -->
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Rehabilitation Centers in {{ $state->name }}</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Childcare Centers in {{ $state->name }}</h2>
 
             @if($facilities->count() > 0)
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -115,7 +115,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                     </svg>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">No facilities found</h3>
-                    <p class="text-gray-600 mb-6">There are no rehabilitation centers added in this state yet.</p>
+                    <p class="text-gray-600 mb-6">There are no childcare centers added in this state yet.</p>
                     <a href="{{ route('facilities.index') }}"
                        class="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
                         Find centers in other states
