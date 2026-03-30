@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('meta_title', 'Recovery Blog — {{ $blogs->total() }} Expert Articles on Childcare | DaycareHub')
+@section('title', 'DaycareHub Blog — Childcare Tips, Guides & Resources | DaycareHub')
 @section('meta_description', 'Evidence-based articles on addiction recovery, treatment options, subsidy programs, and family support. Written by recovery specialists, updated weekly.')
 
 @section('schema')
@@ -18,7 +18,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "CollectionPage",
-    "name": "DaycareHub Recovery Blog",
+    "name": "DaycareHub DaycareHub Blog",
     "description": "Evidence-based articles on addiction recovery, treatment, and family support.",
     "url": "https://daycarehub.us/blog",
     "dateModified": "{{ now()->toIso8601String() }}",
@@ -60,7 +60,7 @@
             <span style="color:rgba(255,255,255,0.5)" class="mx-2">/</span>
             <span class="text-white">Blog</span>
         </nav>
-        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">Recovery Blog<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Expert Articles on Childcare</span></h1>
+        <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">DaycareHub Blog<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Expert Articles on Childcare</span></h1>
         <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">Evidence-based articles on treatment, recovery, insurance, and family support. Reviewed by our editorial team, updated regularly.</p>
         <div style="display:flex;flex-wrap:wrap;gap:24px">
             <div style="display:flex;align-items:center;gap:8px">
