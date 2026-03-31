@@ -52,7 +52,7 @@
         "@@type": "Organization",
         "name": "DaycareHub",
         "url": "https://daycarehub.us",
-        "description": "Find daycare and childcare childcare centers near you across the United States",
+        "description": "Free directory of 26,000+ licensed daycare and childcare centers across all 50 US states.",
         "telephone": "{{ \App\Models\Setting::getValue('phone', '+1(855) 321-3614') }}",
         "areaServed": "US",
         "sameAs": []
@@ -133,13 +133,12 @@
     <div id="unified-cta" style="position:fixed;bottom:0;left:0;right:0;z-index:55;display:none">
         <div style="margin:0 12px 12px;padding:10px 16px;background:rgba(255,255,255,0.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.12),0 0 0 1px rgba(0,0,0,0.05);display:flex;align-items:center;justify-content:space-between;gap:12px">
             <div style="display:flex;flex-direction:column;gap:1px">
-                <span style="font-size:13px;font-weight:600;color:#111">Free &amp; Confidential</span>
-                <span style="font-size:11px;color:#666">24/7 Helpline &bull; No obligation</span>
+                <span style="font-size:13px;font-weight:600;color:#111">Find Daycare Near You</span>
+                <span style="font-size:11px;color:#666">26,000+ licensed centers · Free search</span>
             </div>
-            <a href="tel:{{ \App\Models\Setting::getValue('phone', '+1(855) 321-3614') }}"
-               style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;font-size:13px;border-radius:50px;text-decoration:none;box-shadow:0 2px 8px rgba(5,150,105,0.35);white-space:nowrap">
-                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                Call Now
+            <a href="/facilities"
+               style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#065f46;color:#fff;font-weight:700;font-size:13px;border-radius:50px;text-decoration:none;white-space:nowrap">
+                Search Now
             </a>
         </div>
     </div>

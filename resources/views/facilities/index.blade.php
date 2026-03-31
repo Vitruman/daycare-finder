@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Licensed Daycare & Childcare Centers — 26,000+ Verified | DaycareHub')
-
+@section('title', 'Licensed Daycare & Childcare Centers — Search 26,000+ Verified | DaycareHub')
 @section('meta_description', 'Search 26,000+ licensed daycare and childcare centers across the US. Filter by state, age group, and program type. All listings from official state licensing databases.')
 
 @section('schema')
@@ -15,161 +14,143 @@
     ]
 }
 </script>
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "ItemList",
-    "name": "Childcare Centers Directory",
-    "description": "Browse 26,000+ licensed daycare and childcare centers across all 50 US states.",
-    "numberOfItems": {{ $facilities->total() ?? 0 }},
-    "dateModified": "{{ now()->toIso8601String() }}",
-    "itemListElement": [
-        @foreach($facilities->take(20) as $i => $fac)
-        {"@@type": "ListItem", "position": {{ $i + 1 }}, "url": "https://daycarehub.us/facilities/{{ $fac->id }}", "name": "{{ addslashes($fac->rehab_name) }}"}{{ $loop->last ? '' : ',' }}
-        @endforeach
-    ]
-}
-</script>
 @endsection
+
 @section('content')
-    <!-- Breadcrumb -->
-    <nav class="bg-gray-50 py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ol class="flex items-center space-x-2 text-sm text-gray-500">
-                <li><a href="{{ route('home') }}" class="hover:text-green-600">Home</a></li>
-                <li><span class="text-gray-400">/</span></li>
-                <li class="text-gray-900 font-medium">Facilities</li>
-            </ol>
+<div style="margin-top:64px;">
+
+{{-- Header + Search --}}
+<section style="background:#fff;border-bottom:1px solid #e5e7eb;padding:28px 20px;">
+    <div style="max-width:1200px;margin:0 auto;">
+        <div style="margin-bottom:20px;">
+            <nav style="font-size:.82rem;color:#9ca3af;margin-bottom:8px;">
+                <a href="/" style="color:#065f46;text-decoration:none;">Home</a>
+                <span style="margin:0 6px;">›</span>
+                <span>Find Centers</span>
+            </nav>
+            <h1 style="font-size:1.6rem;font-weight:800;color:#111;margin:0 0 4px;">Licensed Childcare Centers</h1>
+            <p style="color:#6b7280;font-size:.9rem;margin:0;">Licensed centers from official state registries. Verify status on your state's licensing database.</p>
         </div>
-    </nav>
 
-    <!-- Header -->
-    <section class="py-8 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Childcare Centers</h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                Find the right childcare center in your region.
-                Licensed centers from official state registries. Verify status on your state's licensing database.
+        <form action="{{ route('facilities.index') }}" method="GET">
+            <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;">
+                <div style="flex:1;min-width:220px;">
+                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">Search</label>
+                    <div style="position:relative;">
+                        <svg style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#9ca3af;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Name, city, or ZIP..."
+                               style="width:100%;padding:9px 12px 9px 34px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;box-sizing:border-box;outline:none;" onfocus="this.style.borderColor='#065f46'" onblur="this.style.borderColor='#d1d5db'">
+                    </div>
+                </div>
+                <div style="min-width:150px;">
+                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">State</label>
+                    <select name="state" style="width:100%;padding:9px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;background:#fff;outline:none;" onfocus="this.style.borderColor='#065f46'" onblur="this.style.borderColor='#d1d5db'">
+                        <option value="">All States</option>
+                        @foreach($states as $state)
+                        <option value="{{ $state->code }}" {{ request('state') == $state->code ? 'selected' : '' }}>{{ $state->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div style="min-width:130px;">
+                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">Age Group</label>
+                    <select name="age" style="width:100%;padding:9px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;background:#fff;outline:none;">
+                        <option value="">Any Age</option>
+                        <option value="infant" {{ request('age')=='infant'?'selected':'' }}>Infant (0–12 mo)</option>
+                        <option value="toddler" {{ request('age')=='toddler'?'selected':'' }}>Toddler (1–3 yrs)</option>
+                        <option value="preschool" {{ request('age')=='preschool'?'selected':'' }}>Preschool (3–5)</option>
+                        <option value="school" {{ request('age')=='school'?'selected':'' }}>School-Age (5+)</option>
+                    </select>
+                </div>
+                <div style="min-width:120px;">
+                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">Sort By</label>
+                    <select name="sort" style="width:100%;padding:9px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;background:#fff;outline:none;">
+                        <option value="latest" {{ request('sort','latest')=='latest'?'selected':'' }}>Newest</option>
+                        <option value="name" {{ request('sort')=='name'?'selected':'' }}>Name A–Z</option>
+                    </select>
+                </div>
+                <button type="submit" style="padding:9px 22px;background:#065f46;color:#fff;border:none;border-radius:8px;font-weight:700;font-size:.88rem;cursor:pointer;white-space:nowrap;">Search</button>
+                @if(request()->hasAny(['search','state','sort','age']))
+                <a href="{{ route('facilities.index') }}" style="padding:9px 14px;background:#f9fafb;color:#6b7280;border:1px solid #e5e7eb;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;">Clear</a>
+                @endif
+            </div>
+        </form>
+    </div>
+</section>
+
+{{-- Results --}}
+<section style="background:#f9fafb;padding:24px 20px 48px;">
+    <div style="max-width:1200px;margin:0 auto;">
+
+        {{-- Result count + filters summary --}}
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+            @if($facilities->count() > 0)
+            <p style="font-size:.85rem;color:#6b7280;margin:0;">
+                Showing <strong style="color:#111;">{{ ($facilities->currentPage()-1)*$facilities->perPage()+1 }}–{{ min($facilities->currentPage()*$facilities->perPage(),$facilities->total()) }}</strong>
+                of <strong style="color:#111;">{{ number_format($facilities->total()) }}</strong> licensed centers
+                @if(request('search')) matching "<strong>{{ request('search') }}</strong>"@endif
+                @if(request('state')) in <strong>{{ request('state') }}</strong>@endif
             </p>
-
-            <!-- Search and Filter -->
-            <div class="max-w-6xl mx-auto">
-                <form action="{{ route('facilities.index') }}" method="GET" class="space-y-6">
-                    <!-- Main search -->
-                    <div class="flex flex-col lg:flex-row gap-4">
-                        <div class="flex-1">
-                            <input type="text" name="search" value="{{ request('search') }}"
-                                   placeholder="Search by name, city..."
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                        </div>
-                        <div class="lg:w-48">
-                            <select name="state" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                                <option value="">All states</option>
-                                @foreach($states as $state)
-                                    <option value="{{ $state->code }}" {{ request('state') == $state->code ? 'selected' : '' }}>
-                                        {{ $state->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <button type="submit" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium">
-                            Find Centers
-                        </button>
-                    </div>
-
-                    <!-- Additional filters -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg">
-                        <!-- Sorting -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Sort by</label>
-                            <select name="sort" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                                <option value="latest" {{ request('sort', 'latest') == 'latest' ? 'selected' : '' }}>Newest</option>
-                                <option value="name" {{ request('sort') == 'name' ? 'selected' : '' }}>By name</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Reset filters -->
-                    @if(request()->hasAny(['search', 'state', 'sort']))
-                        <div class="text-center">
-                            <a href="{{ route('facilities.index') }}" class="text-green-600 hover:text-green-700 text-sm font-medium">
-                                Reset all filters
-                            </a>
-                        </div>
-                    @endif
-                </form>
+            @endif
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                @foreach(['infant'=>'🍼 Infant','toddler'=>'🧒 Toddler','preschool'=>'🎒 Preschool','head+start'=>'⭐ Head Start'] as $v=>$label)
+                <a href="/facilities?search={{ $v }}" style="padding:4px 12px;background:{{ request('search')==$v?'#065f46':'#fff' }};color:{{ request('search')==$v?'#fff':'#374151' }};border:1px solid {{ request('search')==$v?'#065f46':'#e5e7eb' }};border-radius:20px;font-size:.78rem;font-weight:600;text-decoration:none;">{{ $label }}</a>
+                @endforeach
             </div>
         </div>
-    </section>
 
-    @if($facilities->count() > 0)
-    <div style="max-width:1330px;margin:0 auto;padding:8px 20px;font-size:.88rem;color:#555;">
-        Showing {{ ($facilities->currentPage()-1) * $facilities->perPage() + 1 }}–{{ min($facilities->currentPage() * $facilities->perPage(), $facilities->total()) }} of {{ number_format($facilities->total()) }} licensed centers
-        @if(request('search')) for "<strong>{{ request('search') }}</strong>" @endif
-        @if(request('state')) in <strong>{{ request('state') }}</strong> @endif
-    </div>
-    @endif
-
-    <!-- Facilities -->
-    <section class="py-8 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            @if($facilities->count() > 0)
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    @foreach($facilities as $facility)
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                            @php
-                                $cardImage = $facility->logo ?? $facility->image ?? null;
-                            @endphp
-                            @if($cardImage)
-                                <img src="{{ asset('storage/' . $cardImage) }}" alt="{{ $facility->rehab_name }}"
-                                     class="w-full h-48 object-contain bg-white">
-                            @else
-                                <div class="w-full h-48 bg-gradient-to-br from-emerald-800 to-teal-600 flex flex-col items-center justify-center gap-3">
-                                    <svg class="w-12 h-12 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                                    <span class="text-white/80 text-sm font-medium px-3 text-center">{{ Str::limit($facility->rehab_name, 30) }}</span>
-                                </div>
-                            @endif
-
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-1">
-                                    <a href="{{ route('facilities.show', $facility) }}" class="hover:text-green-600">
-                                        {{ Str::limit($facility->rehab_name, 45) }}
-                                    </a>
-                                </h3>
-
-                                <p class="text-gray-500 text-sm mb-3 flex items-center gap-1">
-                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                    {{ $facility->city }}, {{ $facility->state }}
-                                </p>
-
-                                <div class="flex justify-between items-center">
-                                    <a href="{{ route('facilities.show', $facility) }}"
-                                       class="text-green-600 hover:text-green-700 font-medium">
-                                        Learn More
-                                    </a>
-                                    <a href="tel:{{ $facility->phone }}"
-                                       class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors text-sm">
-                                        Call
-                                    </a>
-                                </div>
-                            </div>
+        @if($facilities->count() > 0)
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px;">
+            @foreach($facilities as $facility)
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;transition:all .15s;" onmouseover="this.style.borderColor='#065f46';this.style.boxShadow='0 4px 16px rgba(6,95,70,.1)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'">
+                <div style="display:flex;gap:14px;padding:16px;">
+                    {{-- Avatar --}}
+                    <div style="width:52px;height:52px;background:linear-gradient(135deg,#065f46,#059669);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.3rem;font-weight:800;">
+                        {{ strtoupper(substr($facility->rehab_name ?? 'D', 0, 1)) }}
+                    </div>
+                    <div style="min-width:0;flex:1;">
+                        <h3 style="font-size:.9rem;font-weight:700;color:#111;margin:0 0 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+                            <a href="{{ route('facilities.show', $facility) }}" style="color:inherit;text-decoration:none;">{{ $facility->rehab_name }}</a>
+                        </h3>
+                        <div style="font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:4px;margin-bottom:6px;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            {{ $facility->city }}, {{ $facility->state }}
+                            @if($facility->zip) · {{ $facility->zip }}@endif
                         </div>
-                    @endforeach
+                        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                            @if($facility->age_range)
+                            <span style="background:#f0fdf4;color:#065f46;padding:2px 8px;border-radius:10px;font-size:.72rem;font-weight:600;">{{ $facility->age_range }}</span>
+                            @endif
+                            @if($facility->program_type)
+                            <span style="background:#f3f4f6;color:#374151;padding:2px 8px;border-radius:10px;font-size:.72rem;font-weight:600;">{{ $facility->program_type }}</span>
+                            @endif
+                            <span style="background:#f0fdf4;color:#065f46;padding:2px 8px;border-radius:10px;font-size:.72rem;font-weight:600;">✓ Licensed</span>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Pagination -->
-                <div class="mt-12">
-                    {{ $facilities->links() }}
+                <div style="border-top:1px solid #f3f4f6;padding:10px 16px;display:flex;gap:8px;background:#fafafa;">
+                    <a href="{{ route('facilities.show', $facility) }}" style="flex:1;text-align:center;padding:7px;background:#065f46;color:#fff;border-radius:7px;font-size:.8rem;font-weight:700;text-decoration:none;">View Profile</a>
+                    @if($facility->phone)
+                    <a href="tel:{{ $facility->phone }}" style="padding:7px 14px;background:#fff;color:#065f46;border:1px solid #065f46;border-radius:7px;font-size:.8rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:4px;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        Call
+                    </a>
+                    @endif
                 </div>
-            @else
-                <div class="text-center py-16">
-                    <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                    </svg>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">No facilities found</h3>
-                    <p class="text-gray-600">Try adjusting the filters or choose another state.</p>
-                </div>
-            @endif
+            </div>
+            @endforeach
         </div>
-    </section>
+
+        <div style="margin-top:28px;">{{ $facilities->links() }}</div>
+
+        @else
+        <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:56px 20px;text-align:center;">
+            <div style="font-size:3rem;margin-bottom:14px;">🔍</div>
+            <h3 style="font-size:1.1rem;font-weight:700;color:#111;margin:0 0 8px;">No centers found</h3>
+            <p style="color:#6b7280;font-size:.9rem;margin:0 0 20px;">Try a different search term, state, or <a href="{{ route('facilities.index') }}" style="color:#065f46;font-weight:600;">browse all centers</a>.</p>
+        </div>
+        @endif
+    </div>
+</section>
+
+</div>
 @endsection
