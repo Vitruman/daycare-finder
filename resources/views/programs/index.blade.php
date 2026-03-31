@@ -38,13 +38,6 @@
 <div>
 @include("components.breadcrumbs")
 
-<!-- Breadcrumbs -->
-<div style="max-width:1100px;margin:0 auto;padding:16px 20px 0;font-size:.85rem;color:#666;">
-    <a href="/" style="color:#065f46;text-decoration:none;">Home</a>
-    <span style="margin:0 8px;color:#ccc;">/</span>
-    <span style="color:#333;">Program Types</span>
-</div>
-
 <!-- Hero -->
 <section style="background:linear-gradient(135deg,#065f46 0%,#047857 60%,#059669 100%);padding:56px 20px 48px;">
     <div style="max-width:900px;margin:0 auto;text-align:center;">

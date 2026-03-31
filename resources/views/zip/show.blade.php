@@ -88,17 +88,7 @@ details summary::-webkit-details-marker { display: none; }
 
     <div style="max-width:1000px;margin:0 auto;position:relative;">
         {{-- Breadcrumb --}}
-        <nav style="font-size:.76rem;color:rgba(255,255,255,.55);margin-bottom:16px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;">
-            <a href="/" style="color:rgba(255,255,255,.7);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.7)'" >Home</a>
-            <span>›</span>
-            <a href="/states" style="color:rgba(255,255,255,.7);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.7)'" >States</a>
-            @if($state)
-            <span>›</span>
-            <a href="/states/{{ strtolower($state) }}" style="color:rgba(255,255,255,.7);text-decoration:none;">{{ $state }}</a>
-            @endif
-            <span>›</span>
-            <span style="color:rgba(255,255,255,.85);">ZIP {{ $zip }}</span>
-        </nav>
+        
 
         {{-- Main row: title left, stats right --}}
         <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">

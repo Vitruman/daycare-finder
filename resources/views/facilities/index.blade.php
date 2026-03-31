@@ -28,11 +28,7 @@
 <section style="background:#f8fafc;border-bottom:1px solid #e5e7eb;padding:32px 20px;">
     <div style="max-width:1000px;margin:0 auto;">
         {{-- Breadcrumbs --}}
-        <nav style="font-size:.85rem;color:#6b7280;margin-bottom:16px;">
-            <a href="/" style="color:#059669;text-decoration:none;">Home</a>
-            <span style="margin:0 6px;color:#d1d5db;">›</span>
-            <span style="color:#374151;">Find Centers</span>
-        </nav>
+        
 
         <h1 style="font-size:1.9rem;font-weight:800;color:#111827;margin:0 0 8px;line-height:1.2;">Licensed Childcare Centers</h1>
         <p style="color:#6b7280;font-size:.95rem;margin:0 0 32px;line-height:1.5;">Licensed centers from official state registries. Verify status on your state's licensing database.</p>
