@@ -78,11 +78,9 @@
         /* Nav responsive */
         .desktop-nav { display: none; }
         .nav-cta { display: none !important; }
-        .mobile-toggle { display: flex !important; }
         @media (min-width: 768px) {
             .desktop-nav { display: flex !important; }
             .nav-cta { display: inline-flex !important; align-items: center; }
-            .mobile-toggle { display: none !important; }
         }
         /* Stats grid */
         .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); text-align: center; }
@@ -151,7 +149,7 @@
         }
     </style>
 </head>
-<body x-data="{ mobileMenuOpen: false }" x-on:keydown.escape.window="mobileMenuOpen = false" class="font-sans antialiased bg-gray-50">
+<body class="font-sans antialiased bg-gray-50">
     <!-- Navigation -->
     @include('layouts.navigation')
 
@@ -162,26 +160,6 @@
 
     <!-- Footer -->
     @include('layouts.footer')
-
-    <!-- Mobile Menu Overlay -->
-    <div x-show="mobileMenuOpen" @click="mobileMenuOpen = false" x-transition:enter="transition-opacity ease-linear duration-300"
-         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-         x-transition:leave="transition-opacity ease-linear duration-300"
-         x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
-         class="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
-         x-cloak>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div x-show="mobileMenuOpen" x-transition:enter="transition ease-in-out duration-300 transform"
-         x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
-         x-transition:leave="transition ease-in-out duration-300 transform"
-         x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full"
-         class="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl lg:hidden"
-         x-cloak>
-        @include('layouts.mobile-navigation')
-    </div>
-
     <!-- Unified Sticky Mobile CTA (glassmorphism) -->
     <div id="unified-cta" style="position:fixed;bottom:0;left:0;right:0;z-index:55;display:none">
         <div style="margin:0 12px 12px;padding:10px 16px;background:rgba(255,255,255,0.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.12),0 0 0 1px rgba(0,0,0,0.05);display:flex;align-items:center;justify-content:space-between;gap:12px">
