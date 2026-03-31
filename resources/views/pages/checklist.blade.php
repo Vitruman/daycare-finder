@@ -35,7 +35,7 @@
 @endsection
 
 @section('content')
-<div style="margin-top:64px;">
+<div>
 
 <div style="max-width:900px;margin:0 auto;padding:14px 20px 0;font-size:.85rem;color:#666;">
     <a href="/" style="color:#065f46;text-decoration:none;">Home</a>

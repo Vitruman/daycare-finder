@@ -60,6 +60,7 @@ $faqs = [
 @endsection
 
 @section('content')
+@include("components.breadcrumbs")
 <style>
 /* Скрыть горизонтальный скролл */
 body { overflow-x: hidden; }

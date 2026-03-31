@@ -32,6 +32,7 @@
 </script>
 @endsection
 @section('content')
+@include("components.breadcrumbs")
     <!-- Breadcrumb -->
     <nav class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

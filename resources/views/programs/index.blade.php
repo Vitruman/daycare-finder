@@ -35,7 +35,8 @@
 @endsection
 
 @section('content')
-<div style="margin-top:64px;">
+<div>
+@include("components.breadcrumbs")
 
 <!-- Breadcrumbs -->
 <div style="max-width:1100px;margin:0 auto;padding:16px 20px 0;font-size:.85rem;color:#666;">

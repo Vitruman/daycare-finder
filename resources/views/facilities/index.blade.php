@@ -18,7 +18,8 @@
 @endsection
 
 @section('content')
-<div style="margin-top:64px;">
+<div>
+@include("components.breadcrumbs")
 
 {{-- Modern Search Section --}}
 {{-- ИСПРАВЛЕННЫЙ ПОИСК КАК В REHABHIVE --}}
