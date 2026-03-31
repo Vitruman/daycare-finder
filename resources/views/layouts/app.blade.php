@@ -37,7 +37,7 @@
     @hasSection("og_image")
         <meta property="og:image" content="@yield('og_image')">
     @else
-        <meta property="og:image" content="{{ asset('images/hero/rf-og.jpg') }}">
+        <meta property="og:image" content="{{ asset('images/logo/dh_og.png') }}">
     @endif
 
     <!-- Twitter Card -->
@@ -120,32 +120,38 @@
     </style>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/images/logo/rf-favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/rf-favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/rf-favicon-180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/logo/rf-logo-192.png">
+    <link rel="icon" type="image/svg+xml" href="/images/logo/dh_favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/dh_favicon_32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/dh_favicon_180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/logo/dh_logo_192.png">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b095d633-3489-40e6-8d76-727705dab912"></script>
     <style id="dh-nav-css">
-        .dh-header{position:fixed;top:0;left:0;right:0;z-index:200;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 1px 4px rgba(0,0,0,.06);}
-        .dh-inner{max-width:1200px;margin:0 auto;padding:0 16px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-        .dh-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;}
-        .dh-logo-box{width:34px;height:34px;background:#065f46;border-radius:9px;display:flex;align-items:center;justify-content:center;}
-        .dh-logo-name{font-size:.95rem;font-weight:800;color:#065f46;line-height:1;}
-        .dh-logo-sub{font-size:.6rem;color:#9ca3af;line-height:1;margin-top:2px;font-weight:500;}
-        .dh-nav-links{display:none;align-items:center;}
-        .dh-nav-links a{padding:7px 11px;border-radius:7px;font-size:.84rem;font-weight:500;color:#374151;text-decoration:none;}
+        .dh-header{position:fixed;top:0;left:0;right:0;z-index:200;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+        .dh-inner{max-width:1200px;margin:0 auto;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+        /* Logo */
+        .dh-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+        .dh-logo-box{width:38px;height:38px;background:linear-gradient(135deg,#065f46,#059669);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(6,95,70,.25);}
+        .dh-logo-name{font-size:1rem;font-weight:800;color:#065f46;line-height:1;letter-spacing:-.3px;}
+        .dh-logo-sub{font-size:.62rem;color:#9ca3af;line-height:1;margin-top:2px;font-weight:500;}
+        /* Nav links */
+        .dh-nav-links{display:none;align-items:center;gap:2px;}
+        .dh-nav-links a{padding:7px 12px;border-radius:8px;font-size:.85rem;font-weight:500;color:#374151;text-decoration:none;transition:all .15s;}
         .dh-nav-links a:hover{background:#f0fdf4;color:#065f46;}
-        .dh-nav-cta{padding:8px 16px;background:#065f46;color:#fff!important;border-radius:8px;font-weight:700;font-size:.84rem;text-decoration:none;margin-left:6px;}
-        .dh-nav-cta:hover{background:#047857!important;}
-        .dh-burger{display:flex;cursor:pointer;background:#fff;border:1.5px solid #e5e7eb;border-radius:8px;width:40px;height:40px;align-items:center;justify-content:center;flex-shrink:0;padding:0;}
-        .dh-dropdown{background:#fff;border-top:1px solid #f0f0f0;overflow:hidden;max-height:0;transition:max-height .3s ease;}
+        /* CTA Button */
+        .dh-nav-cta{display:inline-flex!important;align-items:center;gap:6px;padding:9px 18px!important;background:#065f46;color:#fff!important;border-radius:10px;font-weight:700;font-size:.85rem!important;text-decoration:none;transition:all .15s!important;box-shadow:0 2px 8px rgba(6,95,70,.2);}
+        .dh-nav-cta:hover{background:#047857!important;transform:translateY(-1px);box-shadow:0 4px 14px rgba(6,95,70,.3)!important;}
+        /* Burger */
+        .dh-burger{display:flex;cursor:pointer;background:#fff;border:1.5px solid #e5e7eb;border-radius:9px;width:40px;height:40px;align-items:center;justify-content:center;flex-shrink:0;padding:0;transition:border-color .15s;}
+        .dh-burger:hover{border-color:#065f46;}
+        /* Mobile Dropdown */
+        .dh-dropdown{background:#fff;border-top:1px solid #f3f4f6;overflow:hidden;max-height:0;transition:max-height .3s ease;box-shadow:0 8px 20px rgba(0,0,0,.08);}
         .dh-dropdown.open{max-height:600px;}
-        .dh-dropdown a{display:flex;align-items:center;gap:10px;padding:13px 16px;font-size:.9rem;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #f9f9f9;}
+        .dh-dropdown a{display:flex;align-items:center;gap:10px;padding:13px 20px;font-size:.9rem;font-weight:600;color:#374151;text-decoration:none;border-bottom:1px solid #f9fafb;transition:background .1s;}
         .dh-dropdown a:hover{background:#f0fdf4;color:#065f46;}
-        .dh-dd-cta{margin:8px 16px 14px!important;display:block;text-align:center;padding:12px!important;background:#065f46!important;color:#fff!important;border-radius:10px;font-weight:800!important;font-size:.9rem;border-bottom:none!important;}
+        .dh-dd-cta{margin:10px 16px 16px!important;display:block;text-align:center;padding:13px!important;background:#065f46!important;color:#fff!important;border-radius:12px;font-weight:800!important;font-size:.9rem;border-bottom:none!important;box-shadow:0 2px 8px rgba(6,95,70,.2);}
         @media(min-width:768px){
             .dh-nav-links{display:flex!important;}
-            .dh-burger{display:none;}
+            .dh-burger{display:none!important;}
         }
     </style>
 </head>

@@ -319,12 +319,12 @@ window.addEventListener('scroll', function() {
 })();
 </script>
 <!-- Mobile CTA -->
-<div class="rf-mobile-cta">
+<div class="dh-mobile-cta">
   <a href="tel:+18553213614" style="display:flex;align-items:center;justify-content:center;gap:8px;color:white;font-weight:700;text-decoration:none">
     <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
     Call (855) 321-3614
   </a>
 </div>
-<style>.rf-mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:50;background:#065f46;padding:12px 16px;display:none}@media(min-width:768px){.rf-mobile-cta{display:none!important}}</style>
-<script>window.addEventListener("scroll",function(){var c=document.querySelector(".rf-mobile-cta");if(c)c.style.display=window.scrollY>300?"block":"none"});</script>
+<style>.dh-mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:50;background:#065f46;padding:12px 16px;display:none}@media(min-width:768px){.dh-mobile-cta{display:none!important}}</style>
+<script>window.addEventListener("scroll",function(){var c=document.querySelector(".dh-mobile-cta");if(c)c.style.display=window.scrollY>300?"block":"none"});</script>
 @endsection

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect width="180" height="180" rx="40" fill="#065f46"/>
+  <!-- Крыша -->
+  <polygon points="90,35 28,85 152,85" fill="white"/>
+  <!-- Стены -->
+  <rect x="38" y="85" width="104" height="70" rx="4" fill="white" opacity="0.95"/>
+  <!-- Дверь -->
+  <rect x="70" y="115" width="40" height="40" rx="6" fill="#065f46"/>
+  <!-- Окна -->
+  <rect x="48" y="95" width="22" height="16" rx="3" fill="#065f46" opacity="0.3"/>
+  <rect x="110" y="95" width="22" height="16" rx="3" fill="#065f46" opacity="0.3"/>
+</svg>
