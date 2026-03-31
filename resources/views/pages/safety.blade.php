@@ -68,12 +68,12 @@
         <h2 style="font-size:.9rem;font-weight:700;color:#111;margin:0 0 10px;">7 Safety Topics — Jump to Section:</h2>
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
             <a href="#license" style="background:#065f46;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">1. License Check</a>
-            <a href="#inspections" style="background:#1e40af;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">2. Inspection Reports</a>
-            <a href="#safe-sleep" style="background:#7c3aed;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">3. Safe Sleep</a>
-            <a href="#background" style="background:#0f766e;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">4. Background Checks</a>
-            <a href="#playground" style="background:#b45309;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">5. Playground Safety</a>
-            <a href="#emergency" style="background:#be185d;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">6. Emergency Procedures</a>
-            <a href="#red-flags" style="background:#dc2626;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">7. Red Flags</a>
+            <a href="#inspections" style="background:#065f46;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">2. Inspections</a>
+            <a href="#safe-sleep" style="background:#065f46;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">3. Safe Sleep</a>
+            <a href="#background" style="background:#065f46;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">4. Background Checks</a>
+            <a href="#playground" style="background:#065f46;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">5. Playground</a>
+            <a href="#emergency" style="background:#065f46;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">6. Emergencies</a>
+            <a href="#red-flags" style="background:#dc2626;color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:.8rem;font-weight:600;">🚩 7. Red Flags</a>
         </div>
     </div>
 </section>

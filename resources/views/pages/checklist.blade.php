@@ -67,12 +67,12 @@
     <div style="max-width:850px;margin:0 auto;">
         <h2 style="font-size:.9rem;font-weight:700;color:#111;margin:0 0 10px;">6 Categories — Jump to Section:</h2>
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <a href="#safety" style="background:#065f46;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">🔒 Safety & Licensing</a>
-            <a href="#staff" style="background:#1e40af;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">👩‍🏫 Staff & Ratios</a>
-            <a href="#curriculum" style="background:#7c3aed;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">📚 Schedule & Curriculum</a>
-            <a href="#communication" style="background:#0f766e;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">💬 Communication</a>
-            <a href="#health" style="background:#b45309;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">🏥 Health & Nutrition</a>
-            <a href="#costs" style="background:#be185d;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">💵 Costs & Policies</a>
+            <a href="#safety" style="background:#065f46;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">🔒 Safety</a>
+            <a href="#staff" style="background:#047857;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">👩‍🏫 Staff</a>
+            <a href="#curriculum" style="background:#059669;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">📚 Curriculum</a>
+            <a href="#communication" style="background:#065f46;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">💬 Communication</a>
+            <a href="#health" style="background:#047857;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">🏥 Health</a>
+            <a href="#costs" style="background:#059669;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">💵 Costs</a>
         </div>
     </div>
 </section>
