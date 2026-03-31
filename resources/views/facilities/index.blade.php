@@ -19,8 +19,8 @@
 @section('content')
 <div style="margin-top:64px;">
 
-{{-- Header + Search --}}
-<section style="background:#fff;border-bottom:1px solid #e5e7eb;padding:28px 20px;">
+{{-- Modern Search Section --}}
+<section style="background:#f0fdf4;border-bottom:1px solid #d1fae5;padding:28px 20px;">
     <div style="max-width:1200px;margin:0 auto;">
         <div style="margin-bottom:20px;">
             <nav style="font-size:.82rem;color:#9ca3af;margin-bottom:8px;">
@@ -32,47 +32,95 @@
             <p style="color:#6b7280;font-size:.9rem;margin:0;">Licensed centers from official state registries. Verify status on your state's licensing database.</p>
         </div>
 
-        <form action="{{ route('facilities.index') }}" method="GET">
-            <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;">
-                <div style="flex:1;min-width:220px;">
-                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">Search</label>
-                    <div style="position:relative;">
-                        <svg style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#9ca3af;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                        <input type="text" name="search" value="{{ request('search') }}" placeholder="Name, city, or ZIP..."
-                               style="width:100%;padding:9px 12px 9px 34px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;box-sizing:border-box;outline:none;" onfocus="this.style.borderColor='#065f46'" onblur="this.style.borderColor='#d1d5db'">
+        <form action="{{ route('facilities.index') }}" method="GET" id="searchForm">
+            {{-- Main Search Input --}}
+            <div style="margin-bottom:16px;">
+                <div style="position:relative;">
+                    <svg style="position:absolute;left:18px;top:50%;transform:translateY(-50%);color:#999;pointer-events:none;width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" name="search" value="{{ request('search') }}" 
+                           placeholder="Search by name, city, ZIP code..."
+                           style="width:100%;padding:14px 18px 14px 48px;border-radius:60px;border:1.5px solid #c4d8e4;background:#fff;font-size:15px;outline:none;transition:border .2s,box-shadow .2s;"
+                           onfocus="this.style.borderColor='#065f46';this.style.boxShadow='0 0 0 4px rgba(6,95,70,.08)'" 
+                           onblur="this.style.borderColor='#c4d8e4';this.style.boxShadow='none'"
+                           onkeyup="delayedSubmit()">
+                </div>
+            </div>
+            
+            {{-- Filter Pills --}}
+            <div style="display:flex;gap:8px;overflow-x:auto;margin-bottom:16px;padding:2px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch;">
+                <style>.filter-row::-webkit-scrollbar{display:none;}</style>
+                
+                {{-- State --}}
+                <div style="position:relative;">
+                    <button type="button" onclick="toggleDropdown('state')" 
+                            style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:60px;border:1.5px solid {{ request('state') ? '#065f46' : '#c4d8e4' }};background:{{ request('state') ? '#065f46' : '#f0f6fa' }};font-size:13.5px;font-weight:500;color:{{ request('state') ? '#fff' : '#3a6f8c' }};cursor:pointer;white-space:nowrap;transition:all .15s;flex-shrink:0;">
+                        🌎 {{ request('state') ? request('state') : 'State' }} ▾
+                    </button>
+                    <div id="stateDropdown" style="display:none;position:absolute;top:100%;left:0;margin-top:4px;width:200px;max-height:300px;overflow-y:auto;background:#fff;border:1px solid #d1fae5;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15);z-index:50;">
+                        <div onclick="setFilter('state', '')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;transition:background .1s;" onmouseover="this.style.background='#f5f3f0'" onmouseout="this.style.background='transparent'">All States</div>
+                        @foreach($states as $state)
+                        <div onclick="setFilter('state', '{{ $state->code }}')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('state')==$state->code ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">{{ $state->name }}</div>
+                        @endforeach
                     </div>
                 </div>
-                <div style="min-width:150px;">
-                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">State</label>
-                    <select name="state" style="width:100%;padding:9px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;background:#fff;outline:none;" onfocus="this.style.borderColor='#065f46'" onblur="this.style.borderColor='#d1d5db'">
-                        <option value="">All States</option>
-                        @foreach($states as $state)
-                        <option value="{{ $state->code }}" {{ request('state') == $state->code ? 'selected' : '' }}>{{ $state->name }}</option>
-                        @endforeach
-                    </select>
+
+                {{-- Age --}}
+                <div style="position:relative;">
+                    <button type="button" onclick="toggleDropdown('age')"
+                            style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:60px;border:1.5px solid {{ request('age') ? '#065f46' : '#c4d8e4' }};background:{{ request('age') ? '#065f46' : '#f0f6fa' }};font-size:13.5px;font-weight:500;color:{{ request('age') ? '#fff' : '#3a6f8c' }};cursor:pointer;white-space:nowrap;transition:all .15s;flex-shrink:0;">
+                        👶 {{ ['infant'=>'Infant','toddler'=>'Toddler','preschool'=>'Preschool','school'=>'School'][request('age')] ?? 'Age Group' }} ▾
+                    </button>
+                    <div id="ageDropdown" style="display:none;position:absolute;top:100%;left:0;margin-top:4px;width:180px;background:#fff;border:1px solid #d1fae5;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15);z-index:50;">
+                        <div onclick="setFilter('age', '')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;transition:background .1s;" onmouseover="this.style.background='#f5f3f0'" onmouseout="this.style.background='transparent'">Any Age</div>
+                        <div onclick="setFilter('age', 'infant')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='infant' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">🍼 Infant (0–12 mo)</div>
+                        <div onclick="setFilter('age', 'toddler')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='toddler' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">🧒 Toddler (1–3 yrs)</div>
+                        <div onclick="setFilter('age', 'preschool')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='preschool' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">🎒 Preschool (3–5)</div>
+                        <div onclick="setFilter('age', 'school')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='school' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">📚 School-Age (5+)</div>
+                    </div>
                 </div>
-                <div style="min-width:130px;">
-                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">Age Group</label>
-                    <select name="age" style="width:100%;padding:9px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;background:#fff;outline:none;">
-                        <option value="">Any Age</option>
-                        <option value="infant" {{ request('age')=='infant'?'selected':'' }}>Infant (0–12 mo)</option>
-                        <option value="toddler" {{ request('age')=='toddler'?'selected':'' }}>Toddler (1–3 yrs)</option>
-                        <option value="preschool" {{ request('age')=='preschool'?'selected':'' }}>Preschool (3–5)</option>
-                        <option value="school" {{ request('age')=='school'?'selected':'' }}>School-Age (5+)</option>
-                    </select>
+
+                {{-- Sort --}}
+                <div style="position:relative;">
+                    <button type="button" onclick="toggleDropdown('sort')"
+                            style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:60px;border:1.5px solid #c4d8e4;background:#f0f6fa;font-size:13.5px;font-weight:500;color:#3a6f8c;cursor:pointer;white-space:nowrap;transition:all .15s;flex-shrink:0;">
+                        🔄 {{ ['latest'=>'Newest','name'=>'A–Z'][request('sort', 'latest')] }} ▾
+                    </button>
+                    <div id="sortDropdown" style="display:none;position:absolute;top:100%;left:0;margin-top:4px;width:120px;background:#fff;border:1px solid #d1fae5;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15);z-index:50;">
+                        <div onclick="setFilter('sort', 'latest')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('sort','latest')=='latest' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">Newest</div>
+                        <div onclick="setFilter('sort', 'name')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('sort')=='name' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">Name A–Z</div>
+                    </div>
                 </div>
-                <div style="min-width:120px;">
-                    <label style="display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:4px;">Sort By</label>
-                    <select name="sort" style="width:100%;padding:9px 10px;border:1px solid #d1d5db;border-radius:8px;font-size:.88rem;color:#111;background:#fff;outline:none;">
-                        <option value="latest" {{ request('sort','latest')=='latest'?'selected':'' }}>Newest</option>
-                        <option value="name" {{ request('sort')=='name'?'selected':'' }}>Name A–Z</option>
-                    </select>
-                </div>
-                <button type="submit" style="padding:9px 22px;background:#065f46;color:#fff;border:none;border-radius:8px;font-weight:700;font-size:.88rem;cursor:pointer;white-space:nowrap;">Search</button>
-                @if(request()->hasAny(['search','state','sort','age']))
-                <a href="{{ route('facilities.index') }}" style="padding:9px 14px;background:#f9fafb;color:#6b7280;border:1px solid #e5e7eb;border-radius:8px;font-size:.85rem;font-weight:600;text-decoration:none;">Clear</a>
+
+                {{-- Clear --}}
+                @if(request()->hasAny(['search','state','age']))
+                <a href="{{ route('facilities.index') }}" 
+                   style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:60px;border:1.5px solid #e4c0c0;background:#fef2f2;font-size:13.5px;font-weight:500;color:#b44;cursor:pointer;white-space:nowrap;transition:all .15s;flex-shrink:0;text-decoration:none;" 
+                   onmouseover="this.style.borderColor='#b44'" onmouseout="this.style.borderColor='#e4c0c0'">
+                    ✕ Clear All
+                </a>
                 @endif
             </div>
+            
+            {{-- Quick Tags --}}
+            <div style="display:flex;gap:8px;overflow-x:auto;padding:14px 0 2px;border-top:1px solid #d1fae5;scrollbar-width:none;-webkit-overflow-scrolling:touch;">
+                @foreach([
+                    'head start' => '⭐ Head Start',
+                    'montessori' => '🌱 Montessori',
+                    'bilingual' => '🌍 Bilingual',
+                    'subsidized' => '💰 Subsidized',
+                    'pre-k' => '📖 Pre-K'
+                ] as $term => $label)
+                <a href="?search={{ $term }}" style="padding:8px 16px;border-radius:60px;font-size:13px;font-weight:500;color:{{ request('search')==$term ? '#fff' : '#3a6f8c' }};background:{{ request('search')==$term ? '#065f46' : '#e4eef3' }};border:none;cursor:pointer;text-decoration:none;transition:all .15s;flex-shrink:0;white-space:nowrap;" onmouseover="if('{{ request('search') }}'!='{{ $term }}'){this.style.background='#065f46';this.style.color='#fff'}" onmouseout="if('{{ request('search') }}'!='{{ $term }}'){this.style.background='#e4eef3';this.style.color='#3a6f8c'}">{{ $label }}</a>
+                @endforeach
+            </div>
+
+            {{-- Hidden inputs --}}
+            <input type="hidden" name="state" id="hiddenState" value="{{ request('state') }}">
+            <input type="hidden" name="age" id="hiddenAge" value="{{ request('age') }}">
+            <input type="hidden" name="sort" id="hiddenSort" value="{{ request('sort', 'latest') }}">
         </form>
     </div>
 </section>
@@ -153,4 +201,40 @@
 </section>
 
 </div>
+
+{{-- JavaScript --}}
+<script>
+let searchTimeout;
+
+function toggleDropdown(type) {
+    const dropdown = document.getElementById(type + 'Dropdown');
+    // Закрыть остальные
+    ['state', 'age', 'sort'].forEach(t => {
+        if (t !== type) document.getElementById(t + 'Dropdown').style.display = 'none';
+    });
+    // Переключить текущий
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+}
+
+function setFilter(name, value) {
+    document.getElementById('hidden' + name.charAt(0).toUpperCase() + name.slice(1)).value = value;
+    document.getElementById('searchForm').submit();
+}
+
+function delayedSubmit() {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+        document.getElementById('searchForm').submit();
+    }, 500);
+}
+
+// Закрыть dropdown при клике вне
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('[onclick*="toggleDropdown"]') && !e.target.closest('[id$="Dropdown"]')) {
+        ['state', 'age', 'sort'].forEach(type => {
+            document.getElementById(type + 'Dropdown').style.display = 'none';
+        });
+    }
+});
+</script>
 @endsection
