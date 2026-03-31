@@ -113,7 +113,7 @@
                         </h3>
                         <div style="font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:4px;margin-bottom:6px;">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            {{ $facility->city }}, {{ $facility->state }}
+                            {{ ucwords(strtolower($facility->city)) }}, {{ $facility->state }}
                             @if($facility->zip) · {{ $facility->zip }}@endif
                         </div>
                         <div style="display:flex;gap:6px;flex-wrap:wrap;">

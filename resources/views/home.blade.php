@@ -31,11 +31,11 @@
             <span style="width:6px;height:6px;background:#34d399;border-radius:50%;display:inline-block;"></span>
             26,000+ Licensed Centers · All 50 States
         </div>
-        <h1 style="font-size:clamp(1.5rem,5vw,3rem);font-weight:800;color:#fff;margin:0 0 16px;line-height:1.2;letter-spacing:-.01em;">
+        <h1 style="font-size:clamp(1.4rem,5vw,3rem);font-weight:800;color:#fff;margin:0 0 16px;line-height:1.2;letter-spacing:-.01em;word-break:break-word;overflow-wrap:break-word;">
             Find Safe, Licensed Daycare<br>
             <span style="color:#6ee7b7;">Near You — Free</span>
         </h1>
-        <p style="font-size:1.05rem;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 32px;line-height:1.7;">
+        <p style="font-size:.95rem;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 32px;line-height:1.7;overflow-wrap:break-word;">
             Every listing is verified through official state registries. Search by ZIP, city, or age group — no signup required.
         </p>
 
@@ -74,7 +74,7 @@
         </form>
 
         {{-- Quick links --}}
-        <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+        <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:0 8px;">
             <span style="color:rgba(255,255,255,.6);font-size:.82rem;align-self:center;">Popular:</span>
             @foreach(['infant'=>'Infant Care','preschool'=>'Preschool','montessori'=>'Montessori','head+start'=>'Head Start'] as $q=>$label)
             <a href="/facilities?search={{ $q }}" style="background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);padding:5px 14px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;border:1px solid rgba(255,255,255,.2);transition:all .15s;" onmouseover="this.style.background='rgba(255,255,255,.25)'" onmouseout="this.style.background='rgba(255,255,255,.15)'">{{ $label }}</a>
