@@ -121,6 +121,24 @@ details summary::-webkit-details-marker { display: none; }
                     Search & Filter Centers
                 </a>
             </div>
+        </div>
+
+        {{-- ── МОНЕТИЗАЦИЯ В HERO ── --}}
+        <div style="margin-top:24px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;backdrop-filter:blur(4px);">
+            <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+                <span style="font-size:1.3rem;">💡</span>
+                <div>
+                    <div style="font-size:.84rem;font-weight:700;color:#fff;line-height:1.3;">Need a backup childcare option?</div>
+                    <div style="font-size:.77rem;color:rgba(255,255,255,.75);">Background-checked sitters & home daycares near {{ $zip }}</div>
+                </div>
+            </div>
+            <a href="https://www.care.com/childcare" target="_blank" rel="nofollow"
+               style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;color:#065f46;border-radius:60px;font-size:.84rem;font-weight:800;text-decoration:none;white-space:nowrap;transition:all .15s;box-shadow:0 2px 8px rgba(0,0,0,.15);flex-shrink:0;"
+               onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.2)'"
+               onmouseout="this.style.transform='none';this.style.boxShadow='0 2px 8px rgba(0,0,0,.15)'">
+                Browse Care.com →
+            </a>
+        </div>
 
             {{-- Stats Cards --}}
             <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;min-width:260px;">
@@ -190,9 +208,28 @@ details summary::-webkit-details-marker { display: none; }
             @endif
 
             <div class="center-card">
-                {{-- Avatar --}}
-                <div style="width:52px;height:52px;background:linear-gradient(135deg,#065f46,#059669);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.3rem;font-weight:800;box-shadow:0 4px 12px rgba(6,95,70,.25);">
-                    {{ strtoupper(substr($facility->rehab_name ?? 'D', 0, 1)) }}
+                {{-- Avatar с цветовым разнообразием --}}
+                @php
+                    $letter = strtoupper(substr($facility->rehab_name ?? 'D', 0, 1));
+                    $avatarColors = [
+                        'A'=>'135deg,#065f46,#059669','B'=>'135deg,#1d4ed8,#3b82f6',
+                        'C'=>'135deg,#7c3aed,#a855f7','D'=>'135deg,#c2410c,#f97316',
+                        'E'=>'135deg,#0e7490,#06b6d4','F'=>'135deg,#be185d,#ec4899',
+                        'G'=>'135deg,#065f46,#059669','H'=>'135deg,#1d4ed8,#3b82f6',
+                        'I'=>'135deg,#7c3aed,#a855f7','J'=>'135deg,#c2410c,#f97316',
+                        'K'=>'135deg,#0e7490,#06b6d4','L'=>'135deg,#be185d,#ec4899',
+                        'M'=>'135deg,#065f46,#059669','N'=>'135deg,#1d4ed8,#3b82f6',
+                        'O'=>'135deg,#7c3aed,#a855f7','P'=>'135deg,#c2410c,#f97316',
+                        'Q'=>'135deg,#0e7490,#06b6d4','R'=>'135deg,#be185d,#ec4899',
+                        'S'=>'135deg,#065f46,#059669','T'=>'135deg,#1d4ed8,#3b82f6',
+                        'U'=>'135deg,#7c3aed,#a855f7','V'=>'135deg,#c2410c,#f97316',
+                        'W'=>'135deg,#0e7490,#06b6d4','X'=>'135deg,#be185d,#ec4899',
+                        'Y'=>'135deg,#065f46,#059669','Z'=>'135deg,#1d4ed8,#3b82f6',
+                    ];
+                    $grad = $avatarColors[$letter] ?? '135deg,#065f46,#059669';
+                @endphp
+                <div style="width:52px;height:52px;background:linear-gradient($grad);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.3rem;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.18);">
+                    {{ $letter }}
                 </div>
                 {{-- Info --}}
                 <div style="flex:1;min-width:0;">
