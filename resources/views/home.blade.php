@@ -18,7 +18,7 @@
 @endsection
 
 @section('content')
-<div style="margin-top:64px;">
+
 
 {{-- ===== HERO ===== --}}
 <section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);padding:52px 16px 44px;position:relative;overflow:hidden;box-sizing:border-box;">
