@@ -21,12 +21,12 @@
 <div style="margin-top:64px;">
 
 {{-- ===== HERO ===== --}}
-<section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);padding:52px 16px 44px;position:relative;overflow:hidden;">
+<section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);padding:52px 16px 44px;position:relative;overflow:hidden;box-sizing:border-box;">
     {{-- Background pattern --}}
     <div style="position:absolute;inset:0;opacity:.06;" aria-hidden="true">
         <svg width="100%" height="100%"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
     </div>
-    <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;">
+    <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;padding:0 4px;">
         <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:#a7f3d0;padding:6px 16px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:22px;letter-spacing:.03em;">
             <span style="width:6px;height:6px;background:#34d399;border-radius:50%;display:inline-block;"></span>
             26,000+ Licensed Centers · All 50 States
@@ -40,24 +40,36 @@
         </p>
 
         {{-- Search form --}}
-        <form action="/facilities" method="GET" style="max-width:620px;margin:0 auto 20px;">
-            <div style="display:flex;flex-wrap:wrap;gap:8px;background:rgba(255,255,255,.12);border-radius:14px;padding:8px;backdrop-filter:blur(10px);">
-                <div style="flex:1;min-width:200px;position:relative;">
-                    <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.5);" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                    <input type="text" name="search" placeholder="City, center name, or ZIP code..."
-                           value="{{ request('search') }}"
-                           style="width:100%;padding:12px 14px 12px 38px;background:rgba(255,255,255,.95);border:none;border-radius:8px;font-size:.92rem;color:#111;outline:none;box-sizing:border-box;"
-                           autocomplete="off">
+        <form action="/facilities" method="GET" style="max-width:620px;margin:0 auto 20px;padding:0 4px;">
+            <style>
+                .hero-search-row { display:flex; gap:8px; }
+                .hero-search-input { flex:1; position:relative; }
+                .hero-search-state { min-width:110px; }
+                @media(max-width:600px) {
+                    .hero-search-row { flex-direction:column; }
+                    .hero-search-state { min-width:unset; width:100%; }
+                    .hero-search-btn { width:100%; }
+                }
+            </style>
+            <div style="background:rgba(255,255,255,.12);border-radius:14px;padding:8px;backdrop-filter:blur(10px);">
+                <div class="hero-search-row">
+                    <div class="hero-search-input">
+                        <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#6b7280;z-index:1;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <input type="text" name="search" placeholder="City, ZIP code, or center name..."
+                               value="{{ request('search') }}"
+                               style="width:100%;padding:12px 12px 12px 36px;background:#fff;border:none;border-radius:8px;font-size:.9rem;color:#111;outline:none;box-sizing:border-box;"
+                               autocomplete="off">
+                    </div>
+                    <select name="state" class="hero-search-state" style="padding:12px 10px;background:#fff;border:none;border-radius:8px;font-size:.86rem;color:#111;cursor:pointer;outline:none;box-sizing:border-box;">
+                        <option value="">All States</option>
+                        @foreach($states as $s)
+                        <option value="{{ $s->code }}" {{ request('state')==$s->code?'selected':'' }}>{{ $s->name }}</option>
+                        @endforeach
+                    </select>
+                    <button type="submit" class="hero-search-btn" style="padding:12px 20px;background:#f59e0b;color:#fff;border:none;border-radius:8px;font-weight:800;font-size:.9rem;cursor:pointer;white-space:nowrap;">
+                        Search →
+                    </button>
                 </div>
-                <select name="state" style="padding:12px 12px;background:rgba(255,255,255,.95);border:none;border-radius:8px;font-size:.88rem;color:#111;min-width:120px;max-width:130px;cursor:pointer;outline:none;">
-                    <option value="">All States</option>
-                    @foreach($states as $s)
-                    <option value="{{ $s->code }}" {{ request('state')==$s->code?'selected':'' }}>{{ $s->name }}</option>
-                    @endforeach
-                </select>
-                <button type="submit" style="padding:12px 22px;background:#f59e0b;color:#fff;border:none;border-radius:8px;font-weight:800;font-size:.92rem;cursor:pointer;white-space:nowrap;transition:background .15s;" onmouseover="this.style.background='#d97706'" onmouseout="this.style.background='#f59e0b'">
-                    Search →
-                </button>
             </div>
         </form>
 
@@ -82,7 +94,7 @@
                 ['100%','Free to Search'],
                 ['Gov.','Verified Data'],
             ] as $stat)
-            <div style="padding:18px 10px;border-right:1px solid #f3f4f6;" {{ $loop->last ? 'style="border-right:none;padding:18px 10px;"' : '' }}>
+            <div>
                 <div style="font-size:1.4rem;font-weight:800;color:#065f46;">{{ $stat[0] }}</div>
                 <div style="font-size:.78rem;color:#6b7280;margin-top:2px;font-weight:500;">{{ $stat[1] }}</div>
             </div>
@@ -161,7 +173,7 @@
                     {{ strtoupper(substr($center->rehab_name ?? 'D', 0, 1)) }}
                 </div>
                 <div style="min-width:0;">
-                    <div style="font-weight:700;font-size:.9rem;color:#111;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ $center->rehab_name }}</div>
+                    <div style="font-weight:700;font-size:.9rem;color:#111;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ ucwords(strtolower($center->rehab_name)) }}</div>
                     <div style="font-size:.8rem;color:#6b7280;margin-top:2px;">📍 {{ $center->city }}, {{ $center->state }} {{ $center->zip }}</div>
                     @if($center->age_range)
                     <span style="display:inline-block;background:#f0fdf4;color:#065f46;padding:2px 8px;border-radius:10px;font-size:.72rem;font-weight:600;margin-top:5px;">{{ $center->age_range }}</span>
