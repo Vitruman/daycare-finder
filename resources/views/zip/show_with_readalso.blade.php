@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @php $metaTotal = $stats['total']; @endphp
-@section('title', "Daycare Centers Near ZIP {{ $zip }} — {{ $cityTitle }}, {{ $state }} | DaycareHub")
-@section('meta_description', "Find {$metaTotal} licensed daycare & childcare centers near ZIP {$zip} in " . $cityTitle . ", {$state}. Compare programs, costs, and subsidies. Free, verified listings.")
+@section('title', "Daycare Centers Near ZIP {{ $zip }} — {{ ucwords(strtolower($city)) }}, {{ $state }} | DaycareHub")
+@section('meta_description', "Find {$metaTotal} licensed daycare & childcare centers near ZIP {$zip} in " . ucwords(strtolower($city)) . ", {$state}. Compare programs, costs, and subsidies. Free, verified listings.")
 
 @section('schema')
 <script type="application/ld+json">
@@ -31,7 +31,7 @@
 }
 </script>
 @php
-$cityTitle = $cityTitle;
+$cityTitle = ucwords(strtolower($city));
 $faqs = [
     ["How many daycare centers are near ZIP code {$zip}?", "There are {$stats['total']} licensed childcare centers in and around ZIP {$zip} in {$cityTitle}, {$state}. All hold active state licenses sourced from official {$state} licensing databases."],
     ["What is the average cost of daycare near {$zip}?", "Daycare costs near {$zip} in {$state}: infant care \$900–\$1,800/month; toddler programs \$700–\$1,200/month; preschool \$600–\$1,100/month. CCAP subsidies can reduce costs by 50–90% for eligible families."],
