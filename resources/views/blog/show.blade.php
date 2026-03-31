@@ -80,8 +80,7 @@
 <header class="pb-8 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         @if($blog->featured_image)
-        <figure class="mb-8"><img src="{{ asset($blog->featured_image) }}" alt="{{ $blog->title }} - comprehensive recovery guide overview" class="w-full rounded-2xl shadow-lg max-h-96 object-cover" width="1200" height="630" loading="lazy"></figure>
-        <figure style="display:none"><img src="{{ asset('images/hero/rf-og.jpg') }}" alt="{{ $blog->title }} - DaycareHub recovery resource guide" width="1200" height="630" loading="lazy"></figure>
+        <figure class="mb-8"><img src="{{ asset($blog->featured_image) }}" alt="{{ $blog->title }} - DaycareHub parent guide" class="w-full rounded-2xl shadow-lg max-h-96 object-cover" width="1200" height="630" loading="lazy"></figure>
         @endif
 
         <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{{ $blog->title }}</h1>
@@ -190,7 +189,7 @@
                     <svg class="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
                     <div>
                         <p class="font-bold text-amber-900 text-sm mb-1">Medical Disclaimer</p>
-                        <p class="text-amber-800 text-sm">This article is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider for diagnosis and treatment decisions. If you or someone you know is in crisis, call the <strong>988 Suicide & Crisis Lifeline</strong> or <strong>SAMHSA helpline at 1-800-662-4357</strong>.</p>
+                        <p class="text-amber-800 text-sm">This article is for informational purposes only. Subsidy eligibility rules and program details vary by state and change frequently. Always verify current requirements with your state childcare agency or local Child Care Resource & Referral agency.</p>
                     </div>
                 </div>
             </div>
@@ -218,12 +217,12 @@
 <section class="py-10">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="rounded-2xl p-8 text-center text-white" style="background:#065f46">
-            <h2 class="text-2xl font-bold mb-3">Need Help Finding Treatment?</h2>
-            <p class="text-white mb-5" style="opacity:0.9">Our treatment specialists can help you find the right program. Free, confidential, available 24/7.</p>
-            <a href="tel:+18553213614" class="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                (855) 321-3614
-            </a>
+            <h2 class="text-2xl font-bold mb-3">Find Daycare Near You</h2>
+            <p class="text-white mb-5" style="opacity:0.9">Search 26,000+ licensed childcare centers across all 50 states. Free, instant, no registration.</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="/facilities" class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">Browse Centers</a>
+                <a href="/subsidies" class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-emerald-800 transition-colors">Check Subsidies</a>
+            </div>
         </div>
     </div>
 </section>
@@ -260,21 +259,21 @@
 <section class="py-10 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="/treatment" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Treatment Types</h3>
-                <p class="text-gray-500 text-xs mt-1">7 programs compared</p>
+            <a href="/programs" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Program Types</h3>
+                <p class="text-gray-500 text-xs mt-1">6 types compared</p>
             </a>
-            <a href="/addiction" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Substances</h3>
-                <p class="text-gray-500 text-xs mt-1">8 substance guides</p>
+            <a href="/subsidies" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Subsidies & Aid</h3>
+                <p class="text-gray-500 text-xs mt-1">CCAP, Head Start & more</p>
             </a>
-            <a href="/insurance" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Insurance</h3>
-                <p class="text-gray-500 text-xs mt-1">10 providers</p>
+            <a href="/states" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Browse by State</h3>
+                <p class="text-gray-500 text-xs mt-1">All 50 states covered</p>
             </a>
-            <a href="/resources" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Recovery Guides</h3>
-                <p class="text-gray-500 text-xs mt-1">5 free guides</p>
+            <a href="/facilities" class="group bg-white rounded-xl p-4 border border-gray-100 hover:shadow-lg transition-all text-center">
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 text-sm">Find Centers</h3>
+                <p class="text-gray-500 text-xs mt-1">26,000+ licensed centers</p>
             </a>
         </div>
     </div>

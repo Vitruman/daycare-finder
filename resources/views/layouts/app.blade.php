@@ -8,7 +8,7 @@
 
     @php
         $defaultTitle = \App\Models\Setting::getValue('meta_title', 'DaycareHub - Find Childcare Centers');
-        $defaultDescription = \App\Models\Setting::getValue('meta_description', 'Find rehabilitation support, facilities, and helpful resources.');
+        $defaultDescription = \App\Models\Setting::getValue('meta_description', 'Find licensed daycare centers and childcare programs near you. Free directory for US families.');
         $defaultKeywords = \App\Models\Setting::getValue('meta_keywords', '');
 
         $metaTitle = trim($__env->yieldContent('meta_title')) ?: trim($__env->yieldContent('title')) ?: $defaultTitle;

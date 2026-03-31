@@ -61,7 +61,7 @@
             <span class="text-white">Blog</span>
         </nav>
         <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">DaycareHub Blog<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Expert Articles on Childcare</span></h1>
-        <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">Evidence-based articles on treatment, recovery, insurance, and family support. Reviewed by our editorial team, updated regularly.</p>
+        <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">Practical guides for parents on choosing daycare, understanding costs, applying for subsidies, and more. Updated regularly.</p>
         <div style="display:flex;flex-wrap:wrap;gap:24px">
             <div style="display:flex;align-items:center;gap:8px">
                 <div style="width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
@@ -108,11 +108,11 @@
         <!-- Category Pills -->
         <div class="flex flex-wrap gap-2" id="cat-filter">
             <button data-cat="all" class="cat-pill px-4 py-2 rounded-full text-sm font-medium transition-colors" style="background:#065f46;color:white">All</button>
-            <button data-cat="treatment" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Treatment</button>
-            <button data-cat="recovery" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Recovery</button>
-            <button data-cat="family" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Family</button>
-            <button data-cat="education" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Education</button>
-            <button data-cat="industry" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Industry</button>
+            <button data-cat="choosing" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Choosing Care</button>
+            <button data-cat="costs" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Costs & Subsidies</button>
+            <button data-cat="programs" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Programs</button>
+            <button data-cat="safety" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Safety</button>
+            <button data-cat="infants" class="cat-pill px-4 py-2 rounded-full bg-white border border-gray-200 text-sm text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors">Infants & Toddlers</button>
         </div>
     </div>
 </section>
@@ -160,25 +160,23 @@
             @foreach($blogs as $blog)
             @if($loop->first) @continue @endif
             @php
-                $cats = ['treatment','recovery','family','education','industry'];
+                $cats = ['choosing','costs','programs','safety','infants'];
                 $catMap = [
-                    'how-to-choose' => 'treatment',
-                    'stages-of-recovery' => 'recovery',
-                    'family-therapy' => 'family',
-                    'myths' => 'education',
-                    '12-step' => 'education',
-                    'rising-demand' => 'industry',
-                    'evolving-landscape' => 'industry',
-                    'how-long-does-rehab' => 'treatment',
-                    'medication-assisted-treatment' => 'treatment',
-                    'signs-of-drug-addiction' => 'education',
-                    'how-long-does-rehab' => 'treatment',
-                    'what-is-medication-assisted-treatment' => 'treatment',
+                    'how-to-choose' => 'choosing',
+                    'red-flags' => 'safety',
+                    'infant' => 'infants',
+                    'toddler' => 'infants',
+                    'head-start' => 'programs',
+                    'ccap' => 'costs',
+                    'subsid' => 'costs',
+                    'cost' => 'costs',
+                    'montessori' => 'programs',
+                    'preschool' => 'programs',
                 ];
-                $blogCat = 'education';
+                $blogCat = 'choosing';
                 foreach($catMap as $k => $v) { if(str_contains($blog->slug, $k)) { $blogCat = $v; break; } }
                 $readMin = $blog->content ? max(3, intval(str_word_count(strip_tags($blog->content)) / 200)) : 5;
-                $catColors = ['treatment' => ['#d1fae5','#065f46'], 'recovery' => ['#dbeafe','#1e40af'], 'family' => ['#fce7f3','#9d174d'], 'education' => ['#fef3c7','#92400e'], 'industry' => ['#e0e7ff','#3730a3']];
+                $catColors = ['choosing' => ['#d1fae5','#065f46'], 'costs' => ['#dbeafe','#1e40af'], 'programs' => ['#fce7f3','#9d174d'], 'safety' => ['#fef3c7','#92400e'], 'infants' => ['#e0e7ff','#3730a3']];
                 $cc = $catColors[$blogCat] ?? ['#f3f4f6','#374151'];
             @endphp
             <article class="blog-card group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all overflow-hidden flex flex-col" data-category="{{ $blogCat }}" style="transform:translateY(0);transition:all .3s">
@@ -229,11 +227,10 @@
 <section class="py-10">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="rounded-2xl p-8 text-center text-white" style="background:#065f46">
-            <h2 class="text-2xl font-bold mb-3">Need Help Finding Treatment?</h2>
-            <p class="text-white mb-5 text-lg" style="opacity:0.9">Our specialists can assess your situation and recommend the right program. Free, confidential, available 24/7.</p>
-            <a href="tel:+18553213614" class="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                (855) 321-3614
+            <h2 class="text-2xl font-bold mb-3">Ready to Find Daycare Near You?</h2>
+            <p class="text-white mb-5 text-lg" style="opacity:0.9">Search 26,000+ licensed childcare centers across all 50 states — free, instant, no registration.</p>
+            <a href="/facilities" class="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">
+                Browse All Centers
             </a>
         </div>
     </div>
@@ -242,30 +239,30 @@
 <!-- Start Here — For People New to Recovery -->
 <section class="py-14 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">New to Recovery? Start Here</h2>
-        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">If you or a loved one is considering treatment for the first time, these resources provide the foundation you need.</p>
+        <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">New to Childcare Search? Start Here</h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-10">Whether you're a first-time parent or moving to a new area, these guides cover the essentials.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="/resources/how-to-choose-rehab" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
+            <a href="/blog/how-to-choose-a-daycare-center-complete-guide" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
                 <div class="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center mb-3">
                     <span class="text-emerald-700 font-bold text-lg">1</span>
                 </div>
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">Choose a Daycare Center</h3>
-                <p class="text-gray-600 text-sm">7 factors to evaluate, red flags to avoid, and questions to ask before committing.</p>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">How to Choose a Daycare</h3>
+                <p class="text-gray-600 text-sm">Key quality indicators, questions to ask, and red flags to avoid when visiting centers.</p>
             </a>
-            <a href="/resources/what-to-expect-in-rehab" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
+            <a href="/blog/childcare-costs-us-2026-what-to-expect" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
                 <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-3">
                     <span class="text-blue-700 font-bold text-lg">2</span>
                 </div>
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">What to Expect in Rehab</h3>
-                <p class="text-gray-600 text-sm">Daily schedules, therapy types, what to pack, and how the first 72 hours work.</p>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">Childcare Costs in 2026</h3>
+                <p class="text-gray-600 text-sm">Average costs by state and age group — plus subsidies and tax credits that lower your bill.</p>
             </a>
-            <a href="/resources/paying-for-treatment" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
+            <a href="/blog/what-is-ccap-childcare-assistance-program-guide" class="group bg-white rounded-xl p-6 border border-gray-100 hover:shadow-lg transition-all">
                 <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mb-3">
                     <span class="text-purple-700 font-bold text-lg">3</span>
                 </div>
-                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">Paying for Treatment</h3>
-                <p class="text-gray-600 text-sm">Insurance, Medicaid, state-funded programs, sliding-scale fees, and scholarships.</p>
+                <h3 class="font-bold text-gray-900 group-hover:text-emerald-700 transition-colors mb-2">How to Apply for CCAP</h3>
+                <p class="text-gray-600 text-sm">Income limits, required documents, and step-by-step application guide for your state.</p>
             </a>
         </div>
     </div>
@@ -277,42 +274,42 @@
         <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Explore by Topic</h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                <h3 class="font-bold text-gray-900 mb-3 text-sm">Treatment Types</h3>
+                <h3 class="font-bold text-gray-900 mb-3 text-sm">Program Types</h3>
                 <div class="space-y-1.5 text-sm">
-                    <a href="/treatment/inpatient-rehab" class="block text-gray-600 hover:text-emerald-600">Inpatient Rehab &rarr;</a>
-                    <a href="/treatment/part-time-programs" class="block text-gray-600 hover:text-emerald-600">Outpatient &rarr;</a>
-                    <a href="/treatment/medical-infant care" class="block text-gray-600 hover:text-emerald-600">Medical Infant Care &rarr;</a>
-                    <a href="/treatment/medication-assisted-treatment" class="block text-gray-600 hover:text-emerald-600">MAT &rarr;</a>
-                    <a href="/treatment" class="block text-emerald-600 font-medium mt-1">All 7 programs &rarr;</a>
+                    <a href="/programs" class="block text-gray-600 hover:text-emerald-600">Infant Care &rarr;</a>
+                    <a href="/programs" class="block text-gray-600 hover:text-emerald-600">Toddler Programs &rarr;</a>
+                    <a href="/programs" class="block text-gray-600 hover:text-emerald-600">Preschool &rarr;</a>
+                    <a href="/programs" class="block text-gray-600 hover:text-emerald-600">School-Age Care &rarr;</a>
+                    <a href="/programs" class="block text-emerald-600 font-medium mt-1">All 6 programs &rarr;</a>
                 </div>
             </div>
             <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                <h3 class="font-bold text-gray-900 mb-3 text-sm">Substances</h3>
+                <h3 class="font-bold text-gray-900 mb-3 text-sm">Find by Location</h3>
                 <div class="space-y-1.5 text-sm">
-                    <a href="/addiction/alcohol" class="block text-gray-600 hover:text-emerald-600">Alcohol &rarr;</a>
-                    <a href="/addiction/opioids" class="block text-gray-600 hover:text-emerald-600">Opioids &rarr;</a>
-                    <a href="/addiction/fentanyl" class="block text-gray-600 hover:text-emerald-600">Fentanyl &rarr;</a>
-                    <a href="/addiction/methamphetamine" class="block text-gray-600 hover:text-emerald-600">Meth &rarr;</a>
-                    <a href="/addiction" class="block text-emerald-600 font-medium mt-1">All 8 substances &rarr;</a>
+                    <a href="/states/california" class="block text-gray-600 hover:text-emerald-600">California &rarr;</a>
+                    <a href="/states/texas" class="block text-gray-600 hover:text-emerald-600">Texas &rarr;</a>
+                    <a href="/states/new-york" class="block text-gray-600 hover:text-emerald-600">New York &rarr;</a>
+                    <a href="/states/florida" class="block text-gray-600 hover:text-emerald-600">Florida &rarr;</a>
+                    <a href="/states" class="block text-emerald-600 font-medium mt-1">All 50 states &rarr;</a>
                 </div>
             </div>
             <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                <h3 class="font-bold text-gray-900 mb-3 text-sm">Insurance</h3>
+                <h3 class="font-bold text-gray-900 mb-3 text-sm">Subsidies & Aid</h3>
                 <div class="space-y-1.5 text-sm">
-                    <a href="/insurance/aetna" class="block text-gray-600 hover:text-emerald-600">Aetna &rarr;</a>
-                    <a href="/insurance/bcbs" class="block text-gray-600 hover:text-emerald-600">BCBS &rarr;</a>
-                    <a href="/insurance/cigna" class="block text-gray-600 hover:text-emerald-600">Cigna &rarr;</a>
-                    <a href="/insurance/uhc" class="block text-gray-600 hover:text-emerald-600">UnitedHealthcare &rarr;</a>
-                    <a href="/insurance" class="block text-emerald-600 font-medium mt-1">All 10 providers &rarr;</a>
+                    <a href="/subsidies" class="block text-gray-600 hover:text-emerald-600">CCAP Overview &rarr;</a>
+                    <a href="/subsidies" class="block text-gray-600 hover:text-emerald-600">Head Start &rarr;</a>
+                    <a href="/subsidies" class="block text-gray-600 hover:text-emerald-600">Early Head Start &rarr;</a>
+                    <a href="/subsidies" class="block text-gray-600 hover:text-emerald-600">Tax Credit &rarr;</a>
+                    <a href="/subsidies" class="block text-emerald-600 font-medium mt-1">All subsidy programs &rarr;</a>
                 </div>
             </div>
             <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                <h3 class="font-bold text-gray-900 mb-3 text-sm">Recovery Guides</h3>
+                <h3 class="font-bold text-gray-900 mb-3 text-sm">Parent Guides</h3>
                 <div class="space-y-1.5 text-sm">
-                    <a href="/resources/how-to-choose-rehab" class="block text-gray-600 hover:text-emerald-600">Choosing Rehab &rarr;</a>
-                    <a href="/resources/family-guide" class="block text-gray-600 hover:text-emerald-600">Family Guide &rarr;</a>
-                    <a href="/resources/relapse-prevention" class="block text-gray-600 hover:text-emerald-600">Relapse Prevention &rarr;</a>
-                    <a href="/resources" class="block text-emerald-600 font-medium mt-1">All 5 guides &rarr;</a>
+                    <a href="/blog/how-to-choose-a-daycare-center-complete-guide" class="block text-gray-600 hover:text-emerald-600">Choosing Daycare &rarr;</a>
+                    <a href="/blog/infant-daycare-what-parents-need-to-know" class="block text-gray-600 hover:text-emerald-600">Infant Care Guide &rarr;</a>
+                    <a href="/blog/daycare-red-flags-signs-to-walk-away" class="block text-gray-600 hover:text-emerald-600">Red Flags to Avoid &rarr;</a>
+                    <a href="/blog" class="block text-emerald-600 font-medium mt-1">All articles &rarr;</a>
                 </div>
             </div>
         </div>
@@ -341,10 +338,10 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
         <div class="space-y-3">
-            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Who writes these articles?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">All articles are written by our editorial team with backgrounds in childcare, behavioral health, and public health. Content is reviewed for accuracy before publication and updated regularly based on the latest research from SAMHSA, NIDA, and peer-reviewed sources.</div></details>
-            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How often is the blog updated?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">We publish new articles weekly and review existing content monthly. All articles display their publication and last-updated dates. If research or guidelines change, we update affected articles promptly.</div></details>
-            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Can I use this information to make treatment decisions?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Our articles are educational and should supplement — not replace — professional medical advice. For personalized treatment recommendations, we encourage speaking with a licensed professional or calling our helpline at <a href="tel:+18553213614" class="text-emerald-600 font-semibold">(855) 321-3614</a> for a free assessment.</div></details>
-            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Is the blog free to read?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Yes — 100% free, no registration required. We believe access to quality recovery information should never have a paywall.</div></details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Who writes these articles?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">All articles are written by our editorial team with backgrounds in early childhood education, childcare policy, and family support. Content is reviewed for accuracy and updated regularly based on the latest research and government guidelines.</div></details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">How often is the blog updated?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">We publish new articles regularly and review existing content when policies or costs change. All articles display their publication and last-updated dates.</div></details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Can I search for daycare centers on this site?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Yes — visit our <a href="/facilities" class="text-emerald-600 hover:underline">facilities directory</a> to search 26,000+ licensed childcare centers by city, state, or ZIP code. No registration required.</div></details>
+            <details class="group bg-gray-50 rounded-xl border border-gray-100"><summary class="flex justify-between items-center cursor-pointer p-5 font-semibold text-gray-900">Is the blog free to read?<svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary><div class="px-5 pb-5 text-gray-600">Yes — 100% free, no registration required. We believe finding quality childcare information should never have a paywall.</div></details>
         </div>
     </div>
 </section>
@@ -352,13 +349,13 @@
 <!-- CTA -->
 <section class="py-14 text-white" style="background:#065f46">
     <div class="max-w-2xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-3">Ready to Take the First Step?</h2>
-        <p class="mb-6 text-lg" style="color:rgba(255,255,255,0.9)">Our treatment specialists are available around the clock to help you find the right program. Free, confidential, no obligation.</p>
-        <a href="tel:+18553213614" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            (855) 321-3614
-        </a>
-        <p class="mt-4 text-sm" style="color:rgba(255,255,255,0.7)"><a href="/facilities" class="underline" style="color:rgba(255,255,255,0.9)">Browse centers</a> &bull; <a href="/states" class="underline" style="color:rgba(255,255,255,0.9)">Find by state</a> &bull; <a href="/insurance" class="underline" style="color:rgba(255,255,255,0.9)">Check insurance</a></p>
+        <h2 class="text-3xl font-bold mb-3">Ready to Find Childcare?</h2>
+        <p class="mb-6 text-lg" style="color:rgba(255,255,255,0.9)">Search 26,000+ licensed daycare centers and preschools near you — free and instant.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="/facilities" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-emerald-800 font-bold text-lg hover:bg-emerald-50 transition-colors">Browse Centers</a>
+            <a href="/subsidies" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-emerald-800 transition-colors">Check Subsidies</a>
+        </div>
+        <p class="mt-4 text-sm" style="color:rgba(255,255,255,0.7)"><a href="/states" class="underline" style="color:rgba(255,255,255,0.9)">Browse by state</a> &bull; <a href="/programs" class="underline" style="color:rgba(255,255,255,0.9)">Program types</a> &bull; <a href="/about" class="underline" style="color:rgba(255,255,255,0.9)">About DaycareHub</a></p>
     </div>
 </section>
 
