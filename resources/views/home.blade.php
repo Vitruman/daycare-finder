@@ -118,7 +118,7 @@
             ] as $step)
             <div style="background:#fff;border-radius:14px;padding:24px;border:1px solid #e5e7eb;position:relative;">
                 <div style="position:absolute;top:-14px;left:20px;width:28px;height:28px;background:#065f46;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;">{{ $step[0] }}</div>
-                <div style="font-size:2rem;margin:12px 0 10px;">{{ $step[1] }}</div>
+                <div style="font-size:2rem;margin:12px 0 10px;">{!! $step[1] !!}</div>
                 <h3 style="font-size:1rem;font-weight:700;color:#111;margin:0 0 8px;">{{ $step[2] }}</h3>
                 <p style="font-size:.86rem;color:#6b7280;line-height:1.65;margin:0 0 14px;">{{ $step[3] }}</p>
                 <a href="{{ $step[4] }}" style="color:#065f46;font-size:.83rem;font-weight:700;text-decoration:none;">Learn more →</a>
@@ -148,7 +148,7 @@
                 ['<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12"/><path d="M5 12C5 7.029 9.029 3 14 3s9 4.029 9 9-4 9-9 9H5V12z"/></svg>','Montessori','2–6 years','montessori','Varies'],
             ] as $p)
             <a href="/facilities?search={{ $p[3] }}" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 12px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;text-decoration:none;transition:all .15s;gap:4px;" onmouseover="this.style.borderColor='#065f46';this.style.background='#f0fdf4'" onmouseout="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">
-                <span style="font-size:1.8rem;line-height:1;">{{ $p[0] }}</span>
+                <span style="font-size:1.8rem;line-height:1;">{!! $p[0] !!}</span>
                 <span style="font-weight:700;font-size:.87rem;color:#111;margin-top:6px;">{{ $p[1] }}</span>
                 <span style="font-size:.73rem;color:#9ca3af;">{{ $p[2] }}</span>
                 <span style="font-size:.73rem;color:#065f46;font-weight:600;margin-top:4px;">{{ $p[4] }}</span>
@@ -248,7 +248,7 @@
                 ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>','Parent Blog','/blog','Guides on choosing daycare, CCAP applications, Head Start vs daycare, and more.'],
             ] as $guide)
             <a href="{{ $guide[2] }}" style="display:flex;gap:14px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:18px;text-decoration:none;transition:all .15s;" onmouseover="this.style.borderColor='#065f46';this.style.boxShadow='0 4px 12px rgba(0,0,0,.06)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'">
-                <div style="font-size:1.8rem;flex-shrink:0;line-height:1;margin-top:2px;">{{ $guide[0] }}</div>
+                <div style="font-size:1.8rem;flex-shrink:0;line-height:1;margin-top:2px;">{!! $guide[0] !!}</div>
                 <div>
                     <div style="font-weight:700;font-size:.92rem;color:#111;margin-bottom:4px;">{{ $guide[1] }}</div>
                     <p style="font-size:.83rem;color:#6b7280;line-height:1.6;margin:0;">{{ $guide[3] }}</p>
