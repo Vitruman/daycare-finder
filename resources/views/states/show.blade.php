@@ -2,7 +2,7 @@
 
 @section('title', 'Daycare Centers in ' . $state->name . ' — Find Daycare Near You | DaycareHub')
 
-@section('meta_description', 'Find verified drug & alcohol daycare centers in ' . $state->name . '. Browse ' . $facilities->total() . ' treatment facilities, compare programs, and get free guidance.')
+@section('meta_description', 'Find licensed daycare and childcare centers in ' . $state->name . '. Browse all centers and filter by age group, program type, and subsidy acceptance.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -73,7 +73,7 @@
                     @foreach($facilities as $facility)
                         <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                             @if($facility->image)
-                                <img src="{{ asset('storage/' . $facility->image) }}" alt="{{ $facility->rehab_name }}"
+                                <img src="{{ asset('storage/' . $facility->image) }}" alt="{{ $facility->rehab_name }} childcare center"
                                      class="w-full h-48 object-contain bg-white">
                             @else
                                 <div class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">

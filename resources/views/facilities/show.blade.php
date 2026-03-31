@@ -158,7 +158,7 @@
                             @if($facility->treatment_focus)
                                 <div class="bg-purple-50 border border-purple-100 rounded-xl px-4 py-3">
                                     <p class="text-xs text-purple-700 font-semibold uppercase tracking-wide">Focus</p>
-                                    <p class="text-sm font-semibold text-gray-900 line-clamp-2">{{ $facility->treatment_focus }}</p>
+                                    <p class="text-sm font-semibold text-gray-900 line-clamp-2">{{ $facility->treatment_focus ?: "General Childcare" }}</p>
                                 </div>
                             @endif
                         </div>
