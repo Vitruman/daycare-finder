@@ -56,6 +56,7 @@ $faqs = [
     ]
 }
 </script>
+@include("components.read-also")
 @endsection
 
 @section('content')
@@ -480,4 +481,5 @@ details summary::-webkit-details-marker { display: none; }
 </div>
 
 </div>
+@include("components.read-also")
 @endsection

@@ -6,6 +6,11 @@ use App\Models\Organization;
 
 class ZipController extends Controller
 {
+    public function index()
+    {
+        return view('zip.index');
+    }
+
     public function show($zip)
     {
         $zip = preg_replace('/[^0-9]/', '', $zip);
@@ -19,27 +24,23 @@ class ZipController extends Controller
                 $q->where('permit_status', '!=', 'Expired')
                    ->orWhereNull('permit_status');
             })
-            ->orderByDesc('created_at')
-            ->limit(50)
+            ->orderBy('organization_name')
             ->get();
 
         if ($centers->isEmpty()) {
-            $nearbyZip = substr($zip, 0, 4);
-            $centers = Organization::where('zip', 'like', $nearbyZip . '%')
-                ->limit(12)
-                ->get();
+            return view('zip.not-found', ['zip' => $zip]);
         }
 
         $stats = [
-            'total'     => $centers->count(),
-            'infant'    => $centers->filter(fn($c) => str_contains($c->age_range ?? '', '0'))->count(),
-            'preschool' => $centers->filter(fn($c) => str_contains($c->program_type ?? '', 'PRESCHOOL'))->count(),
-            'avg_safety' => round($centers->whereNotNull('violation_rate')->avg('violation_rate') ?? 0, 1),
+            'total' => $centers->count(),
+            'infant' => $centers->filter(fn($c) => str_contains(strtolower($c->ages_served_desc ?? ''), 'infant'))->count(),
+            'preschool' => $centers->filter(fn($c) => str_contains(strtolower($c->ages_served_desc ?? ''), 'preschool'))->count(),
         ];
 
-        $city  = $centers->first()?->city ?? 'This Area';
-        $state = $centers->first()?->state ?? '';
+        $firstCenter = $centers->first();
+        $cityTitle = $firstCenter->city ?? 'Unknown City';
+        $state = $firstCenter->state;
 
-        return view('zip.show', compact('centers', 'zip', 'city', 'state', 'stats'));
+        return view('zip.show', compact('zip', 'centers', 'stats', 'cityTitle', 'state'));
     }
 }

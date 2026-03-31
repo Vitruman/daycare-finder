@@ -136,6 +136,7 @@ Route::redirect('/guides', '/blog');
 Route::redirect('/guides/', '/blog');
 
 // ZIP routes  
+Route::get('/zip', [\App\Http\Controllers\ZipController::class, 'index'])->name('zip.index');
 Route::get('/zip/{zip}', [\App\Http\Controllers\ZipController::class, 'show'])->name('zip.show');
 
 // City routes
