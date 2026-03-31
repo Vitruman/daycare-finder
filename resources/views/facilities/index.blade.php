@@ -25,101 +25,118 @@
 {{-- ИСПРАВЛЕННЫЙ ПОИСК КАК В REHABHIVE --}}
 
 {{-- Hero with Clean Search --}}
-<section style="background:#f8fafc;border-bottom:1px solid #e5e7eb;padding:32px 20px;">
+{{-- ПОИСК В СТИЛЕ REHABHIVE --}}
+<section style="background:#f8fafc;padding:24px 20px;border-bottom:1px solid #e5e7eb;">
     <div style="max-width:1000px;margin:0 auto;">
-        {{-- Breadcrumbs --}}
-        
+        {{-- Заголовок и breadcrumbs --}}
+        <nav style="font-size:.85rem;color:#6b7280;margin-bottom:12px;">
+            <a href="/" style="color:#059669;text-decoration:none;">Home</a>
+            <span style="margin:0 6px;color:#d1d5db;">›</span>
+            <span style="color:#374151;">Find Centers</span>
+        </nav>
 
-        <h1 style="font-size:1.9rem;font-weight:800;color:#111827;margin:0 0 8px;line-height:1.2;">Licensed Childcare Centers</h1>
-        <p style="color:#6b7280;font-size:.95rem;margin:0 0 32px;line-height:1.5;">Licensed centers from official state registries. Verify status on your state's licensing database.</p>
+        <h1 style="font-size:1.8rem;font-weight:800;color:#111827;margin:0 0 6px;">Licensed Childcare Centers</h1>
+        <p style="color:#6b7280;margin:0 0 24px;font-size:.95rem;">Licensed centers from official state registries — free, no signup required</p>
 
-        {{-- CLEAN SEARCH INPUT - like RehabHive --}}
-        <form action="{{ route('facilities.index') }}" method="GET" class="search-form">
-            <div style="position:relative;margin-bottom:20px;">
-                <svg style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#9ca3af;width:20px;height:20px;pointer-events:none;" 
-                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"/>
-                    <path d="m21 21-4.35-4.35"/>
-                </svg>
+        {{-- ПРОСТОЙ ПОИСК КАК В REHABHIVE --}}
+        <form action="{{ route('facilities.index') }}" method="GET" style="display:flex;gap:12px;flex-wrap:wrap;align-items:end;">
+            {{-- Главное поле поиска --}}
+            <div style="flex:1;min-width:300px;">
+                <label style="display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:6px;">Search by name, city, or ZIP</label>
                 <input type="text" 
                        name="search" 
                        value="{{ request('search') }}" 
-                       placeholder="Search by name, city, ZIP code..."
-                       style="width:100%;padding:16px 20px 16px 50px;border:2px solid #e5e7eb;border-radius:12px;background:#fff;font-size:1rem;outline:none;transition:border-color .2s,box-shadow .2s;"
-                       onfocus="this.style.borderColor='#059669';this.style.boxShadow='0 0 0 3px rgba(5,150,105,0.1)'"
-                       onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'"
-                       autocomplete="off">
+                       placeholder="e.g., Bright Horizons, Manhattan, 10001"
+                       style="width:100%;padding:12px 16px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem;outline:none;transition:border-color .2s;"
+                       onfocus="this.style.borderColor='#059669'" 
+                       onblur="this.style.borderColor='#d1d5db'">
             </div>
 
-            {{-- Filter Pills - Clean Style --}}
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                {{-- State Filter --}}
-                <div style="position:relative;">
-                    <select name="state" 
-                            onchange="this.form.submit()"
-                            style="appearance:none;padding:10px 32px 10px 16px;border:1px solid #d1d5db;border-radius:8px;background:#fff url('data:image/svg+xml;charset=utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"%236b7280\"><path fill-rule=\"evenodd\" d=\"M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z\" clip-rule=\"evenodd\"/></svg>') no-repeat right 8px center;background-size:20px;font-size:.9rem;color:#374151;outline:none;cursor:pointer;min-width:120px;">
-                        <option value="">All States</option>
-                        @foreach($states as $stateOption)
-                        <option value="{{ $stateOption->code }}" {{ request('state') == $stateOption->code ? 'selected' : '' }}>
-                            {{ $stateOption->name }}
-                        </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                {{-- Age Filter --}}
-                <div style="position:relative;">
-                    <select name="age" 
-                            onchange="this.form.submit()"
-                            style="appearance:none;padding:10px 32px 10px 16px;border:1px solid #d1d5db;border-radius:8px;background:#fff url('data:image/svg+xml;charset=utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"%236b7280\"><path fill-rule=\"evenodd\" d=\"M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z\" clip-rule=\"evenodd\"/></svg>') no-repeat right 8px center;background-size:20px;font-size:.9rem;color:#374151;outline:none;cursor:pointer;min-width:130px;">
-                        <option value="">All Ages</option>
-                        <option value="infant" {{ request('age') == 'infant' ? 'selected' : '' }}>Infant (0-12m)</option>
-                        <option value="toddler" {{ request('age') == 'toddler' ? 'selected' : '' }}>Toddler (1-3y)</option>
-                        <option value="preschool" {{ request('age') == 'preschool' ? 'selected' : '' }}>Preschool (3-5y)</option>
-                        <option value="school" {{ request('age') == 'school' ? 'selected' : '' }}>School Age (5+)</option>
-                    </select>
-                </div>
-
-                {{-- Sort Filter --}}
-                <div style="position:relative;">
-                    <select name="sort" 
-                            onchange="this.form.submit()"
-                            style="appearance:none;padding:10px 32px 10px 16px;border:1px solid #d1d5db;border-radius:8px;background:#fff url('data:image/svg+xml;charset=utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"%236b7280\"><path fill-rule=\"evenodd\" d=\"M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z\" clip-rule=\"evenodd\"/></svg>') no-repeat right 8px center;background-size:20px;font-size:.9rem;color:#374151;outline:none;cursor:pointer;min-width:120px;">
-                        <option value="name">A-Z</option>
-                        <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>Newest</option>
-                    </select>
-                </div>
-
-                {{-- Clear Filters --}}
-                @if(request()->hasAny(['search', 'state', 'age', 'sort']))
-                <a href="{{ route('facilities.index') }}" 
-                   style="display:inline-flex;align-items:center;padding:10px 16px;border:1px solid #d1d5db;border-radius:8px;background:#f9fafb;color:#6b7280;text-decoration:none;font-size:.9rem;transition:all .2s;"
-                   onmouseover="this.style.background='#f3f4f6'" 
-                   onmouseout="this.style.background='#f9fafb'">
-                    Clear All
-                </a>
-                @endif
+            {{-- State Filter --}}
+            <div style="min-width:140px;">
+                <label style="display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:6px;">State</label>
+                <select name="state" 
+                        style="width:100%;padding:12px 16px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem;background:#fff;cursor:pointer;outline:none;">
+                    <option value="">All States</option>
+                    @foreach($states as $stateOption)
+                    <option value="{{ $stateOption->code }}" {{ request('state') == $stateOption->code ? 'selected' : '' }}>
+                        {{ $stateOption->name }}
+                    </option>
+                    @endforeach
+                </select>
             </div>
+
+            {{-- Age Filter --}}
+            <div style="min-width:140px;">
+                <label style="display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:6px;">Age Group</label>
+                <select name="age" 
+                        style="width:100%;padding:12px 16px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem;background:#fff;cursor:pointer;outline:none;">
+                    <option value="">All Ages</option>
+                    <option value="infant" {{ request('age') == 'infant' ? 'selected' : '' }}>Infant (0-12m)</option>
+                    <option value="toddler" {{ request('age') == 'toddler' ? 'selected' : '' }}>Toddler (1-3y)</option>
+                    <option value="preschool" {{ request('age') == 'preschool' ? 'selected' : '' }}>Preschool (3-5y)</option>
+                    <option value="school" {{ request('age') == 'school' ? 'selected' : '' }}>School Age (5+)</option>
+                </select>
+            </div>
+
+            {{-- Search Button --}}
+            <button type="submit" 
+                    style="padding:12px 24px;background:#059669;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:background .2s;white-space:nowrap;"
+                    onmouseover="this.style.background='#047857'" 
+                    onmouseout="this.style.background='#059669'">
+                Search
+            </button>
         </form>
 
         {{-- Results Count --}}
-        @if(isset($facilities))
-        <div style="margin-top:20px;padding-top:20px;border-top:1px solid #e5e7eb;">
-            <p style="color:#6b7280;font-size:.9rem;margin:0;">
-                Showing <strong style="color:#374151;">{{ $facilities->firstItem() ?? 0 }}-{{ $facilities->lastItem() ?? 0 }}</strong> 
-                of <strong style="color:#374151;">{{ number_format($facilities->total()) }}</strong> 
-                licensed centers
-                @if(request('search'))
-                for "<strong style="color:#059669;">{{ request('search') }}</strong>"
-                @endif
-                @if(request('state'))
-                in <strong>{{ $states->where('code', request('state'))->first()->name ?? request('state') }}</strong>
-                @endif
+        @if(isset($facilities) && $facilities->total() > 0)
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e5e7eb;">
+            <p style="color:#6b7280;font-size:.9rem;margin:0;display:flex;justify-content:space-between;align-items:center;">
+                <span>
+                    Showing <strong style="color:#374151;">{{ number_format($facilities->firstItem() ?? 0) }}-{{ number_format($facilities->lastItem() ?? 0) }}</strong> 
+                    of <strong style="color:#374151;">{{ number_format($facilities->total()) }}</strong> centers
+                    @if(request('search'))
+                    for "<strong style="color:#059669;">{{ request('search') }}</strong>"
+                    @endif
+                </span>
+                
+                {{-- Sort Options --}}
+                <select name="sort" onchange="this.form.submit()" form="search-form"
+                        style="padding:6px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:.85rem;background:#fff;">
+                    <option value="name" {{ request('sort', 'name') == 'name' ? 'selected' : '' }}>A-Z</option>
+                    <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>Newest</option>
+                </select>
             </p>
         </div>
         @endif
     </div>
 </section>
+
+{{-- Auto-submit при изменении фильтров --}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selects = document.querySelectorAll('select[name="state"], select[name="age"]');
+    selects.forEach(select => {
+        select.addEventListener('change', function() {
+            this.form.submit();
+        });
+    });
+    
+    // Debounced search
+    let searchTimeout;
+    const searchInput = document.querySelector('input[name="search"]');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                if (this.value.length >= 2 || this.value.length === 0) {
+                    this.form.submit();
+                }
+            }, 600);
+        });
+    }
+});
+</script>
 
 <script>
 // Auto-submit search with debounce - like RehabHive

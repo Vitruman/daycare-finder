@@ -67,7 +67,7 @@
                         @endforeach
                     </select>
                     <button type="submit" class="hero-search-btn" style="padding:12px 20px;background:#f59e0b;color:#fff;border:none;border-radius:8px;font-weight:800;font-size:.9rem;cursor:pointer;white-space:nowrap;">
-                        Search →
+                        Search
                     </button>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 ['26,000+','Licensed Centers'],
                 ['50','States Covered'],
                 ['100%','Free to Search'],
-                ['Gov.','Verified Data'],
+                ['100%','Gov. Verified'],
             ] as $stat)
             <div>
                 <div style="font-size:1.4rem;font-weight:800;color:#065f46;">{{ $stat[0] }}</div>
