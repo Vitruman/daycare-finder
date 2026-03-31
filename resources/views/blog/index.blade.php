@@ -50,9 +50,9 @@
 
 <!-- Hero Banner -->
 <section class="relative overflow-hidden" style="min-height:420px">
-    <div class="absolute inset-0">
-        <img src="/images/blog/hero.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%">
-        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,95,70,0.88) 0%,rgba(4,120,87,0.78) 50%,rgba(16,185,129,0.65) 100%)"></div>
+    <div class="absolute inset-0" style="background:linear-gradient(135deg,#064e3b 0%,#065f46 60%,#047857 100%)">
+        
+        
     </div>
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" style="padding-top:72px;padding-bottom:56px">
         <nav class="text-sm mb-4" style="opacity:0.8">
@@ -63,7 +63,7 @@
         <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" style="line-height:1.1">DaycareHub Blog<br><span style="font-weight:400;font-size:0.55em;opacity:0.9">Expert Articles on Childcare</span></h1>
         <p style="color:rgba(255,255,255,0.9);max-width:600px;font-size:17px;margin-bottom:24px">Practical guides for parents on choosing daycare, understanding costs, applying for subsidies, and more. Updated regularly.</p>
         <div style="display:flex;flex-wrap:wrap;gap:24px">
-            <div style="display:flex;align-items:center;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px" class="blog-stat">
                 <div style="width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center">
                     <svg width="20" height="20" fill="none" stroke="white" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
                 </div>

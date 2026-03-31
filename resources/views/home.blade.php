@@ -214,7 +214,7 @@
 </section>
 
 {{-- ===== SUBSIDY BANNER ===== --}}
-<section style="background:linear-gradient(135deg,#065f46 0%,#047857 100%);padding:56px 20px;">
+<section style="background:linear-gradient(135deg,#065f46 0%,#047857 100%);padding:48px 20px;">
     <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;flex-wrap:wrap;">
         <div>
             <div style="display:inline-block;background:rgba(255,255,255,.15);color:#a7f3d0;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:14px;">FINANCIAL ASSISTANCE</div>
