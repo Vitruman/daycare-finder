@@ -147,7 +147,7 @@
         .dh-dd-cta{margin:8px 16px 14px!important;display:block;text-align:center;padding:12px!important;background:#065f46!important;color:#fff!important;border-radius:10px;font-weight:800!important;font-size:.9rem;border-bottom:none!important;}
         @media(min-width:768px){
             .dh-nav-links{display:flex!important;}
-            .dh-burger{display:none!important;}
+            .dh-burger{display:none;}
         }
     </style>
 </head>
