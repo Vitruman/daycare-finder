@@ -47,6 +47,9 @@ Route::redirect('/resources', '/blog', 301);
 Route::redirect('/resources/{slug}', '/blog', 301);
 
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');
+Route::get('/checklist', fn() => view('pages.checklist'))->name('checklist');
+Route::get('/childcare-cost', fn() => view('pages.cost-calculator'))->name('cost-calculator');
+Route::get('/childcare-safety', fn() => view('pages.safety'))->name('safety');
 Route::get('/privacy-policy', fn() => view('pages.privacy'))->name('privacy');
 Route::get('/terms-of-service', fn() => view('pages.terms'))->name('terms');
 

@@ -45,7 +45,7 @@
 </div>
 
 <!-- Hero -->
-<section style="background:linear-gradient(135deg,#1e40af 0%,#1d4ed8 60%,#2563eb 100%);padding:56px 20px 48px;">
+<section style="background:linear-gradient(135deg,#065f46 0%,#047857 60%,#059669 100%);padding:56px 20px 48px;">
     <div style="max-width:900px;margin:0 auto;text-align:center;">
         <div style="display:inline-block;background:rgba(255,255,255,.15);color:#fff;padding:5px 14px;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:16px;letter-spacing:.04em;">CHILDCARE FINANCIAL GUIDE 2026</div>
         <h1 style="font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:800;color:#fff;margin:0 0 14px;line-height:1.2;">Childcare Subsidies & Financial Assistance: Complete Guide</h1>
@@ -67,20 +67,20 @@
     <div style="max-width:900px;margin:0 auto;">
         <h2 style="font-size:1rem;font-weight:700;color:#111;margin:0 0 16px;text-align:center;">The Real Cost of Childcare in the US</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;text-align:center;">
-            <div style="background:#fef2f2;border-radius:10px;padding:14px;">
-                <div style="font-size:1.6rem;font-weight:800;color:#dc2626;">$14,760</div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <div style="font-size:1.6rem;font-weight:800;color:#065f46;">$14,760</div>
                 <div style="font-size:.8rem;color:#666;margin-top:4px;">Avg. annual infant care cost<br><em>(Child Care Aware, 2025)</em></div>
             </div>
-            <div style="background:#fef3c7;border-radius:10px;padding:14px;">
-                <div style="font-size:1.6rem;font-weight:800;color:#b45309;">$32,400</div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <div style="font-size:1.6rem;font-weight:800;color:#065f46;">$32,400</div>
                 <div style="font-size:.8rem;color:#666;margin-top:4px;">Avg. annual cost in DC<br><em>(most expensive market)</em></div>
             </div>
             <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
                 <div style="font-size:1.6rem;font-weight:800;color:#065f46;">$5,000</div>
                 <div style="font-size:.8rem;color:#666;margin-top:4px;">Max DCFSA pre-tax savings<br><em>(per family per year)</em></div>
             </div>
-            <div style="background:#f0f9ff;border-radius:10px;padding:14px;">
-                <div style="font-size:1.6rem;font-weight:800;color:#0369a1;">1.3M+</div>
+            <div style="background:#f0fdf4;border-radius:10px;padding:14px;">
+                <div style="font-size:1.6rem;font-weight:800;color:#065f46;">1.3M+</div>
                 <div style="font-size:.8rem;color:#666;margin-top:4px;">Children served by<br><em>Head Start annually</em></div>
             </div>
         </div>

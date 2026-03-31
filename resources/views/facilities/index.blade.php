@@ -2,7 +2,7 @@
 
 @section('title', 'Licensed Daycare & Childcare Centers — 26,000+ Verified | DaycareHub')
 
-@section('meta_description', 'Search 26,000+ verified daycare and childcare daycare centers across the US. Filter by state, treatment type, and insurance accepted.')
+@section('meta_description', 'Search 26,000+ licensed daycare and childcare centers across the US. Filter by state, age group, and program type. All listings from official state licensing databases.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -20,7 +20,7 @@
     "@@context": "https://schema.org",
     "@@type": "ItemList",
     "name": "Childcare Centers Directory",
-    "description": "Browse 26,000+ verified daycare and childcare childcare centers across all 50 US states.",
+    "description": "Browse 26,000+ licensed daycare and childcare centers across all 50 US states.",
     "numberOfItems": {{ $facilities->total() ?? 0 }},
     "dateModified": "{{ now()->toIso8601String() }}",
     "itemListElement": [
@@ -44,12 +44,12 @@
     </nav>
 
     <!-- Header -->
-    <section class="py-16 bg-white">
+    <section class="py-8 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">Childcare Centers</h1>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                 Find the right childcare center in your region.
-                All facilities are verified and provide quality services.
+                Licensed centers from official state registries. Verify status on your state's licensing database.
             </p>
 
             <!-- Search and Filter -->
@@ -102,8 +102,16 @@
         </div>
     </section>
 
+    @if($facilities->count() > 0)
+    <div style="max-width:1330px;margin:0 auto;padding:8px 20px;font-size:.88rem;color:#555;">
+        Showing {{ ($facilities->currentPage()-1) * $facilities->perPage() + 1 }}–{{ min($facilities->currentPage() * $facilities->perPage(), $facilities->total()) }} of {{ number_format($facilities->total()) }} licensed centers
+        @if(request('search')) for "<strong>{{ request('search') }}</strong>" @endif
+        @if(request('state')) in <strong>{{ request('state') }}</strong> @endif
+    </div>
+    @endif
+
     <!-- Facilities -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-8 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             @if($facilities->count() > 0)
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

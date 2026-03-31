@@ -25,6 +25,15 @@
                 </ul>
             </div>
             <div>
+                <h4 style="color:#fff;font-size:.9rem;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em;">Parent Guides</h4>
+                <ul style="list-style:none;padding:0;margin:0;display:grid;gap:6px;">
+                    <li><a href="/checklist" style="color:rgba(255,255,255,.7);text-decoration:none;font-size:.87rem;">Daycare Tour Checklist</a></li>
+                    <li><a href="/childcare-cost" style="color:rgba(255,255,255,.7);text-decoration:none;font-size:.87rem;">Childcare Costs 2026</a></li>
+                    <li><a href="/childcare-safety" style="color:rgba(255,255,255,.7);text-decoration:none;font-size:.87rem;">Safety Guide</a></li>
+                    <li><a href="/blog/daycare-red-flags-signs-to-walk-away" style="color:rgba(255,255,255,.7);text-decoration:none;font-size:.87rem;">Red Flags Guide</a></li>
+                </ul>
+            </div>
+            <div>
                 <h4 style="color:#fff;font-size:.9rem;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em;">Company</h4>
                 <ul style="list-style:none;padding:0;margin:0;display:grid;gap:6px;">
                     <li><a href="/about" style="color:rgba(255,255,255,.7);text-decoration:none;font-size:.87rem;">About DaycareHub</a></li>
