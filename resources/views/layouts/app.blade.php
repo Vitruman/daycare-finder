@@ -127,6 +127,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/rf-favicon-180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/logo/rf-logo-192.png">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b095d633-3489-40e6-8d76-727705dab912"></script>
+    @stack('styles')
 </head>
 <body x-data="{ mobileMenuOpen: false }" x-on:keydown.escape.window="mobileMenuOpen = false" class="font-sans antialiased bg-gray-50">
     <!-- Navigation -->

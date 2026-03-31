@@ -1,3 +1,4 @@
+@push('styles')
 <style>
 /* ============ NAVIGATION STYLES ============ */
 .dh-header { position:fixed; top:0; left:0; right:0; z-index:200; background:#fff; border-bottom:1px solid #e5e7eb; box-shadow:0 1px 4px rgba(0,0,0,.06); }
@@ -25,6 +26,7 @@
 .dh-dropdown a:hover { background:#f0fdf4; color:#065f46; }
 .dh-dropdown-cta { margin:8px 16px 14px !important; display:block; text-align:center; padding:12px !important; background:#065f46 !important; color:#fff !important; border-radius:10px; font-weight:800 !important; font-size:.9rem; text-decoration:none; border-bottom:none !important; }
 </style>
+@endpush
 
 <header class="dh-header">
     <div class="dh-inner">
