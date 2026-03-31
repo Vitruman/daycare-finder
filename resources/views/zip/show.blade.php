@@ -159,7 +159,7 @@ details summary::-webkit-details-marker { display: none; }
 <div style="background:#f0fdf4;border-bottom:1px solid #d1fae5;padding:12px 20px;">
     <div style="max-width:1000px;margin:0 auto;display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center;">
         @foreach(['<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg> Official state registry data', '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline;vertical-align:middle;"><polyline points="20,6 9,17 4,12"/></svg> Active licenses only', '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg> Free to search', '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><polyline points="23,4 23,10 17,10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Updated regularly'] as $item)
-        <span style="font-size:.8rem;color:#065f46;font-weight:600;display:flex;align-items:center;gap:5px;">{{ $item }}</span>
+        <span style="font-size:.8rem;color:#065f46;font-weight:600;display:flex;align-items:center;gap:5px;">{!! $item !!}</span>
         @endforeach
     </div>
 </div>
@@ -220,7 +220,7 @@ details summary::-webkit-details-marker { display: none; }
                     ];
                     $grad = $avatarColors[$letter] ?? '135deg,#065f46,#059669';
                 @endphp
-                <div style="width:52px;height:52px;background:linear-gradient($grad);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.3rem;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.18);">
+                <div style="width:52px;height:52px;background:linear-gradient({{ $grad }});border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.3rem;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.18);">
                     {{ $letter }}
                 </div>
                 {{-- Info --}}
@@ -310,8 +310,8 @@ details summary::-webkit-details-marker { display: none; }
                 ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>','school','School-Age','5+ years','Before/after school','$300–$700/month','background:#fff7ed;border:1.5px solid #fed7aa;','color:#c2410c;'],
             ] as [$emoji,$type,$label,$ages,$ratio,$cost,$bg,$textColor])
             <div style="{{ $bg }} border-radius:14px;padding:18px;transition:transform .15s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
-                <div style="font-size:1.6rem;margin-bottom:10px;">{{ $emoji }}</div>
-                <h3 style="font-size:.9rem;font-weight:700;{{ $textColor }} margin:0 0 8px;">{{ $label }}</h3>
+                <div style="font-size:1.6rem;margin-bottom:10px;">{!! $emoji !!}</div>
+                <h3 style="font-size:.9rem;font-weight:700;{{ $textColor }} margin:0 0 8px;">{!! $label !!}</h3>
                 <div style="font-size:.78rem;color:#6b7280;line-height:1.8;">
                     <div>📅 Ages: <strong style="color:#374151;">{{ $ages }}</strong></div>
                     <div>👥 {{ $ratio }}</div>
@@ -354,7 +354,7 @@ details summary::-webkit-details-marker { display: none; }
                     ['🎓','State Pre-K','Free half or full-day preschool (4–5 yrs)'],
                 ] as [$ico,$name,$desc])
                 <div style="background:#fff;border:1px solid #d1fae5;border-radius:12px;padding:12px 16px;display:flex;gap:12px;align-items:center;">
-                    <span style="font-size:1.2rem;flex-shrink:0;">{{ $ico }}</span>
+                    <span style="font-size:1.2rem;flex-shrink:0;">{!! $ico !!}</span>
                     <div>
                         <div style="font-size:.85rem;font-weight:700;color:#065f46;">{{ $name }}</div>
                         <div style="font-size:.78rem;color:#6b7280;">{{ $desc }}</div>
@@ -431,7 +431,7 @@ details summary::-webkit-details-marker { display: none; }
                     ['/childcare-safety','Safety Guide'],
                     ['/facilities','Search All Centers'],
                 ] as [$url,$label])
-                <a href="{{ str_replace('{$state}',strtolower($state),$url) }}" style="padding:9px 16px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-size:.82rem;font-weight:600;color:#065f46;text-decoration:none;transition:all .15s;white-space:nowrap;" onmouseover="this.style.borderColor='#065f46';this.style.background='#f0fdf4'" onmouseout="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">{{ $label }} →</a>
+                <a href="{{ str_replace('{$state}',strtolower($state),$url) }}" style="padding:9px 16px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:10px;font-size:.82rem;font-weight:600;color:#065f46;text-decoration:none;transition:all .15s;white-space:nowrap;" onmouseover="this.style.borderColor='#065f46';this.style.background='#f0fdf4'" onmouseout="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">{!! $label !!} →</a>
                 @endforeach
             </div>
         </div>
