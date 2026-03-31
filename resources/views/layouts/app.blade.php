@@ -152,6 +152,7 @@
             .dh-burger{display:none!important;}
         }
     </style>
+<style>*{box-sizing:border-box!important;} html,body{max-width:100vw!important;overflow-x:hidden!important;} img,svg{max-width:100%;} @media(max-width:768px){[style*="max-width"]{max-width:100%!important;padding-left:12px!important;padding-right:12px!important;}}</style>
 </head>
 <body class="font-sans antialiased bg-gray-50" style="overflow-x:hidden;">
     <!-- Navigation -->
