@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', "Daycare Centers Near ZIP {{ $zip }} — {{ $city }}, {{ $state }} | DaycareHub")
-@section('meta_description', "Find {{ $stats['total'] }} licensed daycare & childcare centers near ZIP code {{ $zip }} in {{ $city }}, {{ $state }}. Compare programs, ages served, and get free guidance. All listings verified.")
+@php $metaTotal = $stats['total']; @endphp
+@section('meta_description', "Find {$metaTotal} licensed daycare & childcare centers near ZIP code {$zip} in {$city}, {$state}. Compare programs, ages served, and get free guidance. All listings verified.")
 
 @section('schema')
 <script type="application/ld+json">
@@ -298,8 +299,10 @@
     <div style="max-width:780px;margin:0 auto;">
         <h2 style="font-size:1.25rem;font-weight:800;color:#111;margin:0 0 24px;">Frequently Asked Questions — Daycare Near {{ $zip }}</h2>
 
-        @foreach([
-            ["How many daycare centers are near ZIP code {$zip}?", "There are {$stats['total']} licensed childcare centers in and around ZIP code {$zip} in " . ucwords(strtolower($city)) . ", {$state}. All hold active state licenses and are sourced from official {$state} licensing databases."],
+        @php
+        $cityTitle = ucwords(strtolower($city));
+        $faqs = [
+            ["How many daycare centers are near ZIP code {$zip}?", "There are {$stats['total']} licensed childcare centers in and around ZIP code {$zip} in {$cityTitle}, {$state}. All hold active state licenses and are sourced from official {$state} licensing databases."],
             ["What is the average cost of daycare near {$zip}?", "Daycare costs near {$zip} in {$state} vary by age group: infant care runs \$900–\$1,800/month, toddler programs \$700–\$1,200/month, and preschool \$600–\$1,100/month. Many centers accept CCAP subsidies that can reduce costs by 50–90% for eligible families."],
             ["Are the daycare centers near {$zip} licensed?", "Yes. All {$stats['total']} centers listed for ZIP {$zip} hold active {$state} childcare licenses. Listings are sourced directly from the {$state} state licensing database. You can verify any center's license at your state's childcare licensing portal."],
             ["Does {$state} offer childcare subsidies near {$zip}?", "{$state} participates in the federal Child Care and Development Fund (CCDF). Families near {$zip} may qualify for CCAP assistance based on income. Contact your local social services office or visit childcare.gov to apply. Head Start offers free care for income-eligible families."],
@@ -309,7 +312,9 @@
             ["Are there Head Start programs near ZIP {$zip}?", "Head Start offers free, federally-funded early childhood programs for income-eligible families. Use our search to find Head Start centers near {$zip}, or visit headstart.gov to find and apply for local programs."],
             ["Can I tour a daycare near {$zip} before enrolling?", "Yes — and you should always tour before enrolling. Call ahead to schedule a visit at any center near {$zip}. Use our 30-point checklist at daycarehub.us/checklist to ask the right questions during your tour."],
             ["What documents do I need to enroll in daycare near {$zip}?", "Typical enrollment requirements: child's birth certificate, up-to-date immunization records, emergency contact form, custody documentation if applicable, and proof of income if applying for CCAP subsidies. Requirements vary by center — call ahead to confirm."],
-        ] as [$q, $a])
+        ];
+        @endphp
+        @foreach($faqs as [$q, $a])
         <details style="border-bottom:1px solid #e5e7eb;padding:16px 0;" onopen="this.style.paddingBottom='20px'" onclose="this.style.paddingBottom='16px'">
             <summary style="font-size:.95rem;font-weight:700;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;">
                 {{ $q }}
