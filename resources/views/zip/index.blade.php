@@ -5,16 +5,16 @@
 
 @section('content')
 {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-<section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 60%,#047857 100%);padding:48px 20px 42px;color:#fff;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:rgba(255,255,255,.025);border-radius:50%;pointer-events:none;"></div>
-    <div style="position:absolute;bottom:-80px;left:-60px;width:320px;height:320px;background:rgba(255,255,255,.03);border-radius:50%;pointer-events:none;"></div>
+<section style="background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 60%,#d1fae5 100%);padding:48px 20px 42px;color:#1f2937;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:rgba(16,185,129,.02);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-80px;left:-60px;width:320px;height:320px;background:rgba(16,185,129,.02);border-radius:50%;pointer-events:none;"></div>
 
     <div style="max-width:1000px;margin:0 auto;text-align:center;position:relative;">
-        <h1 style="font-size:2.4rem;font-weight:800;margin:0 0 16px;line-height:1.15;text-shadow:0 2px 8px rgba(0,0,0,.15);">
+        <h1 style="font-size:2.4rem;font-weight:800;margin:0 0 16px;line-height:1.15;text-shadow:none;">
             Find Daycare by <span style="color:#6ee7b7;">ZIP Code</span>
         </h1>
         
-        <p style="font-size:1.1rem;color:rgba(255,255,255,.82);margin:0 0 32px;max-width:600px;margin:0 auto 32px;line-height:1.6;">
+        <p style="font-size:1.1rem;color:#374151;margin:0 0 32px;max-width:600px;margin:0 auto 32px;line-height:1.6;">
             Search 26,000+ licensed childcare centers across all 50 US states. 
             Enter any ZIP code to find verified facilities near you.
         </p>
@@ -23,7 +23,7 @@
         <div style="max-width:480px;margin:0 auto 32px;">
             <form action="/zip" method="GET" style="display:flex;gap:12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:8px;">
                 <input type="text" name="code" placeholder="Enter ZIP code (e.g., 10001)" 
-                       style="flex:1;border:none;background:rgba(255,255,255,.1);color:#fff;padding:16px 20px;border-radius:12px;font-size:.95rem;outline:none;"
+                       style="flex:1;border:none;background:rgba(255,255,255,.1);color:#1f2937;padding:16px 20px;border-radius:12px;font-size:.95rem;outline:none;"
                        oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,5)" required>
                 <button type="submit" 
                         style="padding:16px 24px;background:#fff;color:#065f46;border:none;border-radius:12px;font-weight:800;cursor:pointer;font-size:.95rem;transition:all .2s;box-shadow:0 4px 12px rgba(0,0,0,.15);"
@@ -68,7 +68,7 @@
     <div style="max-width:1000px;margin:0 auto;">
         <div style="text-align:center;margin-bottom:48px;">
             <h2 style="font-size:1.8rem;font-weight:800;color:#1f2937;margin:0 0 12px;">Popular ZIP Codes</h2>
-            <p style="font-size:1rem;color:#6b7280;margin:0;">Browse frequently searched areas</p>
+            <p style="font-size:1rem;color:#374151;margin:0;">Browse frequently searched areas</p>
         </div>
 
         {{-- Grid of popular ZIP codes --}}
@@ -96,7 +96,7 @@
                     <span style="font-size:1.3rem;font-weight:800;color:#1f2937;">{{ $zip }}</span>
                     <span style="font-size:.8rem;color:#10b981;font-weight:600;background:#ecfdf5;padding:4px 8px;border-radius:6px;">{{ $count }}</span>
                 </div>
-                <p style="color:#6b7280;font-size:.9rem;margin:0;line-height:1.4;">{{ $location }}</p>
+                <p style="color:#374151;font-size:.9rem;margin:0;line-height:1.4;">{{ $location }}</p>
             </a>
             @endforeach
         </div>
@@ -108,7 +108,7 @@
     <div style="max-width:1000px;margin:0 auto;">
         <div style="text-align:center;margin-bottom:48px;">
             <h2 style="font-size:1.8rem;font-weight:800;color:#1f2937;margin:0 0 12px;">Why Search by ZIP Code?</h2>
-            <p style="font-size:1rem;color:#6b7280;margin:0;">Get accurate, location-specific childcare information</p>
+            <p style="font-size:1rem;color:#374151;margin:0;">Get accurate, location-specific childcare information</p>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;">
@@ -121,7 +121,7 @@
             <div style="text-align:center;">
                 <div style="margin-bottom:16px;">{!! $icon !!}</div>
                 <h3 style="font-size:1.2rem;font-weight:700;color:#1f2937;margin:0 0 8px;">{{ $title }}</h3>
-                <p style="color:#6b7280;line-height:1.5;margin:0;">{{ $desc }}</p>
+                <p style="color:#374151;line-height:1.5;margin:0;">{{ $desc }}</p>
             </div>
             @endforeach
         </div>
@@ -129,7 +129,7 @@
 </section>
 
 {{-- ═══════════════════════ CTA ═══════════════════════ --}}
-<section style="padding:60px 20px;background:linear-gradient(135deg,#10b981 0%,#059669 100%);color:#fff;">
+<section style="padding:60px 20px;background:linear-gradient(135deg,#10b981 0%,#059669 100%);color:#1f2937;">
     <div style="max-width:600px;margin:0 auto;text-align:center;">
         <h2 style="font-size:1.9rem;font-weight:800;margin:0 0 16px;line-height:1.2;">
             Ready to Find Your Perfect Daycare?
