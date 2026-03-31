@@ -126,8 +126,6 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/images/logo/dh_logo_192.png">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b095d633-3489-40e6-8d76-727705dab912"></script>
     <style id="dh-nav-css">
-        .dh-header{position:fixed;top:0;left:0;right:0;z-index:200;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,.06);}
-        .dh-inner{max-width:1200px;margin:0 auto;padding:0 20px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
         /* Logo */
         .dh-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
         .dh-logo-box{width:38px;height:38px;background:linear-gradient(135deg,#065f46,#059669);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(6,95,70,.25);}

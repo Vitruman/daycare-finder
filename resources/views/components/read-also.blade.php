@@ -12,8 +12,8 @@
     <div style="max-width:1000px;margin:0 auto;">
         {{-- Section Header --}}
         <div style="text-align:center;margin-bottom:48px;">
-            <h2 style="font-size:1.8rem;font-weight:800;color:#1f2937;margin:0 0 12px;">Читайте также</h2>
-            <p style="font-size:1rem;color:#6b7280;margin:0;">Полезные материалы для родителей о выборе детского сада</p>
+            <h2 style="font-size:1.8rem;font-weight:800;color:#1f2937;margin:0 0 12px;">Related Articles</h2>
+            <p style="font-size:1rem;color:#6b7280;margin:0;">Helpful resources for parents choosing childcare</p>
         </div>
 
         {{-- Articles Grid --}}
@@ -55,7 +55,7 @@
                        style="display:inline-flex;align-items:center;gap:6px;color:#10b981;font-weight:600;font-size:.9rem;text-decoration:none;transition:color .2s;"
                        onmouseover="this.style.color='#059669'" 
                        onmouseout="this.style.color='#10b981'">
-                        Читать далее
+                        Read More
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="9,18 15,12 9,6"/>
                         </svg>
@@ -75,7 +75,7 @@
                     <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
                     <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
                 </svg>
-                Все статьи
+                View All Articles
             </a>
         </div>
     </div>
