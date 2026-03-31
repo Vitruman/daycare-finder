@@ -26,13 +26,13 @@
     <div style="position:absolute;inset:0;opacity:.06;" aria-hidden="true">
         <svg width="100%" height="100%"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
     </div>
-    <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;padding:0 4px;">
+    <div style="max-width:860px;margin:0 auto;text-align:center;position:relative;padding:0 20px;">
         <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:#6ee7b7;padding:6px 16px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:22px;letter-spacing:.03em;">
             <span style="width:6px;height:6px;background:#34d399;border-radius:50%;display:inline-block;"></span>
             
         </div>
-        <h1 style="font-size:clamp(1.4rem,5vw,3rem);font-weight:800;color:#fff;margin:0 0 16px;line-height:1.2;letter-spacing:-.01em;word-break:break-word;overflow-wrap:break-word;">
-            Find Safe, Licensed Daycare<br>
+        <h1 style="font-size:clamp(1.25rem,4.5vw,2.8rem);font-weight:800;color:#fff;margin:0 0 16px;line-height:1.2;letter-spacing:-.01em;word-break:break-word;overflow-wrap:break-word;">
+            Find Safe, Licensed Daycare 
             <span style="color:#6ee7b7;">Near You — Free</span>
         </h1>
         <p style="font-size:.95rem;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 32px;line-height:1.7;overflow-wrap:break-word;">
@@ -40,7 +40,7 @@
         </p>
 
         {{-- Search form --}}
-        <form action="/facilities" method="GET" style="max-width:620px;margin:0 auto 20px;padding:0 4px;">
+        <form action="/facilities" method="GET" style="max-width:620px;margin:0 auto 20px;width:100%;">
             <style>
                 .hero-search-row { display:flex; gap:8px; }
                 .hero-search-input { flex:1; position:relative; }
