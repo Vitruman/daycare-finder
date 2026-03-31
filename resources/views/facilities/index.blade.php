@@ -75,10 +75,10 @@
                     </button>
                     <div id="ageDropdown" style="display:none;position:absolute;top:100%;left:0;margin-top:4px;width:180px;background:#fff;border:1px solid #d1fae5;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15);z-index:50;">
                         <div onclick="setFilter('age', '')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;transition:background .1s;" onmouseover="this.style.background='#f5f3f0'" onmouseout="this.style.background='transparent'">Any Age</div>
-                        <div onclick="setFilter('age', 'infant')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='infant' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">🍼 Infant (0–12 mo)</div>
-                        <div onclick="setFilter('age', 'toddler')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='toddler' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">🧒 Toddler (1–3 yrs)</div>
-                        <div onclick="setFilter('age', 'preschool')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='preschool' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">🎒 Preschool (3–5)</div>
-                        <div onclick="setFilter('age', 'school')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='school' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">📚 School-Age (5+)</div>
+                        <div onclick="setFilter('age', 'infant')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='infant' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M10 2h4"/><path d="M12 14v4"/><path d="M8 6h8l1 8a5 5 0 01-10 0z"/></svg> Infant (0–12 mo)</div>
+                        <div onclick="setFilter('age', 'toddler')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='toddler' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg> Toddler (1–3 yrs)</div>
+                        <div onclick="setFilter('age', 'preschool')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='preschool' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M16 20V10a4 4 0 00-8 0v10"/><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M9 4h6"/></svg> Preschool (3–5)</div>
+                        <div onclick="setFilter('age', 'school')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('age')=='school' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> School-Age (5+)</div>
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@
                 <div style="position:relative;">
                     <button type="button" onclick="toggleDropdown('sort')"
                             style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:60px;border:1.5px solid #c4d8e4;background:#f0f6fa;font-size:13.5px;font-weight:500;color:#3a6f8c;cursor:pointer;white-space:nowrap;transition:all .15s;flex-shrink:0;">
-                        🔄 {{ ['latest'=>'Newest','name'=>'A–Z'][request('sort', 'latest')] }} ▾
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><polyline points="23,4 23,10 17,10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> {{ ['latest'=>'Newest','name'=>'A–Z'][request('sort', 'latest')] }} ▾
                     </button>
                     <div id="sortDropdown" style="display:none;position:absolute;top:100%;left:0;margin-top:4px;width:120px;background:#fff;border:1px solid #d1fae5;border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.15);z-index:50;">
                         <div onclick="setFilter('sort', 'latest')" style="padding:10px 14px;cursor:pointer;font-size:13.5px;color:#444;{{ request('sort','latest')=='latest' ? 'background:#065f46;color:#fff;' : '' }}transition:background .1s;" onmouseover="if(!this.classList.contains('active')) this.style.background='#f5f3f0'" onmouseout="if(!this.classList.contains('active')) this.style.background='transparent'">Newest</div>
@@ -107,11 +107,11 @@
             {{-- Quick Tags --}}
             <div style="display:flex;gap:8px;overflow-x:auto;padding:14px 0 2px;border-top:1px solid #d1fae5;scrollbar-width:none;-webkit-overflow-scrolling:touch;">
                 @foreach([
-                    'head start' => '⭐ Head Start',
-                    'montessori' => '🌱 Montessori',
-                    'bilingual' => '🌍 Bilingual',
-                    'subsidized' => '💰 Subsidized',
-                    'pre-k' => '📖 Pre-K'
+                    'head start' => '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg> Head Start',
+                    'montessori' => '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12"/><path d="M5 12C5 7.029 9.029 3 14 3s9 4.029 9 9-4 9-9 9H5V12z"/></svg> Montessori',
+                    'bilingual' => '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg> Bilingual',
+                    'subsidized' => '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Subsidized',
+                    'pre-k' => '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg> Pre-K'
                 ] as $term => $label)
                 <a href="?search={{ $term }}" style="padding:8px 16px;border-radius:60px;font-size:13px;font-weight:500;color:{{ request('search')==$term ? '#fff' : '#3a6f8c' }};background:{{ request('search')==$term ? '#065f46' : '#e4eef3' }};border:none;cursor:pointer;text-decoration:none;transition:all .15s;flex-shrink:0;white-space:nowrap;" onmouseover="if('{{ request('search') }}'!='{{ $term }}'){this.style.background='#065f46';this.style.color='#fff'}" onmouseout="if('{{ request('search') }}'!='{{ $term }}'){this.style.background='#e4eef3';this.style.color='#3a6f8c'}">{{ $label }}</a>
                 @endforeach
@@ -140,7 +140,7 @@
             </p>
             @endif
             <div style="display:flex;gap:8px;flex-wrap:wrap;">
-                @foreach(['infant'=>'🍼 Infant','toddler'=>'🧒 Toddler','preschool'=>'🎒 Preschool','head+start'=>'⭐ Head Start'] as $v=>$label)
+                @foreach(['infant'=>'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M10 2h4"/><path d="M12 14v4"/><path d="M8 6h8l1 8a5 5 0 01-10 0z"/></svg> Infant','toddler'=>'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg> Toddler','preschool'=>'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M16 20V10a4 4 0 00-8 0v10"/><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M9 4h6"/></svg> Preschool','head+start'=>'<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg> Head Start'] as $v=>$label)
                 <a href="/facilities?search={{ $v }}" style="padding:4px 12px;background:{{ request('search')==$v?'#065f46':'#fff' }};color:{{ request('search')==$v?'#fff':'#374151' }};border:1px solid {{ request('search')==$v?'#065f46':'#e5e7eb' }};border-radius:20px;font-size:.78rem;font-weight:600;text-decoration:none;">{{ $label }}</a>
                 @endforeach
             </div>
@@ -192,7 +192,7 @@
 
         @else
         <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:56px 20px;text-align:center;">
-            <div style="font-size:3rem;margin-bottom:14px;">🔍</div>
+            <div style="font-size:3rem;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
             <h3 style="font-size:1.1rem;font-weight:700;color:#111;margin:0 0 8px;">No centers found</h3>
             <p style="color:#6b7280;font-size:.9rem;margin:0 0 20px;">Try a different search term, state, or <a href="{{ route('facilities.index') }}" style="color:#065f46;font-weight:600;">browse all centers</a>.</p>
         </div>

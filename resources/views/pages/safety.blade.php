@@ -82,7 +82,7 @@
 <section id="license" style="padding:40px 20px;background:#fff;">
     <div style="max-width:850px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-            <div style="width:44px;height:44px;background:#065f46;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;">📋</div>
+            <div style="width:44px;height:44px;background:#065f46;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg></div>
             <div>
                 <h2 style="font-size:1.4rem;font-weight:800;color:#111;margin:0 0 2px;">1. How to Check a Daycare License</h2>
                 <div style="font-size:.83rem;color:#065f46;font-weight:600;">Takes 10 minutes · Do this before every tour</div>
@@ -109,7 +109,7 @@
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
             <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:14px;">
-                <div style="font-weight:700;color:#065f46;margin-bottom:6px;">✅ What You Want to See</div>
+                <div style="font-weight:700;color:#065f46;margin-bottom:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline;vertical-align:middle;"><polyline points="20,6 9,17 4,12"/></svg> What You Want to See</div>
                 <ul style="color:#444;font-size:.85rem;line-height:1.8;padding-left:16px;margin:0;">
                     <li>License active and current</li>
                     <li>No serious (Class 1) violations</li>
@@ -136,7 +136,7 @@
 <section id="inspections" style="padding:40px 20px;background:#f9fafb;">
     <div style="max-width:850px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-            <div style="width:44px;height:44px;background:#1e40af;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;">🔍</div>
+            <div style="width:44px;height:44px;background:#1e40af;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
             <div>
                 <h2 style="font-size:1.4rem;font-weight:800;color:#111;margin:0 0 2px;">2. Understanding Inspection Reports</h2>
                 <div style="font-size:.83rem;color:#1e40af;font-weight:600;">Violations are common — but not all are equal</div>
@@ -162,7 +162,7 @@
         </div>
 
         <div style="background:#e0f2fe;border:1px solid #7dd3fc;border-radius:10px;padding:14px 18px;">
-            <strong>💡 Pattern vs. Incident:</strong> <span style="color:#374151;font-size:.88rem;">One serious violation 3 years ago that was quickly resolved is less concerning than 5 minor violations over 6 months. The pattern tells you more than any single incident.</span>
+            <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.74V17h8v-2.26A7 7 0 0012 2z"/></svg> Pattern vs. Incident:</strong> <span style="color:#374151;font-size:.88rem;">One serious violation 3 years ago that was quickly resolved is less concerning than 5 minor violations over 6 months. The pattern tells you more than any single incident.</span>
         </div>
     </div>
 </section>
@@ -211,7 +211,7 @@
 <section id="background" style="padding:40px 20px;background:#f9fafb;">
     <div style="max-width:850px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-            <div style="width:44px;height:44px;background:#0f766e;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;">🔐</div>
+            <div style="width:44px;height:44px;background:#0f766e;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
             <div>
                 <h2 style="font-size:1.4rem;font-weight:800;color:#111;margin:0 0 2px;">4. Background Check Requirements</h2>
                 <div style="font-size:.83rem;color:#0f766e;font-weight:600;">State requirements vary widely — know what's required in yours</div>
@@ -242,7 +242,7 @@
         </div>
 
         <div style="background:#f0fdfa;border:1px solid #99f6e4;border-radius:10px;padding:14px 18px;">
-            <strong>💡 Verification Tip:</strong> <span style="color:#444;font-size:.88rem;">You can verify whether a center is compliant with background check requirements by checking inspection reports (non-compliance is a citable violation) and by asking to see the center's background check policy in writing.</span>
+            <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.74V17h8v-2.26A7 7 0 0012 2z"/></svg> Verification Tip:</strong> <span style="color:#444;font-size:.88rem;">You can verify whether a center is compliant with background check requirements by checking inspection reports (non-compliance is a citable violation) and by asking to see the center's background check policy in writing.</span>
         </div>
     </div>
 </section>

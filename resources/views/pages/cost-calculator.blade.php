@@ -187,28 +187,28 @@ function calcCost() {
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:24px;">
             <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:18px;">
-                <div style="font-size:1.3rem;margin-bottom:8px;">🍼</div>
+                <div style="font-size:1.3rem;margin-bottom:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M10 2h4"/><path d="M12 14v4"/><path d="M8 6h8l1 8a5 5 0 01-10 0z"/></svg></div>
                 <div style="font-weight:700;color:#111;margin-bottom:4px;">Infant Care (0–12 mo)</div>
                 <div style="font-size:1.4rem;font-weight:800;color:#065f46;">$1,000–$2,500</div>
                 <div style="font-size:.78rem;color:#666;margin-top:2px;">per month</div>
                 <div style="font-size:.8rem;color:#555;margin-top:8px;line-height:1.5;">National avg: $1,230/mo<br>Staff ratio: 1:3–4 required</div>
             </div>
             <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:18px;">
-                <div style="font-size:1.3rem;margin-bottom:8px;">🧒</div>
+                <div style="font-size:1.3rem;margin-bottom:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
                 <div style="font-weight:700;color:#111;margin-bottom:4px;">Toddler (1–3 years)</div>
                 <div style="font-size:1.4rem;font-weight:800;color:#065f46;">$900–$2,000</div>
                 <div style="font-size:.78rem;color:#666;margin-top:2px;">per month</div>
                 <div style="font-size:.8rem;color:#555;margin-top:8px;line-height:1.5;">National avg: $1,050/mo<br>Staff ratio: 1:4–6</div>
             </div>
             <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:18px;">
-                <div style="font-size:1.3rem;margin-bottom:8px;">🎒</div>
+                <div style="font-size:1.3rem;margin-bottom:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M16 20V10a4 4 0 00-8 0v10"/><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M9 4h6"/></svg></div>
                 <div style="font-weight:700;color:#111;margin-bottom:4px;">Preschool (3–5 years)</div>
                 <div style="font-size:1.4rem;font-weight:800;color:#065f46;">$700–$1,500</div>
                 <div style="font-size:.78rem;color:#666;margin-top:2px;">per month</div>
                 <div style="font-size:.8rem;color:#555;margin-top:8px;line-height:1.5;">National avg: $860/mo<br>Staff ratio: 1:8–10</div>
             </div>
             <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:18px;">
-                <div style="font-size:1.3rem;margin-bottom:8px;">📚</div>
+                <div style="font-size:1.3rem;margin-bottom:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
                 <div style="font-weight:700;color:#111;margin-bottom:4px;">School-Age (5–12 years)</div>
                 <div style="font-size:1.4rem;font-weight:800;color:#065f46;">$200–$700</div>
                 <div style="font-size:.78rem;color:#666;margin-top:2px;">per month</div>
@@ -315,7 +315,7 @@ function calcCost() {
 
         <div style="display:grid;gap:14px;">
             <div style="background:#f0fdf4;border:1px solid #d1fae5;border-radius:12px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;">
-                <div style="width:44px;height:44px;background:#065f46;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.2rem;">🏛️</div>
+                <div style="width:44px;height:44px;background:#065f46;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.2rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg></div>
                 <div>
                     <div style="font-weight:700;color:#065f46;margin-bottom:4px;">CCAP — Child Care Assistance Program</div>
                     <p style="color:#444;font-size:.88rem;line-height:1.65;margin:0 0 8px;">Income-based subsidy covering the difference between a small co-pay and the full cost. A family in California earning $60,000 might pay only $200/month for $1,800/month infant care. Eligibility varies by state — many families earning up to $80,000+ qualify.</p>
@@ -339,7 +339,7 @@ function calcCost() {
                 </div>
             </div>
             <div style="background:#f0fdf4;border:1px solid #d1fae5;border-radius:12px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;">
-                <div style="width:44px;height:44px;background:#065f46;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.2rem;">⭐</div>
+                <div style="width:44px;height:44px;background:#065f46;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.2rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
                 <div>
                     <div style="font-weight:700;color:#065f46;margin-bottom:4px;">Head Start (Free for Eligible Families)</div>
                     <p style="color:#444;font-size:.88rem;line-height:1.65;margin:0 0 8px;">Completely free for families at or below the federal poverty level. Serves 1.3M+ children ages 0–5. Includes health, nutrition, and family services — not just childcare. Apply early; waitlists are common.</p>

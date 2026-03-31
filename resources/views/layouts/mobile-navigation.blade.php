@@ -1,10 +1,10 @@
 <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
     <div class="px-4 py-3 space-y-1">
-        <a href="/facilities" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50">🔍 Find Daycare</a>
-        <a href="/programs" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50">🎒 Programs</a>
-        <a href="/states" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50">🗺️ Browse States</a>
-        <a href="/subsidies" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50">💰 Subsidies</a>
+        <a href="/facilities" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Find Daycare</a>
+        <a href="/programs" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M16 20V10a4 4 0 00-8 0v10"/><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M9 4h6"/></svg> Programs</a>
+        <a href="/states" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><polygon points="1,6 1,22 8,18 16,22 23,18 23,2 16,6 8,2"/></svg> Browse States</a>
+        <a href="/subsidies" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Subsidies</a>
         <a href="/blog" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50">📝 Blog</a>
-        <a href="/about" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50">ℹ️ About</a>
+        <a href="/about" class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-blue-50"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg> About</a>
     </div>
 </div>

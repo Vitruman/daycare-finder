@@ -55,7 +55,7 @@
 <!-- Key takeaway -->
 <section style="background:#f0fdf4;border-bottom:1px solid #d1fae5;padding:20px;">
     <div style="max-width:850px;margin:0 auto;display:flex;align-items:flex-start;gap:14px;">
-        <div style="font-size:1.5rem;flex-shrink:0;">💡</div>
+        <div style="font-size:1.5rem;flex-shrink:0;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.74V17h8v-2.26A7 7 0 0012 2z"/></svg></div>
         <div>
             <strong style="color:#065f46;">Key Finding:</strong> <span style="color:#374151;">According to Child Care Aware, 40% of parents who switched daycares within the first year said they wished they'd asked more questions during the tour. The most common regrets: not asking about staff turnover, sick child policy, and what happens on snow days.</span>
         </div>
@@ -68,8 +68,8 @@
         <h2 style="font-size:.9rem;font-weight:700;color:#111;margin:0 0 10px;">6 Categories — Jump to Section:</h2>
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
             <a href="#safety" style="background:#065f46;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">🔒 Safety</a>
-            <a href="#staff" style="background:#047857;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">👩‍🏫 Staff</a>
-            <a href="#curriculum" style="background:#059669;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">📚 Curriculum</a>
+            <a href="#staff" style="background:#047857;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">👩‍<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Staff</a>
+            <a href="#curriculum" style="background:#059669;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Curriculum</a>
             <a href="#communication" style="background:#065f46;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">💬 Communication</a>
             <a href="#health" style="background:#047857;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">🏥 Health</a>
             <a href="#costs" style="background:#059669;color:#fff;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:.82rem;font-weight:600;">💵 Costs</a>
@@ -125,7 +125,7 @@
 <section id="staff" style="padding:40px 20px;background:#f9fafb;">
     <div style="max-width:850px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-            <div style="width:44px;height:44px;background:#1e40af;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;">👩‍🏫</div>
+            <div style="width:44px;height:44px;background:#1e40af;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;">👩‍<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
             <div>
                 <h2 style="font-size:1.4rem;font-weight:800;color:#111;margin:0 0 2px;">Category 2: Staff & Ratios</h2>
                 <div style="font-size:.83rem;color:#1e40af;font-weight:600;">Questions 6–10 · The single biggest predictor of quality</div>
@@ -168,7 +168,7 @@
 <section id="curriculum" style="padding:40px 20px;background:#fff;">
     <div style="max-width:850px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
-            <div style="width:44px;height:44px;background:#7c3aed;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;">📚</div>
+            <div style="width:44px;height:44px;background:#7c3aed;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
             <div>
                 <h2 style="font-size:1.4rem;font-weight:800;color:#111;margin:0 0 2px;">Category 3: Daily Schedule & Curriculum</h2>
                 <div style="font-size:.83rem;color:#7c3aed;font-weight:600;">Questions 11–15 · Your child's actual days</div>
@@ -321,7 +321,7 @@
 <!-- Printable Checklist -->
 <section style="padding:40px 20px;background:#fff;border-top:2px dashed #e5e7eb;">
     <div style="max-width:850px;margin:0 auto;">
-        <h2 style="font-size:1.3rem;font-weight:800;color:#111;margin:0 0 8px;">📋 Quick-Print Checklist</h2>
+        <h2 style="font-size:1.3rem;font-weight:800;color:#111;margin:0 0 8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg> Quick-Print Checklist</h2>
         <p style="color:#555;font-size:.88rem;margin:0 0 20px;">Print this condensed version before your tour. Check each box as you ask the question.</p>
         <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:24px;">
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:4px;">

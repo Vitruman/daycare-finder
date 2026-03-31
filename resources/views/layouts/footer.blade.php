@@ -2,7 +2,7 @@
     <div style="max-width:1100px;margin:0 auto;">
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);">
             <div>
-                <div style="font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:12px;">🏫 DaycareHub</div>
+                <div style="font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> DaycareHub</div>
                 <p style="font-size:.85rem;line-height:1.6;color:rgba(255,255,255,.65);">Free directory of 26,000+ state-licensed daycare and childcare centers across all 50 US states.</p>
             </div>
             <div>

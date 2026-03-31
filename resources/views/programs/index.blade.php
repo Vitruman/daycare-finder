@@ -149,7 +149,7 @@
 <section id="infant" style="padding:48px 20px;background:#fff;">
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-            <div style="font-size:2.5rem;">🍼</div>
+            <div style="font-size:2.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M10 2h4"/><path d="M12 14v4"/><path d="M8 6h8l1 8a5 5 0 01-10 0z"/></svg></div>
             <div>
                 <h2 style="font-size:1.6rem;font-weight:800;color:#111;margin:0 0 4px;">Infant Care (Ages 0–12 Months)</h2>
                 <div style="font-size:.85rem;color:#065f46;font-weight:600;">Most expensive childcare type · Highest staffing needs · Critical for attachment</div>
@@ -184,7 +184,7 @@
         </div>
 
         <div style="background:#fef3c7;border-left:4px solid #f59e0b;border-radius:0 8px 8px 0;padding:14px 18px;margin:0 0 18px;">
-            <strong>💡 Money-Saving Tip:</strong> Apply for CCAP subsidies before your baby is born — waitlists can be 3–6 months long. <a href="/subsidies" style="color:#065f46;font-weight:600;">See subsidy programs →</a>
+            <strong><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.74V17h8v-2.26A7 7 0 0012 2z"/></svg> Money-Saving Tip:</strong> Apply for CCAP subsidies before your baby is born — waitlists can be 3–6 months long. <a href="/subsidies" style="color:#065f46;font-weight:600;">See subsidy programs →</a>
         </div>
 
         <a href="/facilities?search=infant" style="display:inline-block;background:#065f46;color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;margin-top:8px;">Find Infant Care Near You →</a>
@@ -195,7 +195,7 @@
 <section id="toddler" style="padding:48px 20px;background:#f9fafb;">
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-            <div style="font-size:2.5rem;">🧒</div>
+            <div style="font-size:2.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
             <div>
                 <h2 style="font-size:1.6rem;font-weight:800;color:#111;margin:0 0 4px;">Toddler Programs (Ages 1–3 Years)</h2>
                 <div style="font-size:.85rem;color:#065f46;font-weight:600;">Language explosion phase · Play-based learning · Social skill development</div>
@@ -224,7 +224,7 @@
 <section id="preschool" style="padding:48px 20px;background:#fff;">
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-            <div style="font-size:2.5rem;">🎒</div>
+            <div style="font-size:2.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M16 20V10a4 4 0 00-8 0v10"/><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M9 4h6"/></svg></div>
             <div>
                 <h2 style="font-size:1.6rem;font-weight:800;color:#111;margin:0 0 4px;">Preschool & Pre-K (Ages 3–5 Years)</h2>
                 <div style="font-size:.85rem;color:#065f46;font-weight:600;">School readiness focus · Academic and social-emotional skills · Part or full-day</div>
@@ -279,7 +279,7 @@
 <section id="school-age" style="padding:48px 20px;background:#f9fafb;">
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-            <div style="font-size:2.5rem;">📚</div>
+            <div style="font-size:2.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
             <div>
                 <h2 style="font-size:1.6rem;font-weight:800;color:#111;margin:0 0 4px;">School-Age Care (Ages 5–12 Years)</h2>
                 <div style="font-size:.85rem;color:#065f46;font-weight:600;">Most affordable option · Before/after school · Summer programs</div>
@@ -310,7 +310,7 @@
 <section id="head-start" style="padding:48px 20px;background:#fff;">
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-            <div style="font-size:2.5rem;">⭐</div>
+            <div style="font-size:2.5rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
             <div>
                 <h2 style="font-size:1.6rem;font-weight:800;color:#111;margin:0 0 4px;">Head Start & Early Head Start (Free)</h2>
                 <div style="font-size:.85rem;color:#065f46;font-weight:600;">Free for income-eligible families · Comprehensive services · 1.3M+ children served annually</div>
@@ -363,7 +363,7 @@
 <section id="family-daycare" style="padding:48px 20px;background:#f9fafb;">
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
-            <div style="font-size:2.5rem;">🏠</div>
+            <div style="font-size:2.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
             <div>
                 <h2 style="font-size:1.6rem;font-weight:800;color:#111;margin:0 0 4px;">Family Daycare Homes</h2>
                 <div style="font-size:.85rem;color:#065f46;font-weight:600;">Home-based · Smaller groups · Often more affordable · State-licensed</div>

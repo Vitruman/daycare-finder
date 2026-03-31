@@ -80,85 +80,77 @@ details summary::-webkit-details-marker { display: none; }
 <div style="margin-top:64px;">
 
 {{-- ═══════════════════════ HERO ═══════════════════════ --}}
-<section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);padding:52px 20px 44px;color:#fff;position:relative;overflow:hidden;">
-    {{-- Decorative circles --}}
-    <div style="position:absolute;top:-80px;right:-80px;width:360px;height:360px;background:rgba(255,255,255,.04);border-radius:50%;pointer-events:none;"></div>
-    <div style="position:absolute;bottom:-60px;left:-60px;width:240px;height:240px;background:rgba(255,255,255,.04);border-radius:50%;pointer-events:none;"></div>
-    <div style="position:absolute;top:30%;right:10%;width:120px;height:120px;background:rgba(16,185,129,.12);border-radius:50%;pointer-events:none;"></div>
+<section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 60%,#047857 100%);padding:36px 20px 32px;color:#fff;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:rgba(255,255,255,.03);border-radius:50%;pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-60px;left:-40px;width:220px;height:220px;background:rgba(255,255,255,.03);border-radius:50%;pointer-events:none;"></div>
 
     <div style="max-width:1000px;margin:0 auto;position:relative;">
         {{-- Breadcrumb --}}
-        <nav style="font-size:.78rem;color:rgba(255,255,255,.6);margin-bottom:22px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
-            <a href="/" style="color:rgba(255,255,255,.75);text-decoration:none;transition:color .15s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.75)'">Home</a>
-            <span style="opacity:.4;">›</span>
-            <a href="/states" style="color:rgba(255,255,255,.75);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.75)'">States</a>
+        <nav style="font-size:.76rem;color:rgba(255,255,255,.55);margin-bottom:16px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;">
+            <a href="/" style="color:rgba(255,255,255,.7);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.7)'" >Home</a>
+            <span>›</span>
+            <a href="/states" style="color:rgba(255,255,255,.7);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.7)'" >States</a>
             @if($state)
-            <span style="opacity:.4;">›</span>
-            <a href="/states/{{ strtolower($state) }}" style="color:rgba(255,255,255,.75);text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.75)'">{{ $state }}</a>
+            <span>›</span>
+            <a href="/states/{{ strtolower($state) }}" style="color:rgba(255,255,255,.7);text-decoration:none;">{{ $state }}</a>
             @endif
-            <span style="opacity:.4;">›</span>
-            <span style="color:rgba(255,255,255,.9);">ZIP {{ $zip }}</span>
+            <span>›</span>
+            <span style="color:rgba(255,255,255,.85);">ZIP {{ $zip }}</span>
         </nav>
 
-        <div style="display:flex;align-items:flex-start;gap:32px;flex-wrap:wrap;">
-            <div style="flex:1;min-width:280px;">
-                <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border-radius:60px;padding:6px 14px;font-size:.8rem;font-weight:600;margin-bottom:16px;border:1px solid rgba(255,255,255,.2);">
-                    <span style="width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block;"></span>
-                    {{ $stats['total'] }} Licensed Centers Found
-                </div>
-
-                <h1 style="font-size:2.1rem;font-weight:800;margin:0 0 12px;line-height:1.2;text-shadow:0 2px 8px rgba(0,0,0,.15);">
-                    Daycare Near ZIP<br>
-                    <span style="background:rgba(255,255,255,.18);padding:4px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.25);">{{ $zip }}</span>
+        {{-- Main row: title left, stats right --}}
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+            <div style="flex:1;min-width:260px;">
+                <h1 style="font-size:1.8rem;font-weight:800;margin:0 0 8px;line-height:1.2;">
+                    Daycare Centers Near ZIP <span style="color:#6ee7b7;">{{ $zip }}</span>
                 </h1>
-
-                <p style="font-size:1rem;color:rgba(255,255,255,.85);margin:0 0 28px;max-width:480px;line-height:1.65;">
-                    {{ $cityTitle }}{{ $state ? ", $state" : "" }} — licensed centers verified from official {{ $state }} state registry. Free, no signup required.
+                <p style="font-size:.9rem;color:rgba(255,255,255,.78);margin:0 0 20px;line-height:1.5;">
+                    {{ $cityTitle }}, {{ $state }} · {{ $stats["total"] }} licensed centers · Free, no signup
                 </p>
-
-                <a href="/facilities?search={{ $zip }}" style="display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:#fff;color:#065f46;border-radius:12px;font-size:.9rem;font-weight:800;text-decoration:none;transition:all .15s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.2)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                {{-- CTA Button - акцент --}}
+                <a href="/facilities?search={{ $zip }}"
+                   style="display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:#fff;color:#065f46;border-radius:10px;font-size:.92rem;font-weight:800;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25),0 2px 6px rgba(0,0,0,.15);transition:all .2s;letter-spacing:-.2px;"
+                   onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.3)'"
+                   onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,0,0,.2)'" >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#065f46" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     Search & Filter Centers
                 </a>
             </div>
+
+            {{-- Stats — горизонтально, компактно --}}
+            <div style="display:flex;gap:16px;flex-wrap:wrap;">
+                <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;min-width:90px;">
+                    <div style="font-size:1.8rem;font-weight:800;line-height:1;">{{ $stats['total'] }}</div>
+                    <div style="font-size:.7rem;color:rgba(255,255,255,.65);margin-top:4px;font-weight:500;">Centers</div>
+                </div>
+                <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;min-width:90px;">
+                    <div style="font-size:1.8rem;font-weight:800;line-height:1;">{{ $stats['infant'] }}</div>
+                    <div style="font-size:.7rem;color:rgba(255,255,255,.65);margin-top:4px;font-weight:500;">Infant Care</div>
+                </div>
+                <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;min-width:90px;">
+                    <div style="font-size:1.8rem;font-weight:800;line-height:1;">{{ $stats['preschool'] }}</div>
+                    <div style="font-size:.7rem;color:rgba(255,255,255,.65);margin-top:4px;font-weight:500;">Preschool</div>
+                </div>
+                <div style="text-align:center;padding:16px 20px;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.35);border-radius:14px;min-width:90px;">
+                    <div style="font-size:1.3rem;font-weight:800;line-height:1;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.8"><polyline points="20,6 9,17 4,12"/></svg>
+                    </div>
+                    <div style="font-size:.7rem;color:rgba(255,255,255,.75);margin-top:4px;font-weight:600;">Verified</div>
+                </div>
+            </div>
         </div>
 
-        {{-- ── МОНЕТИЗАЦИЯ В HERO ── --}}
-        <div style="margin-top:24px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;backdrop-filter:blur(4px);">
-            <div style="display:flex;align-items:center;gap:10px;min-width:0;">
-                <span style="font-size:1.3rem;">💡</span>
-                <div>
-                    <div style="font-size:.84rem;font-weight:700;color:#fff;line-height:1.3;">Need a backup childcare option?</div>
-                    <div style="font-size:.77rem;color:rgba(255,255,255,.75);">Background-checked sitters & home daycares near {{ $zip }}</div>
-                </div>
+        {{-- Care.com монетизация --}}
+        <div style="margin-top:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:10px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.74V17h8v-2.26A7 7 0 0012 2z"/></svg>
+                <span style="font-size:.82rem;color:rgba(255,255,255,.8);"><strong style="color:#fff;">Need a backup plan?</strong> Background-checked sitters & home daycares near {{ $zip }}</span>
             </div>
             <a href="https://www.care.com/childcare" target="_blank" rel="nofollow"
-               style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;color:#065f46;border-radius:60px;font-size:.84rem;font-weight:800;text-decoration:none;white-space:nowrap;transition:all .15s;box-shadow:0 2px 8px rgba(0,0,0,.15);flex-shrink:0;"
-               onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.2)'"
-               onmouseout="this.style.transform='none';this.style.boxShadow='0 2px 8px rgba(0,0,0,.15)'">
+               style="padding:8px 18px;background:#fff;color:#065f46;border-radius:8px;font-size:.82rem;font-weight:800;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:all .15s;"
+               onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='none'" >
                 Browse Care.com →
             </a>
-        </div>
-
-            {{-- Stats Cards --}}
-            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;min-width:260px;">
-                <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px;text-align:center;backdrop-filter:blur(8px);">
-                    <div style="font-size:2rem;font-weight:800;line-height:1.1;">{{ $stats['total'] }}</div>
-                    <div style="font-size:.75rem;color:rgba(255,255,255,.7);margin-top:6px;font-weight:500;">Total Centers</div>
-                </div>
-                <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px;text-align:center;backdrop-filter:blur(8px);">
-                    <div style="font-size:2rem;font-weight:800;line-height:1.1;">{{ $stats['infant'] }}</div>
-                    <div style="font-size:.75rem;color:rgba(255,255,255,.7);margin-top:6px;font-weight:500;">Infant Programs</div>
-                </div>
-                <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px;text-align:center;backdrop-filter:blur(8px);">
-                    <div style="font-size:2rem;font-weight:800;line-height:1.1;">{{ $stats['preschool'] }}</div>
-                    <div style="font-size:.75rem;color:rgba(255,255,255,.7);margin-top:6px;font-weight:500;">Preschool</div>
-                </div>
-                <div style="background:rgba(16,185,129,.25);border:1px solid rgba(16,185,129,.4);border-radius:16px;padding:18px;text-align:center;backdrop-filter:blur(8px);">
-                    <div style="font-size:1.4rem;font-weight:800;line-height:1.1;">✓</div>
-                    <div style="font-size:.75rem;color:rgba(255,255,255,.85);margin-top:6px;font-weight:600;">State Verified</div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -166,7 +158,7 @@ details summary::-webkit-details-marker { display: none; }
 {{-- ═══════════════════════ TRUST BAR ═══════════════════════ --}}
 <div style="background:#f0fdf4;border-bottom:1px solid #d1fae5;padding:12px 20px;">
     <div style="max-width:1000px;margin:0 auto;display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:center;">
-        @foreach(['🏛️ Official state registry data', '✅ Active licenses only', '🔓 Free to search', '🔄 Updated regularly'] as $item)
+        @foreach(['<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg> Official state registry data', '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline;vertical-align:middle;"><polyline points="20,6 9,17 4,12"/></svg> Active licenses only', '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg> Free to search', '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><polyline points="23,4 23,10 17,10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Updated regularly'] as $item)
         <span style="font-size:.8rem;color:#065f46;font-weight:600;display:flex;align-items:center;gap:5px;">{{ $item }}</span>
         @endforeach
     </div>
@@ -257,7 +249,7 @@ details summary::-webkit-details-marker { display: none; }
                         @endif
                         @if($facility->max_capacity)
                         <span style="background:#faf5ff;color:#7c3aed;padding:4px 10px;border-radius:20px;font-size:.72rem;font-weight:700;">
-                            🏫 Cap: {{ $facility->max_capacity }}
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Cap: {{ $facility->max_capacity }}
                         </span>
                         @endif
                         <span style="background:#f0fdf4;color:#059669;padding:4px 10px;border-radius:20px;font-size:.72rem;font-weight:700;display:inline-flex;align-items:center;gap:3px;">
@@ -278,7 +270,7 @@ details summary::-webkit-details-marker { display: none; }
 
         @else
         <div style="background:#fff;border:1.5px solid #e5e7eb;border-radius:20px;padding:56px 20px;text-align:center;">
-            <div style="font-size:3.5rem;margin-bottom:16px;">🔍</div>
+            <div style="font-size:3.5rem;margin-bottom:16px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
             <h3 style="font-size:1.15rem;font-weight:700;color:#111;margin:0 0 8px;">No centers found for ZIP {{ $zip }}</h3>
             <p style="color:#6b7280;font-size:.9rem;margin:0 0 24px;">Try searching nearby ZIPs or browse by state.</p>
             <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
@@ -312,10 +304,10 @@ details summary::-webkit-details-marker { display: none; }
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;">
             @foreach([
-                ['🍼','infant','Infant Care','0–12 months','1:4 staff ratio required','$900–$1,600/month','background:#f0fdf4;border:1.5px solid #d1fae5;','color:#065f46;'],
-                ['🧒','toddler','Toddler','1–3 years','1:6 staff ratio required','$700–$1,200/month','background:#eff6ff;border:1.5px solid #dbeafe;','color:#2563eb;'],
-                ['🎒','preschool','Preschool','3–5 years','1:10 staff ratio','$600–$1,100/month','background:#faf5ff;border:1.5px solid #ede9fe;','color:#7c3aed;'],
-                ['📚','school','School-Age','5+ years','Before/after school','$300–$700/month','background:#fff7ed;border:1.5px solid #fed7aa;','color:#c2410c;'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M10 2h4"/><path d="M12 14v4"/><path d="M8 6h8l1 8a5 5 0 01-10 0z"/></svg>','infant','Infant Care','0–12 months','1:4 staff ratio required','$900–$1,600/month','background:#f0fdf4;border:1.5px solid #d1fae5;','color:#065f46;'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>','toddler','Toddler','1–3 years','1:6 staff ratio required','$700–$1,200/month','background:#eff6ff;border:1.5px solid #dbeafe;','color:#2563eb;'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M16 20V10a4 4 0 00-8 0v10"/><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M9 4h6"/></svg>','preschool','Preschool','3–5 years','1:10 staff ratio','$600–$1,100/month','background:#faf5ff;border:1.5px solid #ede9fe;','color:#7c3aed;'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>','school','School-Age','5+ years','Before/after school','$300–$700/month','background:#fff7ed;border:1.5px solid #fed7aa;','color:#c2410c;'],
             ] as [$emoji,$type,$label,$ages,$ratio,$cost,$bg,$textColor])
             <div style="{{ $bg }} border-radius:14px;padding:18px;transition:transform .15s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
                 <div style="font-size:1.6rem;margin-bottom:10px;">{{ $emoji }}</div>
@@ -323,7 +315,7 @@ details summary::-webkit-details-marker { display: none; }
                 <div style="font-size:.78rem;color:#6b7280;line-height:1.8;">
                     <div>📅 Ages: <strong style="color:#374151;">{{ $ages }}</strong></div>
                     <div>👥 {{ $ratio }}</div>
-                    <div>💰 Avg: <strong style="color:#374151;">{{ $cost }}</strong></div>
+                    <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Avg: <strong style="color:#374151;">{{ $cost }}</strong></div>
                 </div>
                 @php $count = $type === 'infant' ? $stats['infant'] : ($type === 'preschool' ? $stats['preschool'] : '?'); @endphp
                 @if(is_numeric($count))
@@ -343,7 +335,7 @@ details summary::-webkit-details-marker { display: none; }
         <div style="display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start;">
             <div style="flex:1;min-width:280px;">
                 <div style="display:inline-flex;align-items:center;gap:8px;background:#065f46;color:#fff;border-radius:60px;padding:6px 14px;font-size:.75rem;font-weight:700;margin-bottom:14px;">
-                    💰 Free Money Available
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Free Money Available
                 </div>
                 <h2 style="font-size:1.2rem;font-weight:800;color:#111;margin:0 0 10px;">Childcare Subsidies Near {{ $zip }}</h2>
                 <p style="color:#374151;font-size:.9rem;line-height:1.7;margin:0 0 16px;">
@@ -355,10 +347,10 @@ details summary::-webkit-details-marker { display: none; }
             </div>
             <div style="flex:1;min-width:240px;display:flex;flex-direction:column;gap:10px;">
                 @foreach([
-                    ['🏛️','CCAP / CCDF','Federal block grant — up to 90% coverage'],
-                    ['⭐','Head Start','Free care for income-eligible families'],
+                    ['<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg>','CCAP / CCDF','Federal block grant — up to 90% coverage'],
+                    ['<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>','Head Start','Free care for income-eligible families'],
                     ['💼','Dependent Care FSA','Pre-tax savings — up to $5,000/yr'],
-                    ['📋','Child Tax Credit','Up to $3,000/year federal credit'],
+                    ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>','Child Tax Credit','Up to $3,000/year federal credit'],
                     ['🎓','State Pre-K','Free half or full-day preschool (4–5 yrs)'],
                 ] as [$ico,$name,$desc])
                 <div style="background:#fff;border:1px solid #d1fae5;border-radius:12px;padding:12px 16px;display:flex;gap:12px;align-items:center;">
@@ -378,7 +370,7 @@ details summary::-webkit-details-marker { display: none; }
 <section style="background:#fff;padding:32px 20px;border-top:1px solid #e5e7eb;">
     <div style="max-width:1000px;margin:0 auto;">
         <div style="background:linear-gradient(135deg,#064e3b,#065f46);border-radius:20px;padding:32px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
-            <div style="font-size:3rem;">🧮</div>
+            <div style="font-size:3rem;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" style="display:inline;vertical-align:middle;"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="9" x2="8" y2="9"/><line x1="12" y1="9" x2="12" y2="9"/><line x1="16" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="8" y2="13"/><line x1="12" y1="13" x2="12" y2="13"/><line x1="16" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></div>
             <div style="flex:1;min-width:220px;">
                 <h3 style="font-size:1.05rem;font-weight:800;color:#fff;margin:0 0 6px;">Estimate Your Childcare Cost Near {{ $zip }}</h3>
                 <p style="font-size:.85rem;color:rgba(255,255,255,.8);margin:0;line-height:1.6;">See average daycare costs in {{ $state }} by age group + estimate how much CCAP can save you.</p>
@@ -394,7 +386,7 @@ details summary::-webkit-details-marker { display: none; }
 <section style="background:#faf5ff;padding:32px 20px;border-top:1px solid #ede9fe;">
     <div style="max-width:1000px;margin:0 auto;">
         <div style="background:#fff;border:1.5px solid #ede9fe;border-radius:20px;padding:28px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
-            <div style="width:60px;height:60px;background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;">🌟</div>
+            <div style="width:60px;height:60px;background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2" style="display:inline;vertical-align:middle;"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
             <div style="flex:1;min-width:220px;">
                 <div style="font-size:.7rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;">Sponsored · Partner</div>
                 <h3 style="font-size:1rem;font-weight:800;color:#111;margin:0 0 6px;">Compare Daycare Waitlists on Winnie</h3>
@@ -468,7 +460,7 @@ details summary::-webkit-details-marker { display: none; }
     <div style="max-width:1000px;margin:0 auto;">
         <div style="background:linear-gradient(135deg,#1d4ed8,#0ea5e9);border-radius:20px;padding:32px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;text-align:center;">
             <div style="flex:1;min-width:240px;">
-                <div style="font-size:2rem;margin-bottom:10px;">🏠</div>
+                <div style="font-size:2rem;margin-bottom:10px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
                 <h3 style="font-size:1rem;font-weight:800;color:#fff;margin:0 0 8px;">Need In-Home Childcare Near {{ $zip }}?</h3>
                 <p style="font-size:.84rem;color:rgba(255,255,255,.85);margin:0 0 16px;line-height:1.5;">Care.com has 1M+ background-checked sitters, nannies, and home daycare providers near you.</p>
                 <a href="https://www.care.com/childcare" target="_blank" rel="nofollow" style="display:inline-block;padding:12px 26px;background:#fff;color:#1d4ed8;border-radius:10px;font-size:.9rem;font-weight:800;text-decoration:none;transition:all .15s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 20px rgba(0,0,0,.2)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">

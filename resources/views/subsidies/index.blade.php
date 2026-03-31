@@ -93,19 +93,19 @@
         <h2 style="font-size:1.1rem;font-weight:800;color:#065f46;margin:0 0 12px;">Which Programs Might You Qualify For?</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
             <div style="background:#fff;border-radius:8px;padding:12px 16px;border:1px solid #bbf7d0;">
-                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;">✅ Always Available</div>
+                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline;vertical-align:middle;"><polyline points="20,6 9,17 4,12"/></svg> Always Available</div>
                 <div style="font-size:.85rem;color:#444;">Child and Dependent Care Tax Credit (all working families with children under 13)</div>
             </div>
             <div style="background:#fff;border-radius:8px;padding:12px 16px;border:1px solid #bbf7d0;">
-                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;">✅ If Employer Offers</div>
+                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline;vertical-align:middle;"><polyline points="20,6 9,17 4,12"/></svg> If Employer Offers</div>
                 <div style="font-size:.85rem;color:#444;">Dependent Care FSA — check with HR during open enrollment</div>
             </div>
             <div style="background:#fff;border-radius:8px;padding:12px 16px;border:1px solid #bbf7d0;">
-                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;">✅ Income-Based</div>
+                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline;vertical-align:middle;"><polyline points="20,6 9,17 4,12"/></svg> Income-Based</div>
                 <div style="font-size:.85rem;color:#444;">CCAP — typically up to 85% of state median income; apply immediately</div>
             </div>
             <div style="background:#fff;border-radius:8px;padding:12px 16px;border:1px solid #bbf7d0;">
-                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;">✅ Low-Income Priority</div>
+                <div style="font-weight:700;color:#065f46;font-size:.9rem;margin-bottom:4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" style="display:inline;vertical-align:middle;"><polyline points="20,6 9,17 4,12"/></svg> Low-Income Priority</div>
                 <div style="font-size:.85rem;color:#444;">Head Start — at or below federal poverty level; apply early for waitlists</div>
             </div>
         </div>
@@ -117,7 +117,7 @@
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
             <div style="width:52px;height:52px;background:#1e40af;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <span style="color:#fff;font-size:1.5rem;">🏛️</span>
+                <span style="color:#fff;font-size:1.5rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg></span>
             </div>
             <div>
                 <h2 style="font-size:1.5rem;font-weight:800;color:#111;margin:0 0 4px;">CCAP — Child Care Assistance Program</h2>
@@ -192,7 +192,7 @@
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
             <div style="width:52px;height:52px;background:#065f46;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <span style="color:#fff;font-size:1.5rem;">⭐</span>
+                <span style="color:#fff;font-size:1.5rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></span>
             </div>
             <div>
                 <h2 style="font-size:1.5rem;font-weight:800;color:#111;margin:0 0 4px;">Head Start & Early Head Start (FREE)</h2>
@@ -349,7 +349,7 @@
     <div style="max-width:900px;margin:0 auto;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
             <div style="width:52px;height:52px;background:#0f766e;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <span style="color:#fff;font-size:1.5rem;">🏫</span>
+                <span style="color:#fff;font-size:1.5rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span>
             </div>
             <div>
                 <h2 style="font-size:1.5rem;font-weight:800;color:#111;margin:0 0 4px;">State Pre-K Programs</h2>

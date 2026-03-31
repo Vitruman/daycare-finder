@@ -112,9 +112,9 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
             @foreach([
-                ['1','🔍','Search by Location','Enter your city, ZIP code, or state. Filter by age group (infant, toddler, preschool), program type, and more.','/facilities'],
+                ['1','<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>','Search by Location','Enter your city, ZIP code, or state. Filter by age group (infant, toddler, preschool), program type, and more.','/facilities'],
                 ['2','🔎','Compare & Verify','Each profile shows licensing status, contact info, age groups served, and inspection history.','/facilities'],
-                ['3','💰','Check Your Subsidies','US families pay avg $14,760/year. CCAP, Head Start, and tax credits can cut costs dramatically.','/subsidies'],
+                ['3','<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>','Check Your Subsidies','US families pay avg $14,760/year. CCAP, Head Start, and tax credits can cut costs dramatically.','/subsidies'],
             ] as $step)
             <div style="background:#fff;border-radius:14px;padding:24px;border:1px solid #e5e7eb;position:relative;">
                 <div style="position:absolute;top:-14px;left:20px;width:28px;height:28px;background:#065f46;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;">{{ $step[0] }}</div>
@@ -140,12 +140,12 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:10px;">
             @foreach([
-                ['🍼','Infant Care','0–12 months','infant','$1,000–$2,500/mo'],
-                ['🧒','Toddler','1–3 years','toddler','$900–$2,000/mo'],
-                ['🎒','Preschool','3–5 years','preschool','$700–$1,500/mo'],
-                ['📚','After School','5–12 years','school','$200–$700/mo'],
-                ['⭐','Head Start','0–5 years','head+start','Free (eligible)'],
-                ['🌱','Montessori','2–6 years','montessori','Varies'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M10 2h4"/><path d="M12 14v4"/><path d="M8 6h8l1 8a5 5 0 01-10 0z"/></svg>','Infant Care','0–12 months','infant','$1,000–$2,500/mo'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>','Toddler','1–3 years','toddler','$900–$2,000/mo'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M16 20V10a4 4 0 00-8 0v10"/><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M9 4h6"/></svg>','Preschool','3–5 years','preschool','$700–$1,500/mo'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>','After School','5–12 years','school','$200–$700/mo'],
+                ['<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>','Head Start','0–5 years','head+start','Free (eligible)'],
+                ['<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12"/><path d="M5 12C5 7.029 9.029 3 14 3s9 4.029 9 9-4 9-9 9H5V12z"/></svg>','Montessori','2–6 years','montessori','Varies'],
             ] as $p)
             <a href="/facilities?search={{ $p[3] }}" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 12px;background:#f9fafb;border:1.5px solid #e5e7eb;border-radius:12px;text-decoration:none;transition:all .15s;gap:4px;" onmouseover="this.style.borderColor='#065f46';this.style.background='#f0fdf4'" onmouseout="this.style.borderColor='#e5e7eb';this.style.background='#f9fafb'">
                 <span style="font-size:1.8rem;line-height:1;">{{ $p[0] }}</span>
@@ -242,10 +242,10 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
             @foreach([
-                ['📋','Daycare Tour Checklist','/checklist','30 questions to ask before enrolling — safety, staff, curriculum, costs, and more.'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>','Daycare Tour Checklist','/checklist','30 questions to ask before enrolling — safety, staff, curriculum, costs, and more.'],
                 ['💵','Childcare Cost Calculator','/childcare-cost','See average costs for all 50 states + how to cut your bill with subsidies.'],
                 ['🔒','Childcare Safety Guide','/childcare-safety','How to check licenses, read inspection reports, and verify background checks.'],
-                ['✍️','Parent Blog','/blog','Guides on choosing daycare, CCAP applications, Head Start vs daycare, and more.'],
+                ['<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>','Parent Blog','/blog','Guides on choosing daycare, CCAP applications, Head Start vs daycare, and more.'],
             ] as $guide)
             <a href="{{ $guide[2] }}" style="display:flex;gap:14px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px;text-decoration:none;transition:all .15s;" onmouseover="this.style.borderColor='#065f46';this.style.boxShadow='0 4px 12px rgba(0,0,0,.06)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'">
                 <div style="font-size:1.8rem;flex-shrink:0;line-height:1;margin-top:2px;">{{ $guide[0] }}</div>

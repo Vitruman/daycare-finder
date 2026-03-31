@@ -151,14 +151,14 @@
 
     {{-- Mobile Dropdown --}}
     <nav class="dh-dropdown" id="dh-dd">
-        <a href="/facilities">🏫 Find Daycare Centers</a>
-        <a href="/programs">📚 Program Types</a>
-        <a href="/states">🗺️ Browse by State</a>
-        <a href="/subsidies">💰 Subsidies &amp; Aid</a>
-        <a href="/blog">✍️ Parent Blog</a>
-        <a href="/checklist">📋 Tour Checklist</a>
-        <a href="/about">ℹ️ About</a>
-        <a href="/facilities" class="dh-dd-cta">🔍 Search Centers →</a>
+        <a href="/facilities"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Find Daycare Centers</a>
+        <a href="/programs"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg> Program Types</a>
+        <a href="/states"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><polygon points="1,6 1,22 8,18 16,22 23,18 23,2 16,6 8,2"/></svg> Browse by State</a>
+        <a href="/subsidies"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg> Subsidies &amp; Aid</a>
+        <a href="/blog"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Parent Blog</a>
+        <a href="/checklist"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg> Tour Checklist</a>
+        <a href="/about"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg> About</a>
+        <a href="/facilities" class="dh-dd-cta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Search Centers →</a>
     </nav>
 </header>
 
