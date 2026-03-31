@@ -24,7 +24,7 @@
             <form action="/zip" method="GET" style="display:flex;gap:12px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:8px;">
                 <input type="text" name="code" placeholder="Enter ZIP code (e.g., 10001)" 
                        style="flex:1;border:none;background:rgba(255,255,255,.1);color:#1f2937;padding:16px 20px;border-radius:12px;font-size:.95rem;outline:none;"
-                       oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,5)" required>
+                       oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,5)" required pattern=[0-9]{5} maxlength=5 inputmode=numeric>
                 <button type="submit" 
                         style="padding:16px 24px;background:#fff;color:#065f46;border:none;border-radius:12px;font-weight:800;cursor:pointer;font-size:.95rem;transition:all .2s;box-shadow:0 4px 12px rgba(0,0,0,.15);"
                         onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 20px rgba(0,0,0,.25)'"

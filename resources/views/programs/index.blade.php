@@ -73,7 +73,7 @@
         <h2 style="font-size:1.4rem;font-weight:800;color:#111;margin:0 0 6px;text-align:center;">Program Types at a Glance</h2>
         <p style="color:#555;text-align:center;margin:0 0 24px;font-size:.9rem;">All key details compared in one table — click any row to jump to the full guide.</p>
         <div style="overflow-x:auto;border-radius:12px;border:1px solid #e5e7eb;">
-            <table style="width:100%;border-collapse:collapse;background:#fff;font-size:.87rem;">
+            <table style="width:100%;min-width:800px;border-collapse:collapse;background:#fff;font-size:.87rem;">
                 <thead>
                     <tr style="background:#065f46;color:#fff;">
                         <th style="padding:12px 16px;text-align:left;font-weight:700;">Program</th>
@@ -438,35 +438,35 @@
         <p style="color:#555;text-align:center;margin:0 0 28px;font-size:.9rem;">Answers to the most common questions about childcare program types.</p>
 
         <div style="display:grid;gap:10px;">
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What type of childcare is best for infants? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">For infants (0-12 months), center-based infant care with a 1:3 or 1:4 ratio is best. Look for NAEYC-accredited programs with consistent caregivers, safe sleep practices following AAP guidelines, and daily feeding logs. Family daycare homes can also be excellent for infants due to smaller group sizes and a more personal relationship with one caregiver.</div>
             </details>
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What is the difference between preschool and daycare? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">Preschool typically runs part-day (3-5 hours) and focuses on school readiness for ages 3-5. Daycare/childcare centers offer full-day coverage (6-12 hours) for a wider age range. Many centers offer both — a preschool program in the morning with extended care available for working parents. The lines have blurred significantly as both increasingly focus on early education.</div>
             </details>
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">How much does childcare cost by program type? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">Average monthly costs: Infant care $1,000–$2,500, Toddler programs $900–$2,000, Preschool $700–$1,500, School-age before/after care $200–$700, Head Start $0 (free for eligible families), Family daycare $500–$1,500. Costs vary significantly by state — Massachusetts and California are among the most expensive, while Mississippi and Arkansas are the most affordable.</div>
             </details>
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What is a good staff-to-child ratio? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">NAEYC recommends: Infants (0-12 months) 1:3-4, Young toddlers (1-2 years) 1:4-5, Older toddlers (2-3 years) 1:6, Preschool (3-5 years) 1:7-10, School-age 1:10-15. Lower ratios mean more individual attention. Always ask about the ratio in the specific classroom your child will be in, not just the overall center average. State minimums often allow higher ratios than NAEYC recommends.</div>
             </details>
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What is Head Start and who qualifies? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">Head Start is a free federal program for children ages 3-5 from families at or below the federal poverty level. Early Head Start serves pregnant women and children ages 0-3. Both programs include education, health screenings, nutrition, and family support. Foster children qualify automatically regardless of income. Apply at <a href="https://eclkc.hhs.gov/center-locator" target="_blank" rel="noopener" style="color:#065f46;">headstart.gov</a> or through your local program. Waitlists are common — apply early.</div>
             </details>
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What is NAEYC accreditation and does it matter? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">NAEYC (National Association for the Education of Young Children) accreditation is the gold standard for childcare quality. Accredited programs meet rigorous standards covering curriculum, staff qualifications, health and safety, family engagement, and more. Only about 10% of US childcare programs are NAEYC-accredited, making it a meaningful quality signal. That said, many excellent programs haven't pursued accreditation due to cost — don't rule out non-accredited options.</div>
             </details>
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Is a family daycare home safe? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">Licensed family daycare homes are regulated by state agencies and subject to inspections. Before enrolling, verify the current license on your state's licensing database, check for inspection violations, confirm background checks for all household members over 18, and verify CPR/first aid certification. Unlicensed family daycare is riskier — in most states it's illegal to operate without a license if caring for more than 1-2 children who aren't family members.</div>
             </details>
-            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;">
+            <details style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:visible;">
                 <summary style="padding:16px 20px;font-weight:600;color:#111;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Can I use subsidies for any program type? <span>+</span></summary>
                 <div style="padding:0 20px 16px;color:#444;font-size:.9rem;line-height:1.7;">CCAP/CCDF subsidies can be used at any licensed childcare provider — centers, family daycare homes, and in some states, relatives. The provider must be CCAP-certified, which most licensed providers are. Head Start is a separate program from CCAP. The Child and Dependent Care Tax Credit applies to all types of paid childcare, including after-school programs and summer camps. See our <a href="/subsidies" style="color:#065f46;">subsidies guide</a> for details.</div>
             </details>
