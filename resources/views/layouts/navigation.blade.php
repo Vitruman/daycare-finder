@@ -44,7 +44,7 @@
             <a href="/facilities" class="dh-nav-cta">Search Centers</a>
         </nav>
 
-        <button class="dh-burger" id="dh-burger-btn" aria-label="Open menu" onclick="
+        <button class="dh-burger" id="dh-burger-btn" aria-label="Open menu" style="display:none" onclick="
             var m = document.getElementById('dh-mobile-menu');
             m.classList.toggle('open');
             var icon = document.getElementById('dh-burger-icon');
@@ -73,3 +73,26 @@
         <a href="/facilities" class="dh-mobile-menu-cta">Search Centers →</a>
     </div>
 </header>
+<script>
+(function() {
+    function updateNav() {
+        var burger = document.getElementById('dh-burger-btn');
+        var desktopNav = document.querySelector('.dh-nav');
+        if (!burger || !desktopNav) return;
+        if (window.innerWidth < 768) {
+            burger.style.display = 'flex';
+            desktopNav.style.display = 'none';
+        } else {
+            burger.style.display = 'none';
+            desktopNav.style.display = 'flex';
+            // Close mobile menu if open
+            var m = document.getElementById('dh-mobile-menu');
+            if (m) m.classList.remove('open');
+        }
+    }
+    updateNav();
+    window.addEventListener('resize', updateNav);
+    // Also run after DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', updateNav);
+})();
+</script>
