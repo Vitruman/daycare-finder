@@ -21,7 +21,7 @@
 <div style="margin-top:64px;">
 
 {{-- ===== HERO ===== --}}
-<section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);padding:64px 20px 56px;position:relative;overflow:hidden;">
+<section style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%);padding:52px 16px 44px;position:relative;overflow:hidden;">
     {{-- Background pattern --}}
     <div style="position:absolute;inset:0;opacity:.06;" aria-hidden="true">
         <svg width="100%" height="100%"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
@@ -31,7 +31,7 @@
             <span style="width:6px;height:6px;background:#34d399;border-radius:50%;display:inline-block;"></span>
             26,000+ Licensed Centers · All 50 States
         </div>
-        <h1 style="font-size:clamp(1.9rem,4.5vw,3.2rem);font-weight:800;color:#fff;margin:0 0 16px;line-height:1.15;letter-spacing:-.02em;">
+        <h1 style="font-size:clamp(1.5rem,5vw,3rem);font-weight:800;color:#fff;margin:0 0 16px;line-height:1.2;letter-spacing:-.01em;">
             Find Safe, Licensed Daycare<br>
             <span style="color:#6ee7b7;">Near You — Free</span>
         </h1>
@@ -41,15 +41,15 @@
 
         {{-- Search form --}}
         <form action="/facilities" method="GET" style="max-width:620px;margin:0 auto 20px;">
-            <div style="display:flex;gap:8px;background:rgba(255,255,255,.12);border-radius:14px;padding:8px;backdrop-filter:blur(10px);">
-                <div style="flex:1;position:relative;">
+            <div style="display:flex;flex-wrap:wrap;gap:8px;background:rgba(255,255,255,.12);border-radius:14px;padding:8px;backdrop-filter:blur(10px);">
+                <div style="flex:1;min-width:200px;position:relative;">
                     <svg style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.5);" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     <input type="text" name="search" placeholder="City, center name, or ZIP code..."
                            value="{{ request('search') }}"
                            style="width:100%;padding:12px 14px 12px 38px;background:rgba(255,255,255,.95);border:none;border-radius:8px;font-size:.92rem;color:#111;outline:none;box-sizing:border-box;"
                            autocomplete="off">
                 </div>
-                <select name="state" style="padding:12px 12px;background:rgba(255,255,255,.95);border:none;border-radius:8px;font-size:.88rem;color:#111;min-width:130px;cursor:pointer;outline:none;">
+                <select name="state" style="padding:12px 12px;background:rgba(255,255,255,.95);border:none;border-radius:8px;font-size:.88rem;color:#111;min-width:120px;max-width:130px;cursor:pointer;outline:none;">
                     <option value="">All States</option>
                     @foreach($states as $s)
                     <option value="{{ $s->code }}" {{ request('state')==$s->code?'selected':'' }}>{{ $s->name }}</option>
@@ -74,7 +74,8 @@
 {{-- ===== TRUST BAR ===== --}}
 <section style="background:#fff;border-bottom:1px solid #e5e7eb;padding:0;">
     <div style="max-width:1000px;margin:0 auto;padding:0 20px;">
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);text-align:center;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);text-align:center;" class="stats-grid">
+            <style>@media(min-width:600px){.stats-grid{grid-template-columns:repeat(4,1fr)!important}}</style>
             @foreach([
                 ['26,000+','Licensed Centers'],
                 ['50','States Covered'],
