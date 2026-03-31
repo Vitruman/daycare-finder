@@ -19,7 +19,7 @@
             <a href="/facilities" class="dh-nav-cta" style="margin-left:6px;">Search Centers</a>
         </nav>
 
-        <button class="dh-burger" id="dh-burger" aria-label="Open menu" onclick="var d=document.getElementById('dh-dd');d.classList.toggle('open');">
+        <button class="dh-burger" id="dh-burger" aria-label="Open menu" style="display:flex;" onclick="var d=document.getElementById('dh-dd');d.classList.toggle('open');">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2.5" stroke-linecap="round">
                 <line x1="3" y1="7" x2="21" y2="7"/>
                 <line x1="3" y1="12" x2="21" y2="12"/>
@@ -39,3 +39,18 @@
         <a href="/facilities" class="dh-dropdown-cta">Search Centers →</a>
     </nav>
 </header>
+<script>
+if(window.innerWidth>=768){
+  var b=document.getElementById('dh-burger');
+  if(b)b.style.display='none';
+  var n=document.querySelector('.dh-nav-links');
+  if(n)n.style.display='flex';
+}
+window.addEventListener('resize',function(){
+  var b=document.getElementById('dh-burger');
+  var n=document.querySelector('.dh-nav-links');
+  if(!b||!n)return;
+  if(window.innerWidth>=768){b.style.display='none';n.style.display='flex';}
+  else{b.style.display='flex';n.style.display='none';}
+});
+</script>
