@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'DaycareHub Blog — Childcare Tips, Guides & Resources | DaycareHub')
-@section('meta_description', 'Evidence-based articles on addiction recovery, treatment options, subsidy programs, and family support. Written by recovery specialists, updated weekly.')
+@section('title', 'DaycareHub Blog — Childcare Tips, Guides & Resources for Parents')
+@section('meta_description', 'Practical guides for parents: how to choose daycare, understand childcare costs, apply for subsidies, and find the right program for your child. Updated regularly.')
 
 @section('schema')
 <script type="application/ld+json">
@@ -19,7 +19,7 @@
     "@@context": "https://schema.org",
     "@@type": "CollectionPage",
     "name": "DaycareHub DaycareHub Blog",
-    "description": "Evidence-based articles on addiction recovery, treatment, and family support.",
+    "description": "Practical childcare guides for parents: choosing daycare, understanding costs, applying for subsidies, and more.",
     "url": "https://daycarehub.us/blog",
     "dateModified": "{{ now()->toIso8601String() }}",
     "publisher": {"@@type": "Organization", "name": "DaycareHub", "url": "https://daycarehub.us"},
