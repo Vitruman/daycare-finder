@@ -20,11 +20,6 @@
 @include("components.breadcrumbs")
 <div>
 
-<div style="max-width:1100px;margin:0 auto;padding:14px 20px 0;font-size:.85rem;color:#666;">
-    <a href="/" style="color:#065f46;text-decoration:none;">Home</a>
-    <span style="margin:0 8px;color:#ccc;">/</span>
-    <span style="color:#333;">Browse by State</span>
-</div>
 
 <section style="background:#fff;padding:28px 20px 20px;border-bottom:1px solid #e5e7eb;">
     <div style="max-width:1100px;margin:0 auto;">
@@ -32,8 +27,16 @@
         <p style="color:#555;font-size:.92rem;line-height:1.7;max-width:700px;margin:0 0 18px;">Every US state licenses childcare centers separately through its own database. Click your state to browse verified licensed centers, local subsidy programs, and CCAP-certified providers.</p>
 
         <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:4px;">
+        @php
+        $grouped = $states->groupBy(function($s) { return strtoupper(substr($s->name, 0, 1)); })->sortKeys();
+        $availableLetters = array_keys($grouped->toArray());
+        @endphp
             @foreach(range('A','Z') as $letter)
+            @if(in_array($letter, $availableLetters))
             <a href="#letter-{{ $letter }}" style="width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:#f3f4f6;border-radius:6px;color:#333;font-weight:700;font-size:.82rem;text-decoration:none;transition:all .15s;" onmouseover="this.style.background='#065f46';this.style.color='#fff'" onmouseout="this.style.background='#f3f4f6';this.style.color='#333'">{{ $letter }}</a>
+            @else
+            <span style="width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:#f9fafb;border-radius:6px;color:#d1d5db;font-weight:700;font-size:.82rem;cursor:default;">{{ $letter }}</span>
+            @endif
             @endforeach
         </div>
     </div>
@@ -41,9 +44,6 @@
 
 <section style="background:#f9fafb;padding:28px 20px 48px;">
     <div style="max-width:1100px;margin:0 auto;">
-        @php
-        $grouped = $states->groupBy(function($s) { return strtoupper(substr($s->name, 0, 1)); })->sortKeys();
-        @endphp
 
         @foreach($grouped as $letter => $group)
         <div id="letter-{{ $letter }}" style="margin-bottom:28px;">

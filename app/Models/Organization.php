@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -10,6 +11,17 @@ class Organization extends Model
     public $timestamps = false;
     public $incrementing = false;
     protected $keyType = 'int';
+
+    /**
+     * Only show real daycare records (exclude rehab/substance abuse data).
+     * Records without a source are from RehabHive (drug rehab clinics).
+     */
+    protected static function booted(): void
+    {
+        static::addGlobalScope('daycare_only', function (Builder $builder) {
+            $builder->whereNotNull('source');
+        });
+    }
 
     protected $fillable = [
         'id',

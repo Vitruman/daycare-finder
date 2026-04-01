@@ -56,7 +56,7 @@ $faqs = [
     ]
 }
 </script>
-@include("components.read-also")
+
 @endsection
 
 @section('content')

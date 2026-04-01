@@ -33,8 +33,12 @@ class ZipController extends Controller
 
         $stats = [
             'total' => $centers->count(),
-            'infant' => $centers->filter(fn($c) => str_contains(strtolower($c->ages_served_desc ?? ''), 'infant'))->count(),
-            'preschool' => $centers->filter(fn($c) => str_contains(strtolower($c->ages_served_desc ?? ''), 'preschool'))->count(),
+            'infant' => $centers->filter(fn($c) => (int)($c->age_min ?? 99) < 2)->count(),
+            'preschool' => $centers->filter(fn($c) =>
+                str_contains(strtolower($c->age_range ?? ''), '3') ||
+                str_contains(strtolower($c->program_type ?? ''), 'preschool') ||
+                str_contains(strtolower($c->facility_type ?? ''), 'preschool')
+            )->count(),
         ];
 
         $firstCenter = $centers->first();

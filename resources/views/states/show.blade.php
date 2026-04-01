@@ -33,18 +33,6 @@
 @endsection
 @section('content')
 @include("components.breadcrumbs")
-    <!-- Breadcrumb -->
-    <nav class="bg-gray-50 py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ol class="flex items-center space-x-2 text-sm text-gray-500">
-                <li><a href="{{ route('home') }}" class="hover:text-green-600">Home</a></li>
-                <li><span class="text-gray-400">/</span></li>
-                <li><a href="{{ route('states.index') }}" class="hover:text-green-600">States</a></li>
-                <li><span class="text-gray-400">/</span></li>
-                <li class="text-gray-900 font-medium">{{ $state->name }}</li>
-            </ol>
-        </div>
-    </nav>
 
     <!-- Header -->
     <section class="py-16 bg-white">
