@@ -33,9 +33,9 @@
         @endphp
             @foreach(range('A','Z') as $letter)
             @if(in_array($letter, $availableLetters))
-            <a href="#letter-{{ $letter }}" style="width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:#f3f4f6;border-radius:6px;color:#333;font-weight:700;font-size:.82rem;text-decoration:none;transition:all .15s;" onmouseover="this.style.background='#065f46';this.style.color='#fff'" onmouseout="this.style.background='#f3f4f6';this.style.color='#333'">{{ $letter }}</a>
+            <a href="#letter-{{ $letter }}" style="width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:#ecfdf5;border-radius:6px;color:#065f46;border:1px solid #d1fae5;font-weight:700;font-size:.82rem;text-decoration:none;transition:all .15s;" onmouseover="this.style.background='#065f46';this.style.color='#fff'" onmouseout="this.style.background='#f3f4f6';this.style.color='#333'">{{ $letter }}</a>
             @else
-            <span style="width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:#f9fafb;border-radius:6px;color:#d1d5db;font-weight:700;font-size:.82rem;cursor:default;">{{ $letter }}</span>
+            <span style="width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:#f9fafb;border-radius:6px;color:#d1d5db;border:1px solid #f3f4f6;font-weight:700;font-size:.82rem;cursor:default;">{{ $letter }}</span>
             @endif
             @endforeach
         </div>
