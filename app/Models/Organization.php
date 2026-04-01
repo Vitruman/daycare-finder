@@ -19,7 +19,12 @@ class Organization extends Model
     protected static function booted(): void
     {
         static::addGlobalScope('daycare_only', function (Builder $builder) {
-            $builder->whereNotNull('source');
+            // Only show real daycare/childcare records
+            // Exclude rehab/substance abuse facilities (source=NULL and no facility_type)
+            $builder->where(function ($q) {
+                $q->whereNotNull('source')
+                  ->orWhereNotNull('facility_type');
+            });
         });
     }
 

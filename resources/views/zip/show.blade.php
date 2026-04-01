@@ -115,12 +115,15 @@ details summary::-webkit-details-marker { display: none; }
                     <div style="font-size:1.8rem;font-weight:800;line-height:1;">{{ $stats['total'] }}</div>
                     <div style="font-size:.7rem;color:rgba(255,255,255,.65);margin-top:4px;font-weight:500;">Centers</div>
                 </div>
+                @if($stats['infant'] > 0)
                 <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;min-width:90px;">
                     <div style="font-size:1.8rem;font-weight:800;line-height:1;">{{ $stats['infant'] }}</div>
                     <div style="font-size:.7rem;color:rgba(255,255,255,.65);margin-top:4px;font-weight:500;">Infant Care</div>
                 </div>
+                @endif
                 <div style="text-align:center;padding:16px 20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;min-width:90px;">
                     <div style="font-size:1.8rem;font-weight:800;line-height:1;">{{ $stats['preschool'] }}</div>
+                @endif
                     <div style="font-size:.7rem;color:rgba(255,255,255,.65);margin-top:4px;font-weight:500;">Preschool</div>
                 </div>
                 <div style="text-align:center;padding:16px 20px;background:rgba(16,185,129,.2);border:1px solid rgba(16,185,129,.35);border-radius:14px;min-width:90px;">
